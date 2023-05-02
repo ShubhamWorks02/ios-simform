@@ -12,11 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var hyperlinkLabel: UILabel!
     @IBOutlet weak var labelWithLink: UILabel!
     @IBOutlet weak var textLabelOutlet: UILabel!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         textLabelOutlet.text = "Runtime text change when clicked"
         textLabelOutlet.isHighlighted = true
-        
         textLabelOutlet.backgroundColor = UIColor.blue
         let tap = UITapGestureRecognizer(target: self, action: #selector(changeBgColour(sender: )))
         textLabelOutlet.isUserInteractionEnabled = true
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
         catch {
             
         }
+        
+        // Login Button
         
 //        let text =
 //        let word = (text as NSString).range(of: "Word")
