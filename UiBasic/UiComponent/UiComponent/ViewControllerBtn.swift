@@ -12,6 +12,7 @@ class ViewControllerBtn: UIViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     
+    @IBOutlet weak var selectedBtn: UIButton!
     @IBOutlet weak var propBtn: UIButton!
     @IBAction func anotherFunc(_ sender: UIButton) {
         if(sender.isSelected) {
@@ -31,6 +32,14 @@ class ViewControllerBtn: UIViewController {
         sender.backgroundColor = UIColor.black
         mainView.backgroundColor = .gray
     }
+    
+    @IBAction func onPressSelcted(_ sender: UIButton) {
+        print(sender.isHighlighted, "isHigh")
+        sender.isSelected = true
+        //mainView.backgroundColor = UIColor.black
+        print(sender.isSelected, "isSelected")
+    }
+    
     
     
     @IBAction func placeImage(_ sender: UIButton) {
