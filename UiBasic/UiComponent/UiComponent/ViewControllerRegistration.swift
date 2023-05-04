@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewControllerRegistration: UIViewController {
-
+    // MARK: Outlets
     @IBOutlet weak var lblRegister: UILabel!
     @IBOutlet weak var successView: UIView!
     @IBOutlet weak var tfName: UITextField!

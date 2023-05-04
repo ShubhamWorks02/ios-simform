@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y5G-xx-B6Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vi9-ab-3uy">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -436,10 +436,11 @@
                     </view>
                     <connections>
                         <outlet property="appleBtn" destination="S0g-qg-oSo" id="edY-uF-fIR"/>
-                        <outlet property="emaiLabel" destination="qn1-VP-gol" id="WOs-Wi-ZkL"/>
+                        <outlet property="btnLogin" destination="mwQ-SH-PCj" id="ghY-uk-web"/>
                         <outlet property="fBtn" destination="ndS-t0-p6y" id="oR0-jc-XTE"/>
                         <outlet property="googleBtn" destination="ndS-t0-p6y" id="9dJ-3i-bdn"/>
-                        <outlet property="passWordField" destination="2m1-Oj-vwN" id="mGD-hp-1JJ"/>
+                        <outlet property="tfEmail" destination="qn1-VP-gol" id="4Ja-4R-ylj"/>
+                        <outlet property="tfPass" destination="2m1-Oj-vwN" id="zjs-RR-5qd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVJ-Jp-T2C" sceneMemberID="firstResponder"/>

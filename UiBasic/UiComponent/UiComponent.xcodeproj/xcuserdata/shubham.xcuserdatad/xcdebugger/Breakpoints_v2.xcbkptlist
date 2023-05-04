@@ -36,5 +36,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "480C1969-1726-4C68-AD57-38CFB65528B2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UiComponent/ViewControllerSwitch.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "480C1969-1726-4C68-AD57-38CFB65528B2 - f975a663d6945a92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UiComponent.ViewControllerSwitch.viewDidLoad() -&gt; ()"
+                  moduleName = "UiComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubham/Documents/SimformProject/DemoProject/Ios/UiBasic/UiComponent/UiComponent/ViewControllerSwitch.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "493">
+               </Location>
+               <Location
+                  uuid = "480C1969-1726-4C68-AD57-38CFB65528B2 - f975a663d6945a92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UiComponent.ViewControllerSwitch.viewDidLoad() -&gt; ()"
+                  moduleName = "UiComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubham/Documents/SimformProject/DemoProject/Ios/UiBasic/UiComponent/UiComponent/ViewControllerSwitch.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "561">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
