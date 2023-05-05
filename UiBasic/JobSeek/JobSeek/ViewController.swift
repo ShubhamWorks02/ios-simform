@@ -9,12 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var loginProgress: UIProgressView!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var tfEmail: UITextField1!
     @IBOutlet weak var tfPass: UITextField1!
     @IBOutlet weak var fBtn: UIButton!
     @IBOutlet weak var appleBtn: UIButton!
     @IBOutlet weak var googleBtn: UIButton!
+    let progress = Progress(totalUnitCount: 4)
 //    @IBOutlet weak var emaifield: UITextField1!
 //    @IBOutlet weak var passWordField: UITextField!
     
@@ -50,6 +53,7 @@ class ViewController: UIViewController {
         // .addSubview(appleBtn)
     }
     private func setInitViews(){
+        
 //        tfName.becomeFirstResponder()
 //        tfName.delegate = self
         tfEmail.delegate = self
@@ -85,11 +89,23 @@ class ViewController: UIViewController {
                 
             } else {
                 btnLogin.isHidden = true
-                
+                loginProgress.isHidden = false
+                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+                                guard self.progress.isFinished == false else{
+                                    timer.invalidate()
+                                    // self.msgLbl.text = "Data Saved"
+                                    return
+                                }
+                                self.progress.completedUnitCount += 1
+                                let progrsssFloat = Float(self.progress.fractionCompleted)
+                                self.loginProgress.setProgress(progrsssFloat, animated: true)
+                                  
+                            }
                 print("hi user")
             }
             
         }
+        
         
     }
     
@@ -140,6 +156,9 @@ class ViewController: UIViewController {
 //        }
         
     }
+    
+    
+    
 }
 
 //

@@ -323,6 +323,9 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                     </button>
+                                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Ly9-l0-1WR">
+                                        <rect key="frame" x="77.333333333333343" y="190" width="259.33333333333326" height="4"/>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -334,7 +337,10 @@
                                     <constraint firstItem="2m1-Oj-vwN" firstAttribute="leading" secondItem="qn1-VP-gol" secondAttribute="leading" id="K1o-NJ-ekR"/>
                                     <constraint firstItem="mwQ-SH-PCj" firstAttribute="trailing" secondItem="2m1-Oj-vwN" secondAttribute="trailing" id="Nv5-8R-4lz"/>
                                     <constraint firstItem="mwQ-SH-PCj" firstAttribute="top" secondItem="2m1-Oj-vwN" secondAttribute="bottom" constant="25" id="OeN-eI-qjM"/>
+                                    <constraint firstItem="Ly9-l0-1WR" firstAttribute="width" secondItem="mwQ-SH-PCj" secondAttribute="width" multiplier="0.712088" id="TIL-ht-NeY"/>
+                                    <constraint firstItem="Ly9-l0-1WR" firstAttribute="centerX" secondItem="VJe-Yb-zwa" secondAttribute="centerX" id="a22-hT-pQL"/>
                                     <constraint firstItem="qn1-VP-gol" firstAttribute="top" secondItem="VJe-Yb-zwa" secondAttribute="top" constant="22" id="b11-dT-aPE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ly9-l0-1WR" secondAttribute="bottom" constant="22" id="fG7-NK-Egm"/>
                                     <constraint firstItem="2m1-Oj-vwN" firstAttribute="trailing" secondItem="qn1-VP-gol" secondAttribute="trailing" id="l5F-nI-J1I"/>
                                     <constraint firstAttribute="trailing" secondItem="qn1-VP-gol" secondAttribute="trailing" constant="25" id="lA4-gV-Bhp"/>
                                     <constraint firstItem="2m1-Oj-vwN" firstAttribute="height" secondItem="qn1-VP-gol" secondAttribute="height" id="pyu-0v-eMc"/>
@@ -439,6 +445,7 @@
                         <outlet property="btnLogin" destination="mwQ-SH-PCj" id="ghY-uk-web"/>
                         <outlet property="fBtn" destination="ndS-t0-p6y" id="oR0-jc-XTE"/>
                         <outlet property="googleBtn" destination="ndS-t0-p6y" id="9dJ-3i-bdn"/>
+                        <outlet property="loginProgress" destination="Ly9-l0-1WR" id="5TW-WX-CTK"/>
                         <outlet property="tfEmail" destination="qn1-VP-gol" id="4Ja-4R-ylj"/>
                         <outlet property="tfPass" destination="2m1-Oj-vwN" id="zjs-RR-5qd"/>
                     </connections>
@@ -473,16 +480,16 @@
     </scenes>
     <designables>
         <designable name="2m1-Oj-vwN">
-            <size key="intrinsicContentSize" width="83" height="42.666666666666664"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="6wu-L7-BrJ">
-            <size key="intrinsicContentSize" width="127.33333333333333" height="46"/>
+            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
         </designable>
         <designable name="mfo-yZ-JyO">
-            <size key="intrinsicContentSize" width="83" height="42.666666666666664"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="qn1-VP-gol">
-            <size key="intrinsicContentSize" width="127.33333333333333" height="46"/>
+            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
         </designable>
     </designables>
     <resources>
