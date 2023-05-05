@@ -21,18 +21,24 @@ class UITextField1: UITextField {
           }
       }
     
+    @objc private func toggleVisibility() {
+        self.isSecureTextEntry.toggle()
+    }
+    
     @IBInspectable var rightImage: UIImage? {
         didSet {
-            rightViewMode = .always
-            let imageView = UIImageView(image: rightImage)
-            imageView.tintColor = .lightGray
-            imageView.contentMode = .right
-            rightView = imageView
+            let btn = UIButton(frame: CGRectMake( 100 , 0, 24, 24))
+            btn.setImage(UIImage(named: "eye"), for: .normal)
+            btn.addTarget(self, action: #selector(toggleVisibility), for: .touchUpInside)
+            rightViewMode = .whileEditing
+            rightView = btn
+            btn.contentMode = .right
+            rightView?.isUserInteractionEnabled = true
             rightView?.tintColor = .lightGray
         }
     }
       
-      let textPadding = UIEdgeInsets(top: 10, left: 45, bottom: 10, right: 40)
+      let textPadding = UIEdgeInsets(top: 10, left: 45, bottom: 10, right: 20)
       
       required init?(coder: NSCoder) {
           super.init(coder: coder)
@@ -48,10 +54,16 @@ class UITextField1: UITextField {
           return bounds.inset(by: .init(top: 0, left: 20, bottom: 0, right: 0))
           
       }
-        override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-            return bounds.inset(by: .init(top: 0, left: 0, bottom: 0, right: 20))
-        }
-      
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.rightViewRect(forBounds: bounds)
+        rect.origin.x = bounds.width - rect.width - textPadding.right
+        return rect
+    }
+
+//        override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+//            return bounds.inset(by: .init(top: 0, left: 0, bottom: 0, right: 20))
+//        }
+//
       override open func textRect(forBounds bounds: CGRect) -> CGRect {
           return bounds.inset(by: textPadding)
       }

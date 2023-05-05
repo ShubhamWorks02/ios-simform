@@ -84,10 +84,13 @@ class ViewController: UIViewController {
                 self.present(alert2, animated: true, completion: nil)
                 
             } else {
+                btnLogin.isHidden = true
+                
                 print("hi user")
             }
             
         }
+        
     }
     
     private func verifyEmail() -> Bool {
@@ -118,7 +121,10 @@ class ViewController: UIViewController {
      }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return range.location < 10
+        
+            textField.textColor = UIColor.gray
+    
+        return range.location < 20
 //
 //        if range.length == 1 {
 //            switch textField {
