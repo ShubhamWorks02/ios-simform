@@ -13,6 +13,7 @@
 		5134D8D22A03F3A000DCFDC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5134D8D02A03F3A000DCFDC1 /* Main.storyboard */; };
 		5134D8D42A03F3A200DCFDC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5134D8D32A03F3A200DCFDC1 /* Assets.xcassets */; };
 		5134D8D72A03F3A200DCFDC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5134D8D52A03F3A200DCFDC1 /* LaunchScreen.storyboard */; };
+		5169F4FB2A053B2B003666A9 /* VIewControllerOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169F4FA2A053B2B003666A9 /* VIewControllerOtp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5134D8D32A03F3A200DCFDC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5134D8D62A03F3A200DCFDC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5134D8D82A03F3A200DCFDC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5169F4FA2A053B2B003666A9 /* VIewControllerOtp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerOtp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5134D8D32A03F3A200DCFDC1 /* Assets.xcassets */,
 				5134D8D52A03F3A200DCFDC1 /* LaunchScreen.storyboard */,
 				5134D8D82A03F3A200DCFDC1 /* Info.plist */,
+				5169F4FA2A053B2B003666A9 /* VIewControllerOtp.swift */,
 			);
 			path = OtpVerify;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5169F4FB2A053B2B003666A9 /* VIewControllerOtp.swift in Sources */,
 				5134D8CF2A03F3A000DCFDC1 /* ViewController.swift in Sources */,
 				5134D8CB2A03F3A000DCFDC1 /* AppDelegate.swift in Sources */,
 				5134D8CD2A03F3A000DCFDC1 /* SceneDelegate.swift in Sources */,
