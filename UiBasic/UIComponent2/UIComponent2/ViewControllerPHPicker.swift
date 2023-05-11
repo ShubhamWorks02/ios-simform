@@ -9,34 +9,72 @@ import UIKit
 import PhotosUI
 
 class ViewControllerPHPicker: UIViewController,PHPickerViewControllerDelegate {
+    
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true, completion: nil)
-        // imageView.image = results[0] as UIImage
-        if let images = results as? [UIImage] {
-            imageView.animationImages = images
-            imageView.animationDuration = 1.0 // 1 second per loop
-            imageView.animationRepeatCount = 0
-            imageView.startAnimating()
+        
+        //var imageIndex = 0
+        var images = [UIImage]() // Array to store the selected images
+        
+        //let dispatchGroup = DispatchGroup()
+        
+        for result in results {
+            //dispatchGroup.enter()
+            
+            result.itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.image.identifier) { (url, error) in
+                if let error = error {
+                    // Handle error
+                    //dispatchGroup.leave()
+                    return
+                }
+                
+                if let url = url {
+                    if let image = UIImage(contentsOfFile: url.path) {
+                        print(results.count)
+                        print(images.count)
+                        images.append(image)
+                    }
+                }
+                
+                
+//                if images.count == results.count {
+//                    DispatchQueue.main.async {
+//                        self.displayImagesWithTimeInterval(images)
+//                    }
+//                }
+                //dispatchGroup.leave()
+                
+            }
+            
+            
+        }
+        if images.count == results.count {
+             print("same images as per result")
+            self.displayImagesWithTimeInterval(images)
         }
         
-//        for result in results {
-//            result.itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.image.identifier) { (url, error) in
-//                if let error = error {
-//                    // Handle error
-//                    return
-//                }
-//
-//                if let url = url {
-//                    // Use the selected image URL
-//                    // Note: You may need to copy the image to a different location if you want to persist it
-//                }
-//            }
+//        dispatchGroup.notify(queue: .main) {
+//            self.displayImagesWithTimeInterval(images)
 //        }
     }
     
+    func displayImagesWithTimeInterval(_ images: [UIImage]) {
+        var imageIndex = 0
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.imageView.image = images[imageIndex]
+            imageIndex += 1
+            
+            if imageIndex == images.count {
+                imageIndex = 0
+            }
+        }
+    }
+
+
 
     @IBOutlet weak var btnImagePick: UIButton!
-   
+    var imagesArr : [UIImage] = []
     @IBAction func pickImagePressed(_ sender: Any) {
         showPicker()
     }

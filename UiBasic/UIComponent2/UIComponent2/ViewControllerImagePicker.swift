@@ -15,6 +15,9 @@ class ViewControllerImagePicker: UIViewController {
     // MARK: OUTLETS
     @IBOutlet weak var btnPickImage: UIButton!
     @IBOutlet weak var imageViewSet: UIImageView!
+    
+    //
+    var tempURl: URL?
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,66 +77,63 @@ extension ViewControllerImagePicker: UIImagePickerControllerDelegate,UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-               
-               if let image = info[.originalImage] as? UIImage {
-                   saveImageToDocumentsDirectory(image: image)
-                   displayImageFromDocumentsDirectory()
-               }
         
-//        if let mediaType = info[.mediaType] as? String {
-//                if mediaType == kUTTypeImage as String {
-//                    // Handle image media type
-//                    print("Picked media type: Image")
-//                } else if mediaType == kUTTypeMovie as String {
-//                    // Handle movie media type
-//                    print("Picked media type: Movie")
-//                } else {
-//                    // Handle other media types
-//                    print("Picked media type: \(mediaType)")
-//                }
-//            }
-//        if let mediaMetadata = info[.mediaMetadata] as? [String: Any] {
-//                // Print the media metadata
-//                print("Media Metadata: \(mediaMetadata)")
-//            }
-//        if let selectedImage = info[.editedImage] as? UIImage {
-//            print(info[.imageURL] as? URL)
-//            imageViewSet.image = selectedImage
-//        } else {
-//            print("image not found")
-//        }
-//        picker.dismiss(animated: true)
+        if let image = info[.originalImage] as? UIImage {
+            if let url = saveImageToDocumentsDirectory(image: image) {
+                displayImageFromDocumentsDirectory(displayURL: url)
+            }
+            
+        }
+        
     }
     
-    func saveImageToDocumentsDirectory(image: UIImage) {
-            guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                return
-            }
-            
-            let fileURL = documentsDirectory.appendingPathComponent("image.jpg")
-            if let data = image.jpegData(compressionQuality: 1.0) {
-                do {
-                    try data.write(to: fileURL)
-                    print("Image saved to documents directory.")
-                } catch {
-                    print("Error saving image: \(error)")
+    func saveImageToDocumentsDirectory(image: UIImage) -> URL? {
+        if let data = image.jpegData(compressionQuality: 1.0) {
+            do {
+                guard let fileURl = createDocumentDirectory() else {
+                    print("returned from save else")
+                    return nil
                 }
+            tempURl = fileURl
+                try data.write(to:  fileURl)
+                print("Image saved to documents directory.")
+            } catch {
+                print("Error saving image: \(error)")
             }
         }
+        return tempURl
+    }
     
-    func displayImageFromDocumentsDirectory() {
-            guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                return
-            }
-            
-            let fileURL = documentsDirectory.appendingPathComponent("image.jpg")
-            if let imageData = try? Data(contentsOf: fileURL), let image = UIImage(data: imageData) {
+    func createDocumentDirectory() -> URL? {
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        
+        let fileURL = documentsDirectory.appendingPathComponent(generateRandomString())
+        return fileURL
+    }
+    
+
+        
+        func generateRandomString() -> String {
+            let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            let randomString = String((0..<10).map{ _ in letters.randomElement()! })
+            return randomString + ".jpg"
+        }
+        
+        
+    func displayImageFromDocumentsDirectory(displayURL: URL) {
+            print("displayImageFromDocumentsDirectory")
+            print("fileurl",displayURL)
+            if let imageData = try? Data(contentsOf: displayURL), let image = UIImage(data: imageData) {
+                print("image setted")
                 imageViewSet.image = image
             }
         }
-    
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-         picker.dismiss(animated: true)
+        
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true)
+        }
     }
-}
+
