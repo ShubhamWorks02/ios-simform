@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5157A1382A0BDB90007E0C5F /* ViewControllerPHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5157A1372A0BDB90007E0C5F /* ViewControllerPHPicker.swift */; };
+		515ABB422A0E122B009A3DE4 /* ViewControllerScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB412A0E122B009A3DE4 /* ViewControllerScrollOffset.swift */; };
 		515DE2FD2A0B88DA00439FD0 /* ViewControllerImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515DE2FC2A0B88DA00439FD0 /* ViewControllerImagePicker.swift */; };
 		5177C3482A0D099C00383C2E /* ViewControllerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5177C3472A0D099C00383C2E /* ViewControllerScrollView.swift */; };
 		5177C34A2A0D206800383C2E /* ViewControllerDemoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5177C3492A0D206800383C2E /* ViewControllerDemoScrollView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5157A1372A0BDB90007E0C5F /* ViewControllerPHPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPHPicker.swift; sourceTree = "<group>"; };
+		515ABB412A0E122B009A3DE4 /* ViewControllerScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScrollOffset.swift; sourceTree = "<group>"; };
 		515DE2FC2A0B88DA00439FD0 /* ViewControllerImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerImagePicker.swift; sourceTree = "<group>"; };
 		5177C3472A0D099C00383C2E /* ViewControllerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScrollView.swift; sourceTree = "<group>"; };
 		5177C3492A0D206800383C2E /* ViewControllerDemoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDemoScrollView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				5157A1372A0BDB90007E0C5F /* ViewControllerPHPicker.swift */,
 				5177C3472A0D099C00383C2E /* ViewControllerScrollView.swift */,
 				5177C3492A0D206800383C2E /* ViewControllerDemoScrollView.swift */,
+				515ABB412A0E122B009A3DE4 /* ViewControllerScrollOffset.swift */,
 			);
 			path = UIComponent2;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				5177C34A2A0D206800383C2E /* ViewControllerDemoScrollView.swift in Sources */,
 				51B8D53C2A04C15D00F18904 /* SceneDelegate.swift in Sources */,
 				51B0A5DA2A090DA200E3F5F5 /* ViewControllerPageControl.swift in Sources */,
+				515ABB422A0E122B009A3DE4 /* ViewControllerScrollOffset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

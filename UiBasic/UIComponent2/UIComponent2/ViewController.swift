@@ -93,10 +93,10 @@ class ViewController: UIViewController {
     
     
     private func showAlert() {
-            let alert = UIAlertController(title: "Progress Complete", message: "The progress is complete.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(action)
-            present(alert, animated: true)
+        let alert = UIAlertController(title: "Progress Complete", message: "The progress is complete.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
 

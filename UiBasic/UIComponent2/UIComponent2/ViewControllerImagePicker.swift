@@ -113,8 +113,6 @@ extension ViewControllerImagePicker: UIImagePickerControllerDelegate,UINavigatio
         return fileURL
     }
     
-
-        
         func generateRandomString() -> String {
             let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             let randomString = String((0..<10).map{ _ in letters.randomElement()! })

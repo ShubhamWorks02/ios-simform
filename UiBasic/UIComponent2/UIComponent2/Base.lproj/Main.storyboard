@@ -473,10 +473,10 @@
             </objects>
             <point key="canvasLocation" x="5244" y="-21"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Scroll Offset-->
         <scene sceneID="f9k-Cu-F7v">
             <objects>
-                <viewController id="NS0-QF-G91" sceneMemberID="viewController">
+                <viewController id="NS0-QF-G91" customClass="ViewControllerScrollOffset" customModule="UIComponent2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZt-jc-Rw4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,10 +485,10 @@
                                 <rect key="frame" x="15" y="46" width="345" height="121"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTT-2k-Sjg">
-                                        <rect key="frame" x="10" y="0.0" width="450" height="121"/>
+                                        <rect key="frame" x="10" y="0.0" width="1000" height="121"/>
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="450" id="f1W-9A-wmf"/>
+                                            <constraint firstAttribute="width" constant="1000" id="bYs-eV-Hkk"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -510,6 +510,10 @@
                             <constraint firstItem="cqu-hP-UOZ" firstAttribute="trailing" secondItem="Xrl-gQ-mgo" secondAttribute="trailing" constant="15" id="ju6-UA-b7y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="WTT-2k-Sjg" id="HF0-3v-hKp"/>
+                        <outlet property="scrollView" destination="Xrl-gQ-mgo" id="1Mg-4n-MsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cst-jw-Wvr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -524,16 +528,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCW-ku-fgh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U4-UQ-dcP" userLabel="imageContentsView">
-                                        <rect key="frame" x="8" y="23" width="500" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="8" y="23" width="500" height="197"/>
+                                        <color key="backgroundColor" red="0.094117647060000004" green="0.08235294118" blue="0.1176470588" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="500" id="TDf-TC-83M"/>
+                                            <constraint firstAttribute="width" constant="500" id="075-k4-xrF"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.08235294118" blue="0.1176470588" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="8U4-UQ-dcP" firstAttribute="height" secondItem="cCW-ku-fgh" secondAttribute="height" multiplier="0.735632" id="02O-g3-BJq"/>
                                     <constraint firstAttribute="bottom" secondItem="8U4-UQ-dcP" secondAttribute="bottom" constant="23" id="4Wt-Pb-7dr"/>
@@ -542,21 +547,34 @@
                                     <constraint firstItem="8U4-UQ-dcP" firstAttribute="leading" secondItem="cCW-ku-fgh" secondAttribute="leading" constant="8" id="waa-MH-Gz9"/>
                                 </constraints>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="beP-Kr-hKv">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="beP-Kr-hKv">
                                 <rect key="frame" x="129" y="288" width="117" height="26"/>
                                 <color key="backgroundColor" red="0.094117647060000004" green="0.57254901960000004" blue="0.31764705879999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="pageControlValueChanged:" destination="AkN-Wp-DwQ" eventType="valueChanged" id="6o9-1y-p1L"/>
+                                </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="164-4j-xR6">
-                                <rect key="frame" x="134" y="369" width="107" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Pick Image"/>
+                                <rect key="frame" x="134" y="369" width="107" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Pick Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Pick Image">
+                                    <backgroundConfiguration key="background" cornerRadius="13">
+                                        <color key="backgroundColor" red="0.094117647060000004" green="0.57254901960000004" blue="0.1176470588" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="pickImagesButtonTapped:" destination="AkN-Wp-DwQ" eventType="touchUpInside" id="r04-Rb-ueg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ADR-lQ-JVA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.08235294118" blue="0.1176470588" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ADR-lQ-JVA" firstAttribute="trailing" secondItem="cCW-ku-fgh" secondAttribute="trailing" id="8Hj-MQ-5wF"/>
                             <constraint firstItem="cCW-ku-fgh" firstAttribute="centerX" secondItem="beP-Kr-hKv" secondAttribute="centerX" id="9jE-56-MfY"/>
@@ -564,13 +582,14 @@
                             <constraint firstItem="ADR-lQ-JVA" firstAttribute="bottom" secondItem="beP-Kr-hKv" secondAttribute="bottom" constant="353" id="MTC-yH-J14"/>
                             <constraint firstItem="164-4j-xR6" firstAttribute="top" secondItem="beP-Kr-hKv" secondAttribute="bottom" constant="55" id="QgR-ax-8df"/>
                             <constraint firstItem="cCW-ku-fgh" firstAttribute="centerX" secondItem="164-4j-xR6" secondAttribute="centerX" id="TT2-xA-4KC"/>
-                            <constraint firstItem="beP-Kr-hKv" firstAttribute="top" secondItem="cCW-ku-fgh" secondAttribute="bottom" constant="114" id="Zhm-k7-fdm"/>
+                            <constraint firstItem="beP-Kr-hKv" firstAttribute="top" secondItem="cCW-ku-fgh" secondAttribute="bottom" constant="20" id="Zhm-k7-fdm"/>
                             <constraint firstItem="cCW-ku-fgh" firstAttribute="leading" secondItem="ADR-lQ-JVA" secondAttribute="leading" id="moR-OU-mhO"/>
                             <constraint firstItem="beP-Kr-hKv" firstAttribute="leading" secondItem="ADR-lQ-JVA" secondAttribute="leading" constant="129" id="u6o-ku-9hh"/>
                             <constraint firstItem="164-4j-xR6" firstAttribute="leading" secondItem="ADR-lQ-JVA" secondAttribute="leading" constant="134" id="ysZ-4C-TIU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pageControl" destination="beP-Kr-hKv" id="ho6-cm-fKj"/>
                         <outlet property="pickImagesButton" destination="164-4j-xR6" id="aZl-Y9-0ru"/>
                         <outlet property="scrollView" destination="cCW-ku-fgh" id="uHt-Sm-5qt"/>
                     </connections>
