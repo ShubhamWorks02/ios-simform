@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5134641B2A126E1400B5571D /* TableContentViewControllerDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134641A2A126E1400B5571D /* TableContentViewControllerDuplicate.swift */; };
 		515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */; };
 		515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */; };
 		515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB532A0E486E009A3DE4 /* ViewController.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5134641A2A126E1400B5571D /* TableContentViewControllerDuplicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableContentViewControllerDuplicate.swift; sourceTree = "<group>"; };
 		515ABB4C2A0E486E009A3DE4 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				515ABB532A0E486E009A3DE4 /* ViewController.swift */,
 				515ABB642A0E550C009A3DE4 /* TableContentViewController.swift */,
 				519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */,
-				5134641A2A126E1400B5571D /* TableContentViewControllerDuplicate.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,7 +195,6 @@
 				515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */,
 				519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */,
 				519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */,
-				5134641B2A126E1400B5571D /* TableContentViewControllerDuplicate.swift in Sources */,
 				515ABB682A0E5579009A3DE4 /* IndexTableViewCell.swift in Sources */,
 				519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */,
 				519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */,

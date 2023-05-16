@@ -10,10 +10,13 @@ import UIKit
 class IndexTableViewCell: UITableViewCell {
 
     // MARK: OUTLETS
-    @IBOutlet weak var lblIndex: UILabel!
-    
+  
+//    @IBOutlet weak var leading: NSLayoutConstraint!
+//
+//    @IBOutlet weak var lblIndex: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
     

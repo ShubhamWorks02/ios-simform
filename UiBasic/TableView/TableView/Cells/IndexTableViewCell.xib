@@ -16,24 +16,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="413" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwo-Ye-QV5">
-                        <rect key="frame" x="10" y="10" width="393" height="83"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yTZ-JQ-DdB">
+                        <rect key="frame" x="181.66666666666666" y="26.666666666666671" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.57254901960000004" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yTZ-JQ-DdB" secondAttribute="height" multiplier="1:1" id="avg-QY-OoE"/>
+                            <constraint firstAttribute="height" constant="50" id="tC3-Dv-Zw1"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="uwo-Ye-QV5" secondAttribute="trailing" constant="10" id="JUC-GC-rIr"/>
-                    <constraint firstItem="uwo-Ye-QV5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KlJ-Tz-1jL"/>
-                    <constraint firstItem="uwo-Ye-QV5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="grp-Kh-naH"/>
-                    <constraint firstAttribute="bottom" secondItem="uwo-Ye-QV5" secondAttribute="bottom" constant="10" id="nc5-4Q-5pg"/>
+                    <constraint firstItem="yTZ-JQ-DdB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4Tm-6i-fmm"/>
+                    <constraint firstItem="yTZ-JQ-DdB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aJg-Qg-yJr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <connections>
-                <outlet property="lblIndex" destination="uwo-Ye-QV5" id="g3D-Ja-KAV"/>
-            </connections>
             <point key="canvasLocation" x="2.2900763358778624" y="-42.605633802816904"/>
         </tableViewCell>
     </objects>

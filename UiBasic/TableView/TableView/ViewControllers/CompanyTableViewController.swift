@@ -15,7 +15,7 @@ class CompanyTableViewController: UIViewController {
     
     // MARK: VARIABLES
     var openingList: [FindJobModel] = FindJobModel.getCurrentOpening()
-    
+    var isHeaderSelected: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         initValues()
@@ -38,9 +38,15 @@ class CompanyTableViewController: UIViewController {
 
 extension CompanyTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+   //     changeAllCells(isSelected: false)
         let indexData = openingList[indexPath.row]
-        indexData.isSelected = !indexData.isSelected
+        
+        if indexData.isSelected {return}
+        changeAllCells(isSelected: false)
+        indexData.isSelected = true
         openingList[indexPath.row] = indexData
+        
         tblCompanyContents.reloadData()
     }
 }
@@ -59,6 +65,12 @@ extension CompanyTableViewController: UITableViewDataSource {
         // companyCell.lblCompanyName.text = openingList[indexPath.row].companyName
         // companyCell.imgLogo.image = UIImage(named: openingList[indexPath.row].imageName!)
         return companyCell
+    }
+    
+    func changeAllCells(isSelected: Bool) {
+        openingList.forEach({
+            $0.isSelected = isSelected
+        })
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -84,14 +96,11 @@ extension CompanyTableViewController: UITableViewDataSource {
         return 60
     }
     
-//    @objc func headerImageViewTapped(_ gestureRecognizer: UITapGestureRecognizer) {
-//        // let newImage: UIImage? // Set the new image you want to display on the cells
-//
-//        for index in 0..<openingList.count {
-//            companyCell.imgLogo.image = UIImage(named: openingList[indexPath.row].imageName!) // Assuming you have a "cellImage" property in your FindJobModel class to store the image
-//        }
-//
-//        tblCompanyContents.reloadData()
-//    }
+    @objc func headerImageViewTapped(_ gestureRecognizer: UITapGestureRecognizer) {
+        // let newImage: UIImage? // Set the new image you want to display on the cells
+        isHeaderSelected = !isHeaderSelected
+        changeAllCells(isSelected: isHeaderSelected)
+        tblCompanyContents.reloadData()
+    }
 
 }
