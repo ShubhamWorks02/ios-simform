@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510DB00E2A14932D00AFF737 /* PracticeTableViewController.swift */; };
 		515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */; };
 		515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */; };
 		515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB532A0E486E009A3DE4 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		510DB00E2A14932D00AFF737 /* PracticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewController.swift; sourceTree = "<group>"; };
 		515ABB4C2A0E486E009A3DE4 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				515ABB532A0E486E009A3DE4 /* ViewController.swift */,
 				515ABB642A0E550C009A3DE4 /* TableContentViewController.swift */,
 				519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */,
+				510DB00E2A14932D00AFF737 /* PracticeTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */,
 				515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */,
 				515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */,
+				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ class FindJobModel: NSObject {
     var companyName: String?
     var currentOpening: String?
     var isSelected: Bool = false
+    // Isimg
     
     override init() {
         super.init()
@@ -39,6 +40,5 @@ class FindJobModel: NSObject {
                 FindJobModel(imageName: "facebook", companyName: "faceBook", currentOpening: "SDE2"),
                 FindJobModel(imageName: "linkedIn", companyName: "LinkedIn", currentOpening: "UI/UX")]
     }
-    
     
 }

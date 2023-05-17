@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fMh-wW-bZ3">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -50,21 +50,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-wr-toV">
-                                <rect key="frame" x="76" y="114" width="240" height="117"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="16H-W5-qqL">
+                                <rect key="frame" x="0.0" y="59" width="393" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qyV-ev-cQM"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="qyV-ev-cQM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mpw-wr-toV" secondAttribute="bottom" constant="587" id="5ru-l3-ZZb"/>
-                            <constraint firstItem="Mpw-wr-toV" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="qyV-ev-cQM" secondAttribute="trailing" constant="77" id="C92-Mm-R58"/>
-                            <constraint firstItem="Mpw-wr-toV" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qyV-ev-cQM" secondAttribute="leading" constant="50" id="GTj-Dc-XOV"/>
-                            <constraint firstItem="Mpw-wr-toV" firstAttribute="top" secondItem="qyV-ev-cQM" secondAttribute="top" constant="55" id="t5v-6q-HnN"/>
+                            <constraint firstItem="16H-W5-qqL" firstAttribute="leading" secondItem="qyV-ev-cQM" secondAttribute="leading" id="Cnf-vd-q5F"/>
+                            <constraint firstItem="qyV-ev-cQM" firstAttribute="trailing" secondItem="16H-W5-qqL" secondAttribute="trailing" id="ba0-wn-7CG"/>
+                            <constraint firstItem="16H-W5-qqL" firstAttribute="top" secondItem="qyV-ev-cQM" secondAttribute="top" id="oWE-5e-quh"/>
+                            <constraint firstItem="qyV-ev-cQM" firstAttribute="bottom" secondItem="16H-W5-qqL" secondAttribute="bottom" constant="125" id="ogl-Hn-Nvc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -112,11 +109,38 @@
             </objects>
             <point key="canvasLocation" x="1059" y="20"/>
         </scene>
+        <!--Practice Table View Controller-->
+        <scene sceneID="qf7-fy-ghu">
+            <objects>
+                <viewController id="GaI-5e-6hP" customClass="PracticeTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOi-jg-92v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1gT-Zj-jd7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="634"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FJE-C3-NtU"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="FJE-C3-NtU" firstAttribute="bottom" secondItem="1gT-Zj-jd7" secondAttribute="bottom" constant="125" id="CWn-kb-fJl"/>
+                            <constraint firstItem="1gT-Zj-jd7" firstAttribute="top" secondItem="FJE-C3-NtU" secondAttribute="top" id="DRx-0C-FW3"/>
+                            <constraint firstItem="1gT-Zj-jd7" firstAttribute="leading" secondItem="FJE-C3-NtU" secondAttribute="leading" id="bqH-TU-L3b"/>
+                            <constraint firstItem="FJE-C3-NtU" firstAttribute="trailing" secondItem="1gT-Zj-jd7" secondAttribute="trailing" id="f6y-Rt-bm1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblViewPractice" destination="1gT-Zj-jd7" id="cTN-tp-9wz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWZ-XT-fxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766" y="20"/>
+        </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

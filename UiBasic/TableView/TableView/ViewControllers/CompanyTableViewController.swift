@@ -16,6 +16,7 @@ class CompanyTableViewController: UIViewController {
     // MARK: VARIABLES
     var openingList: [FindJobModel] = FindJobModel.getCurrentOpening()
     var isHeaderSelected: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initValues()
@@ -28,7 +29,7 @@ class CompanyTableViewController: UIViewController {
         tblCompanyContents.register(UINib(nibName: "CompanyTableViewCell", bundle: nil), forCellReuseIdentifier: "CompanyTableViewCell")
     }
     
-    // MARK: ACTIONS
+    // MARK: BUTTON ACTIONS
     @IBAction func btnSubmitPressed(_ sender: UIButton) {
         let filtereData = openingList.filter({$0.isSelected})
         print(filtereData)
@@ -36,21 +37,8 @@ class CompanyTableViewController: UIViewController {
     }
 }
 
-extension CompanyTableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-   //     changeAllCells(isSelected: false)
-        let indexData = openingList[indexPath.row]
-        
-        if indexData.isSelected {return}
-        changeAllCells(isSelected: false)
-        indexData.isSelected = true
-        openingList[indexPath.row] = indexData
-        
-        tblCompanyContents.reloadData()
-    }
-}
-
+// MARK: TBVDATASOURCE
 extension CompanyTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return openingList.count
@@ -61,7 +49,9 @@ extension CompanyTableViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let indexData = openingList[indexPath.row]
-        companyCell.configCell(data: indexData)
+        //companyCell.configCell(data: indexData, indexPath)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
+//        openingList[indexPath.] .addGestureRecognizer(tapGesture)
         // companyCell.lblCompanyName.text = openingList[indexPath.row].companyName
         // companyCell.imgLogo.image = UIImage(named: openingList[indexPath.row].imageName!)
         return companyCell
@@ -103,4 +93,18 @@ extension CompanyTableViewController: UITableViewDataSource {
         tblCompanyContents.reloadData()
     }
 
+}
+
+// MARK: TBVDELEGATES
+extension CompanyTableViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let indexData = openingList[indexPath.row]
+        if indexData.isSelected {return}
+        changeAllCells(isSelected: false)
+        indexData.isSelected = true
+        openingList[indexPath.row] = indexData
+        tblCompanyContents.reloadData()
+    }
+    
 }

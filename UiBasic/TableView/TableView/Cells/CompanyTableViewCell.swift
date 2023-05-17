@@ -28,6 +28,7 @@ class CompanyTableViewCell: UITableViewCell {
     func configCell(data: FindJobModel) {
         imgLogo.image = UIImage(named: data.imageName ?? "")
         lblCompanyName.text = data.companyName
+        //imgSelect.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
         if data.isSelected {
             imgSelect.backgroundColor = .white
             imgSelect.image = UIImage(named: "check")
@@ -36,5 +37,6 @@ class CompanyTableViewCell: UITableViewCell {
             imgSelect.image = UIImage(named: "uncheck")
         }
     }
+    
     
 }
