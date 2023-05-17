@@ -49,8 +49,11 @@ extension CompanyTableViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let indexData = openingList[indexPath.row]
-        //companyCell.configCell(data: indexData, indexPath)
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
+//        companyCell.imageDelegate = self
+        // companyCell.imageDelegate = self
+        companyCell.configCell(data: indexData, tap: tapGesture)
+                // let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
 //        openingList[indexPath.] .addGestureRecognizer(tapGesture)
         // companyCell.lblCompanyName.text = openingList[indexPath.row].companyName
         // companyCell.imgLogo.image = UIImage(named: openingList[indexPath.row].imageName!)
@@ -61,6 +64,35 @@ extension CompanyTableViewController: UITableViewDataSource {
         openingList.forEach({
             $0.isSelected = isSelected
         })
+    }
+    
+    @objc func imageSelectTapped(_ sender: UITapGestureRecognizer) {
+        
+        guard let indexPath = tblCompanyContents.indexPathForRow(at: sender.location(in: tblCompanyContents)) else {
+                return
+        }
+        let alertController = UIAlertController(title: "Selected", message: "You Have Selected \(indexPath.row+1)th company's opening", preferredStyle: .alert)
+
+            // Create the alert action
+            let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+                // Handle the user's response to the alert action
+                print("OK button tapped")
+            }
+
+            // Add the alert action to the alert controller
+            alertController.addAction(okAction)
+
+            // Present the alert controller
+            
+        if indexPath.row == 0 {
+            
+            print("tapped on row \(indexPath.row)")
+        }
+        if indexPath.row == 1 {
+            print("tapped on row \(indexPath.row)")
+        }
+        present(alertController, animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -108,3 +140,13 @@ extension CompanyTableViewController: UITableViewDelegate {
     }
     
 }
+
+//extension CompanyTableViewController: TapImageDelegate {
+//    func imageSelectTapped(cell: UITableViewCell) {
+//        print("selected?")
+//        let path = tblCompanyContents.indexPath(for: cell)
+//        if path?.row == 0 {
+//            print("dfdsfdfdfd")
+//        }
+//    }
+//}

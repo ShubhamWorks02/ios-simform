@@ -31,6 +31,9 @@
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-mw-S70">
                         <rect key="frame" x="308" y="22" width="25" height="25"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="4J7-97-HYw"/>
                             <constraint firstAttribute="width" constant="25" id="Kbl-52-1hg"/>

@@ -13,6 +13,7 @@ class CompanyTableViewCell: UITableViewCell {
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var lblCompanyName: UILabel!
     @IBOutlet weak var imgSelect: UIImageView!
+    //  var imageDelegate: TapImageDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +26,12 @@ class CompanyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell(data: FindJobModel) {
+    func configCell(data: FindJobModel, tap: UITapGestureRecognizer) {
         imgLogo.image = UIImage(named: data.imageName ?? "")
         lblCompanyName.text = data.companyName
-        //imgSelect.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
+        imgSelect.isUserInteractionEnabled = true
+        // let tap = UITapGestureRecognizer(target: self, action: #selector(imageSelectTap(_:)))
+        imgSelect.addGestureRecognizer(tap)
         if data.isSelected {
             imgSelect.backgroundColor = .white
             imgSelect.image = UIImage(named: "check")
@@ -38,5 +41,13 @@ class CompanyTableViewCell: UITableViewCell {
         }
     }
     
+//    @objc func imageSelectTap(_ sender: UITapGestureRecognizer) {
+//        print("objc called")
+//        imageDelegate?.imageSelectTapped(cell: self)
+//    }
     
 }
+//
+//protocol TapImageDelegate {
+//    func imageSelectTapped(cell: UITableViewCell)
+//}
