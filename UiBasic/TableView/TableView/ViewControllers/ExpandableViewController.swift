@@ -52,12 +52,16 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
             return
         }
         
-        if cell.lblDescription.numberOfLines == 3 {
-            cell.lblDescription.numberOfLines = 0
-        } else {
-            cell.lblDescription.numberOfLines = 3
-        }
-        tblExpandable.reloadRows(at: [path], with: .none)
+         cell.lblDescription.text = memberDetailsList[0].description
+        // cell.lblDescription.isHidden.toggle()
+        
+//        if cell.lblDescription.numberOfLines == 0 {
+//            cell.lblDescription.numberOfLines = 0
+//        } else {
+//            cell.lblDescription.numberOfLines = 3
+//        }
+        // tblExpandable.reloadData()
+         tblExpandable.reloadRows(at: [path], with: .fade)
     }
     
 }
@@ -67,6 +71,51 @@ extension ExpandableViewController: UITableViewDelegate {
         print("dimes")
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+    
+        headerView.backgroundColor = .lightGray
+        headerView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+
+        let textField = UITextField(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
+        textField.placeholder = "Enter text"
+        textField.borderStyle = .roundedRect
+        headerView.addSubview(textField)
+
+        let doneButton = UIButton(type: .system)
+        doneButton.frame = CGRect(x: 300, y: 10, width: 70, height: 30)
+        doneButton.setTitle("Done", for: .normal)
+        // doneButton.contentMode = .right
+        doneButton.addTarget(self, action: #selector(doneButtonTapped(_:)), for: .touchUpInside)
+        headerView.addSubview(doneButton)
+
+        return headerView
+    }
+    
+    @objc func doneButtonTapped(_ sender: UIButton) {
+        // Handle the "Done" button tap event
+        guard let headerView = sender.superview else {
+                return
+            }
+        var enteredText = ""
+            // Find the text field in the header view
+            for subview in headerView.subviews {
+                if let textField = subview as? UITextField {
+                     enteredText = textField.text ?? ""
+                    print("Entered text: \(enteredText)")
+                    break
+                }
+                
+            }
+        memberDetailsList.forEach{
+            $0.description = enteredText
+        }
+        tblExpandable.reloadData()
+    }
+
+
+
 }
 
 
