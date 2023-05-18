@@ -16,20 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="411" height="161"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shubham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-yS-KYz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shubham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-yS-KYz">
                         <rect key="frame" x="8" y="8" width="86.333333333333329" height="23"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is a member since 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vua-CH-qHY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Is a member since 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vua-CH-qHY">
                         <rect key="frame" x="8" y="39" width="170.66666666666666" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ula-O2-ZFG">
-                        <rect key="frame" x="8" y="65" width="395" height="57.333333333333343"/>
+                        <rect key="frame" x="8" y="122.33333333333333" width="395" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="3WY-Qu-egp"/>
+                        </constraints>
                         <string key="text">By reusing the prototype cell, you can efficiently manage the creation and recycling of cells as the table view is scrolled. This approach helps improve performance and memory usage by reusing existing cells instead of creating new ones for each row.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
@@ -70,6 +73,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnSeeMore" destination="5rb-Dm-Ee9" id="RVp-Tr-YyZ"/>
+                <outlet property="heightOut" destination="3WY-Qu-egp" id="gO9-oL-DN4"/>
                 <outlet property="lblDate" destination="wYr-do-Y3x" id="hPJ-nS-kTQ"/>
                 <outlet property="lblDescription" destination="Ula-O2-ZFG" id="twH-eR-eTc"/>
                 <outlet property="lblMemberDuration" destination="Vua-CH-qHY" id="9bb-hQ-bEK"/>

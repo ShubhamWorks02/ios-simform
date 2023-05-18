@@ -87,7 +87,7 @@ extension ExpandableViewController: UITableViewDelegate {
         let headerView = UIView()
     
         headerView.backgroundColor = .lightGray
-        headerView.layoutMargins = UIEdgeInsets(top: , left: 0, bottom: 200, right: 0)
+        headerView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
 
         let textField = UITextField(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
         textField.placeholder = "Enter text"
@@ -97,6 +97,7 @@ extension ExpandableViewController: UITableViewDelegate {
         let doneButton = UIButton(type: .system)
         doneButton.frame = CGRect(x: 300, y: 10, width: 70, height: 30)
         doneButton.setTitle("Done", for: .normal)
+        doneButton.backgroundColor = .lightGray
         // doneButton.contentMode = .right
         doneButton.addTarget(self, action: #selector(doneButtonTapped(_:)), for: .touchUpInside)
         headerView.addSubview(doneButton)

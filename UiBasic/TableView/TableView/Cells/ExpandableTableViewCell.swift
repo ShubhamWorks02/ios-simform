@@ -17,6 +17,7 @@ class ExpandableTableViewCell: UITableViewCell {
     @IBOutlet weak var btnSeeMore: UIButton!
     var seeMoreDelegate: BtnDelegate?
      // var isSeeMoreSelected: Bool
+    @IBOutlet weak var heightOut: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,12 +36,8 @@ class ExpandableTableViewCell: UITableViewCell {
         lblMemberDuration.text = data.memberSincetxt
         lblDescription.text = data.description
         lblDate.text = data.date
-        
+        heightOut.priority = UILayoutPriority(data.isExpanded ? 1 : 1000)
         lblDescription.numberOfLines = data.isExpanded ? 0 : 3
-        
-//        lblDescription.numberOfLines = 0
-//        lblDescription.text = ""
-//        btnSeeMore.isSelected = false
     }
     
     // MARK: ACTIONS
