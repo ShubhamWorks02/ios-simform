@@ -25,6 +25,9 @@ class ExpandableViewController: UIViewController {
         tblExpandable.delegate = self
         tblExpandable.dataSource = self
         tblExpandable.register(UINib(nibName: "ExpandableTableViewCell", bundle: nil), forCellReuseIdentifier: "ExpandableTableViewCell")
+        
+        tblExpandable.estimatedRowHeight = 60
+        tblExpandable.rowHeight = UITableView.automaticDimension
 
     }
 }
@@ -47,36 +50,44 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
     }
     
     func btnSeemoreTapped(cell: ExpandableTableViewCell) {
+        print("clicked")
         guard let path = tblExpandable.indexPath(for: cell) else {
             print("returned unbinded")
             return
         }
+
         
-         cell.lblDescription.text = memberDetailsList[0].description
+         // cell.lblDescription.text = memberDetailsList[0].description
         // cell.lblDescription.isHidden.toggle()
+        radioToggleAllExcept(exceptedIndex: path)
         
-//        if cell.lblDescription.numberOfLines == 0 {
-//            cell.lblDescription.numberOfLines = 0
-//        } else {
-//            cell.lblDescription.numberOfLines = 3
-//        }
-        // tblExpandable.reloadData()
-         tblExpandable.reloadRows(at: [path], with: .fade)
+        tblExpandable.reloadData()
+//        tblExpandable.reloadRows(at: [path], with: .automatic)
     }
+    
+    private func radioToggleAllExcept(exceptedIndex: IndexPath) {
+        // getting the value to be toggled
+        let curValue = memberDetailsList[exceptedIndex.row].isExpanded
+        memberDetailsList.forEach {
+                $0.isExpanded = false
+        }
+        memberDetailsList[exceptedIndex.row].isExpanded = !curValue
+    }
+    
     
 }
 
 extension ExpandableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("dimes")
-        return UITableView.automaticDimension
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//       // print("dimes")
+//        return UITableView.automaticDimension
+//    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
     
         headerView.backgroundColor = .lightGray
-        headerView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+        headerView.layoutMargins = UIEdgeInsets(top: , left: 0, bottom: 200, right: 0)
 
         let textField = UITextField(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
         textField.placeholder = "Enter text"

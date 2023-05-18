@@ -33,17 +33,21 @@ class ExpandableTableViewCell: UITableViewCell {
     func configCell(data: MemberDetailsModel) {
         lblPersonName.text = data.personName
         lblMemberDuration.text = data.memberSincetxt
-//        lblDescription.text = data.description
+        lblDescription.text = data.description
         lblDate.text = data.date
-        //lblDescription.numberOfLines = 0
-        lblDescription.text = ""
-        btnSeeMore.isSelected = false
+        
+        lblDescription.numberOfLines = data.isExpanded ? 0 : 3
+        
+//        lblDescription.numberOfLines = 0
+//        lblDescription.text = ""
+//        btnSeeMore.isSelected = false
     }
     
     // MARK: ACTIONS
     @IBAction func seeMoreTapped(_ sender: UIButton) {
         
         seeMoreDelegate?.btnSeemoreTapped(cell: self)
+    
     }
 }
 
