@@ -196,9 +196,9 @@
             filePath = "TableView/ViewControllers/ExpandableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "doneButtonTapped(_:)"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "buttonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

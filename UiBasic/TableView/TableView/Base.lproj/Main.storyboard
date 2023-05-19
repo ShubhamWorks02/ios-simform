@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tya-eX-T4F">
-                                <rect key="frame" x="0.0" y="59" width="393" height="659"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -158,7 +158,7 @@
                             <constraint firstItem="E4n-c6-qvU" firstAttribute="trailing" secondItem="Tya-eX-T4F" secondAttribute="trailing" id="FFE-DY-yqN"/>
                             <constraint firstItem="Tya-eX-T4F" firstAttribute="leading" secondItem="E4n-c6-qvU" secondAttribute="leading" id="Mxi-xR-p3d"/>
                             <constraint firstItem="Tya-eX-T4F" firstAttribute="top" secondItem="E4n-c6-qvU" secondAttribute="top" id="efl-AQ-BWv"/>
-                            <constraint firstItem="E4n-c6-qvU" firstAttribute="bottom" secondItem="Tya-eX-T4F" secondAttribute="bottom" constant="100" id="fwd-9e-UdT"/>
+                            <constraint firstItem="E4n-c6-qvU" firstAttribute="bottom" secondItem="Tya-eX-T4F" secondAttribute="bottom" constant="50" id="fwd-9e-UdT"/>
                         </constraints>
                     </view>
                     <connections>

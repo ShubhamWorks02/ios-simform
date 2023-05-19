@@ -14,6 +14,7 @@ class ExpandableViewController: UIViewController {
     
     // MARK: VARIABLES
     var memberDetailsList = MemberDetailsModel.getMemberDetails()
+    var isSelectAllBtnSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +26,8 @@ class ExpandableViewController: UIViewController {
         tblExpandable.delegate = self
         tblExpandable.dataSource = self
         tblExpandable.register(UINib(nibName: "ExpandableTableViewCell", bundle: nil), forCellReuseIdentifier: "ExpandableTableViewCell")
-        
         tblExpandable.estimatedRowHeight = 60
-        tblExpandable.rowHeight = UITableView.automaticDimension
-
+        //tblExpandable.rowHeight = UITableView.automaticDimension
     }
 }
 
@@ -78,15 +77,19 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
 }
 
 extension ExpandableViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//       // print("dimes")
-//        return UITableView.automaticDimension
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       // print("dimes")
+        return UITableView.automaticDimension
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-    
-        headerView.backgroundColor = .lightGray
+        let red: CGFloat = 18.0
+        let green: CGFloat = 21.0
+        let blue: CGFloat = 30.0
+
+        let customColor = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0)
+        headerView.backgroundColor = customColor
         headerView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
 
         let textField = UITextField(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
@@ -96,14 +99,56 @@ extension ExpandableViewController: UITableViewDelegate {
 
         let doneButton = UIButton(type: .system)
         doneButton.frame = CGRect(x: 300, y: 10, width: 70, height: 30)
+        doneButton.layer.cornerRadius = 10
+        doneButton.tintColor = .white
+        
         doneButton.setTitle("Done", for: .normal)
-        doneButton.backgroundColor = .lightGray
+        doneButton.backgroundColor = customColor
         // doneButton.contentMode = .right
         doneButton.addTarget(self, action: #selector(doneButtonTapped(_:)), for: .touchUpInside)
         headerView.addSubview(doneButton)
 
         return headerView
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+            let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tblExpandable.bounds.width, height: 50))
+            footerView.backgroundColor = .lightGray
+
+            let button = UIButton(type: .system)
+            button.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+            button.setImage(UIImage(named: "uncheck"), for: .normal)
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+            button.isSelected = false
+            footerView.addSubview(button)
+
+            return footerView
+        }
+
+        func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+            return 50
+        }
+
+    @objc func buttonTapped(_ sender: UIButton) {
+        //sender.imageView?.image = sender.isSelected ? UIImage(named: "check") : UIImage(named: "Uncheck")
+        isSelectAllBtnSelected.toggle()
+        
+        print("isSelected: \(isSelectAllBtnSelected)")
+        var select = isSelectAllBtnSelected
+        if select {
+            memberDetailsList.forEach {
+                $0.isExpanded = select
+            }
+        } else {
+            memberDetailsList.forEach {
+                $0.isExpanded = false
+            }
+        }
+        
+        tblExpandable.reloadData()
+
+    }
+
     
     @objc func doneButtonTapped(_ sender: UIButton) {
         // Handle the "Done" button tap event
@@ -125,9 +170,6 @@ extension ExpandableViewController: UITableViewDelegate {
         }
         tblExpandable.reloadData()
     }
-
-
-
 }
 
 

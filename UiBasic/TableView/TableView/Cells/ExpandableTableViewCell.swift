@@ -36,7 +36,7 @@ class ExpandableTableViewCell: UITableViewCell {
         lblMemberDuration.text = data.memberSincetxt
         lblDescription.text = data.description
         lblDate.text = data.date
-        heightOut.priority = UILayoutPriority(data.isExpanded ? 1 : 1000)
+        heightOut.priority = UILayoutPriority(data.isExpanded ? 1 : 1000) // initial label not visible
         lblDescription.numberOfLines = data.isExpanded ? 0 : 3
     }
     
