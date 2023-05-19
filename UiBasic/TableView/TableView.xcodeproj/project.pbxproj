@@ -27,6 +27,7 @@
 		519BC2F62A1233E200AE6B38 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519BC2F42A1233E200AE6B38 /* CompanyTableViewCell.xib */; };
 		519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */; };
 		519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */; };
+		51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD4C2E2A179667000F463F /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		519BC2F42A1233E200AE6B38 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
 		519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 		519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJobModel.swift; sourceTree = "<group>"; };
+		51CD4C2E2A179667000F463F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		515ABB4E2A0E486E009A3DE4 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				51CD4C2D2A17964C000F463F /* Helper */,
 				519BC2FA2A12388500AE6B38 /* AppDelegate */,
 				519BC2F92A1237E500AE6B38 /* ViewControllers */,
 				515ABB632A0E54CC009A3DE4 /* Cells */,
@@ -131,6 +134,14 @@
 				515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		51CD4C2D2A17964C000F463F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				51CD4C2E2A179667000F463F /* AppConstants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */,
 				515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */,
 				515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */,
+				51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */,
 				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
 			);
