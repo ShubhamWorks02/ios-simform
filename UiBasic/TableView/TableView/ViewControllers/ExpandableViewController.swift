@@ -6,7 +6,7 @@
 //
 
 /*
-This project involves functionality of radio button selection , select all btn , expandable label , Searchbar filtering live.
+This project involves functionality of radio button selection , select all btn , expandable label , Searchbar filtering live, and designed it based on concept like DEBOUNCING.
 */
 
 import UIKit
@@ -17,12 +17,12 @@ class ExpandableViewController: UIViewController {
     @IBOutlet weak var tblExpandable: UITableView!
     
     // MARK: VARIABLES
-    var memberDetailsList = MemberDetailsModel.getMemberDetails()
-    var searchBar: UISearchBar = UISearchBar()
-    var filteredList: [MemberDetailsModel] = []
-    var isSelectAllBtnSelected = false
+    private var searchTimer: Timer?
+    private var memberDetailsList = MemberDetailsModel.getMemberDetails()
+    private var searchBar: UISearchBar = UISearchBar()
+    private var filteredList: [MemberDetailsModel] = []
+    private var isSelectAllBtnSelected = false
     private var searchIsActive: Bool {
-        print("searchBar.searchTextField.hasText",searchBar.searchTextField.hasText)
         return searchBar.searchTextField.hasText
     }
     
@@ -44,24 +44,32 @@ class ExpandableViewController: UIViewController {
     }
 }
 
-
+// MARK: SEARCHBAR DELEGATE
 extension ExpandableViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredList = memberDetailsList.filter {
-            $0.description?.lowercased().contains(searchText.lowercased()) ?? false
+        // Cancel any previous search timer
+        searchTimer?.invalidate()
+        // Start a new search timer
+        searchTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
+            // Perform the filtering after the debounce time interval
+            self?.filterData(with: searchText)
         }
-    print(searchText)
-         // filteredList.forEach{print($0.description!)}
-        tblExpandable.reloadData()
+        print(searchTimer)
     }
 
+    func filterData(with searchText: String) {
+        print("Is searched",searchText)
+        filteredList = memberDetailsList.filter { item in
+            return item.description?.lowercased().contains(searchText.lowercased()) ?? false
+        }
+        tblExpandable.reloadData()
+    }
+    
 }
 
 // MARK: TABLEVIEW DATASOURCE
 extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchIsActive ? filteredList.count : memberDetailsList.count
@@ -71,7 +79,7 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
         guard let cell = tblExpandable.dequeueReusableCell(withIdentifier: Constants.Cell.expandableTableViewCell) as? ExpandableTableViewCell else {
             return UITableViewCell()
         }
-        let indexData = memberDetailsList[indexPath.row]
+        // let indexData = memberDetailsList[indexPath.row]
         cell.seeMoreDelegate = self
         cell.configCell(data: searchIsActive ? filteredList[indexPath.row] : memberDetailsList[indexPath.row])
         return cell
@@ -91,7 +99,7 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
         // getting the value to be toggled
         let curValue = memberDetailsList[exceptedIndex.row].isExpanded
         memberDetailsList.forEach {
-                $0.isExpanded = false
+            $0.isExpanded = false
         }
         memberDetailsList[exceptedIndex.row].isExpanded = !curValue
     }
@@ -139,7 +147,7 @@ extension ExpandableViewController: UITableViewDelegate {
             return 50
         }
 
-    @objc func buttonTapped(_ sender: UIButton) {
+    @objc private func buttonTapped(_ sender: UIButton) {
         // sender.imageView?.image = sender.isSelected ? UIImage(named: "check") : UIImage(named: "Uncheck")
         isSelectAllBtnSelected.toggle()
         print("isSelected: \(isSelectAllBtnSelected)")
@@ -156,7 +164,7 @@ extension ExpandableViewController: UITableViewDelegate {
         tblExpandable.reloadData()
     }
 
-    @objc func doneButtonTapped(_ sender: UIButton) {
+    @objc private func doneButtonTapped(_ sender: UIButton) {
         // Handle the "Done" button tap event
         guard let headerView = sender.superview else {
                 return
@@ -170,7 +178,6 @@ extension ExpandableViewController: UITableViewDelegate {
                     break
                 }
             }
-        
         memberDetailsList.forEach{
             $0.description = enteredText
         }
@@ -185,7 +192,7 @@ extension ExpandableViewController {
         tblExpandable.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
     }
     
-    func createSearchBar() -> UISearchBar {
+    private func createSearchBar() -> UISearchBar {
         let searchBar = UISearchBar(frame: CGRect(x: 10, y: 0, width: 200, height: 30))
         searchBar.placeholder = "Enter text"
         searchBar.searchBarStyle = .minimal
@@ -213,11 +220,11 @@ extension ExpandableViewController {
         }
     }
     
-    func createCustomColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    private func createCustomColor(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0)
     }
     
-    func createButton() -> UIButton {
+    private func createButton() -> UIButton {
         let doneButton = UIButton(type: .system)
         doneButton.frame = CGRect(x: 300, y: 10, width: 70, height: 30)
         doneButton.layer.cornerRadius = 10
@@ -228,7 +235,7 @@ extension ExpandableViewController {
         return doneButton
     }
     
-    func createTextField() -> UITextField {
+    private func createTextField() -> UITextField {
         let textField = UITextField(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
         textField.placeholder = "Enter text"
         textField.borderStyle = .roundedRect
