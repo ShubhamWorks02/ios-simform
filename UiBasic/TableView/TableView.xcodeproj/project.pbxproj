@@ -67,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5112E4982A1B4EAB0069AEF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */,
+				5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		515ABB432A0E486E009A3DE4 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +103,7 @@
 				515ABB582A0E486F009A3DE4 /* Assets.xcassets */,
 				515ABB5A2A0E486F009A3DE4 /* LaunchScreen.storyboard */,
 				515ABB5D2A0E486F009A3DE4 /* Info.plist */,
-				519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */,
-				5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */,
+				5112E4982A1B4EAB0069AEF5 /* Models */,
 			);
 			path = TableView;
 			sourceTree = "<group>";

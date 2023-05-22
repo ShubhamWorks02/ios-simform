@@ -5,6 +5,10 @@
 //  Created by Shubham Bhatt on 17/05/23.
 //
 
+/*
+This project involves functionality of radio button selection , select all btn , expandable label , Searchbar filtering live.
+*/
+
 import UIKit
 
 class ExpandableViewController: UIViewController {
@@ -18,7 +22,8 @@ class ExpandableViewController: UIViewController {
     var filteredList: [MemberDetailsModel] = []
     var isSelectAllBtnSelected = false
     private var searchIsActive: Bool {
-          searchBar.searchTextField.hasText
+        print("searchBar.searchTextField.hasText",searchBar.searchTextField.hasText)
+        return searchBar.searchTextField.hasText
     }
     
     override func viewDidLoad() {
@@ -27,46 +32,31 @@ class ExpandableViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //
+    // MARK: INITIALIZATION
     private func initValues() {
         tblExpandable.delegate = self
         tblExpandable.dataSource = self
         tblExpandable.register(UINib(nibName: Constants.Cell.expandableTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.expandableTableViewCell)
         tblExpandable.estimatedRowHeight = 60
         configureRefreshControl()
-        searchBar.delegate = self
-//        print(type(of: memberDetailsList))
-//        print(searchIsActive)
+        searchBar.isUserInteractionEnabled = true
         //tblExpandable.rowHeight = UITableView.automaticDimension
     }
 }
 
-//extension ExpandableViewController: UISearchBarDelegate {
-//
-//        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//
-//                filteredList = memberDetailsList.filter {
-//
-//                        $0.description?.lowercased().contains(
-//
-//                                searchText.lowercased()
-//
-//                            )
-//
-//                    }
-//
-//                tblExpandable.reloadData()
-//
-//            }
-//}
-extension ExpandableViewController: UISearchBarDelegate {
 
+extension ExpandableViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         filteredList = memberDetailsList.filter {
             $0.description?.lowercased().contains(searchText.lowercased()) ?? false
         }
+    print(searchText)
+         // filteredList.forEach{print($0.description!)}
         tblExpandable.reloadData()
     }
+
 }
 
 // MARK: TABLEVIEW DATASOURCE
@@ -106,7 +96,6 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
         memberDetailsList[exceptedIndex.row].isExpanded = !curValue
     }
     
-    
 }
 
 // MARK: TABLEVIEW DELEGATE
@@ -115,24 +104,7 @@ extension ExpandableViewController: UITableViewDelegate {
        // print("dimes")
         return UITableView.automaticDimension
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView()
-//        let customColor = createCustomColor(red: 18, green: 21, blue: 30)
-//
-//        headerView.backgroundColor = customColor
-//        headerView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
-//
-//
-//        headerView.addSubview(createTextField())
-//
-//        let doneButton = createButton()
-//        doneButton.backgroundColor = customColor
-//        headerView.addSubview(doneButton)
-//
-//        return headerView
-//    }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let customColor = createCustomColor(red: 18, green: 21, blue: 30)
@@ -149,14 +121,6 @@ extension ExpandableViewController: UITableViewDelegate {
 
         return headerView
     }
-
-    func createSearchBar() -> UISearchBar {
-        let searchBar = UISearchBar(frame: CGRect(x: 10, y: 10, width: 200, height: 30))
-        searchBar.placeholder = "Enter text"
-        searchBar.searchBarStyle = .minimal
-        return searchBar
-    }
-
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
             let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tblExpandable.bounds.width, height: 50))
@@ -168,7 +132,6 @@ extension ExpandableViewController: UITableViewDelegate {
             button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
             button.isSelected = false
             footerView.addSubview(button)
-
             return footerView
         }
 
@@ -177,7 +140,7 @@ extension ExpandableViewController: UITableViewDelegate {
         }
 
     @objc func buttonTapped(_ sender: UIButton) {
-//        sender.imageView?.image = sender.isSelected ? UIImage(named: "check") : UIImage(named: "Uncheck")
+        // sender.imageView?.image = sender.isSelected ? UIImage(named: "check") : UIImage(named: "Uncheck")
         isSelectAllBtnSelected.toggle()
         print("isSelected: \(isSelectAllBtnSelected)")
         let select = isSelectAllBtnSelected
@@ -193,7 +156,6 @@ extension ExpandableViewController: UITableViewDelegate {
         tblExpandable.reloadData()
     }
 
-    
     @objc func doneButtonTapped(_ sender: UIButton) {
         // Handle the "Done" button tap event
         guard let headerView = sender.superview else {
@@ -213,7 +175,6 @@ extension ExpandableViewController: UITableViewDelegate {
             $0.description = enteredText
         }
         tblExpandable.reloadData()
-        
     }
 }
 
@@ -224,6 +185,22 @@ extension ExpandableViewController {
         tblExpandable.refreshControl?.addTarget(self, action: #selector(handleRefreshControl), for: .valueChanged)
     }
     
+    func createSearchBar() -> UISearchBar {
+        let searchBar = UISearchBar(frame: CGRect(x: 10, y: 0, width: 200, height: 30))
+        searchBar.placeholder = "Enter text"
+        searchBar.searchBarStyle = .minimal
+        searchBar.delegate = self
+        if let textField = searchBar.value(forKey: "searchField") as? UITextField {
+            textField.textColor = .lightGray
+            textField.attributedPlaceholder = NSAttributedString(string: "Enter text", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+            if let searchIconView = textField.leftView as? UIImageView {
+                searchIconView.image = searchIconView.image?.withRenderingMode(.alwaysTemplate)
+                searchIconView.tintColor = .lightGray
+            }
+        }
+        return searchBar
+    }
+    
     @objc private func handleRefreshControl() {
         // tblExpandable.refreshControl?.beginRefreshing()
         tblExpandable.reloadData()
@@ -231,7 +208,7 @@ extension ExpandableViewController {
         memberDetailsList = MemberDetailsModel.getMemberDetails()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//             Thread.sleep(forTimeInterval: 5)
+            // Thread.sleep(forTimeInterval: 5)
             self.tblExpandable.refreshControl?.endRefreshing()
         }
     }
@@ -246,7 +223,6 @@ extension ExpandableViewController {
         doneButton.layer.cornerRadius = 10
         doneButton.tintColor = .white
         doneButton.setTitle("Done", for: .normal)
-        
         // doneButton.contentMode = .right
         doneButton.addTarget(self, action: #selector(doneButtonTapped(_:)), for: .touchUpInside)
         return doneButton
