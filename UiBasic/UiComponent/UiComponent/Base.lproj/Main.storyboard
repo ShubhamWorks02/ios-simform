@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mIj-pL-NKh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -859,10 +859,10 @@
     </scenes>
     <designables>
         <designable name="ACA-rA-PvP">
-            <size key="intrinsicContentSize" width="103" height="42.666666666666664"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="xTe-mU-suP">
-            <size key="intrinsicContentSize" width="147.33333333333334" height="46"/>
+            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
         </designable>
     </designables>
     <resources>

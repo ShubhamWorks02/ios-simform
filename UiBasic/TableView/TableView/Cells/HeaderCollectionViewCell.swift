@@ -16,5 +16,13 @@ class HeaderCollectionViewCell: UICollectionReusableView {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    private func initView() {
+        
+    }
+    
+    func configure(categoryName: String) {
+        lblHeaderCategory.text = categoryName
+    }
+ 
 }

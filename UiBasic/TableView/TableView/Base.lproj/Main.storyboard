@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -245,29 +246,29 @@
             </objects>
             <point key="canvasLocation" x="3119.8473282442746" y="19.718309859154932"/>
         </scene>
-        <!--View Controller-->
+        <!--Demo Collection View Controller-->
         <scene sceneID="Wxs-DR-z1o">
             <objects>
-                <viewController id="OZ6-dr-JLr" sceneMemberID="viewController">
+                <viewController id="OZ6-dr-JLr" customClass="DemoCollectionViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oe1-pt-Uru">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CO-Hz-FRp" userLabel="BackButton">
                                 <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="56.666666666666664"/>
-                                <color key="backgroundColor" red="0.070588235289999995" green="0.08235294118" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.074509803921568626" green="0.08235294118" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnw-Vm-qIZ">
-                                <rect key="frame" x="157" y="16.333333333333332" width="100.33333333333331" height="23.999999999999996"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="155.33333333333334" y="16.333333333333332" width="103.33333333333334" height="23.999999999999996"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nwu-V6-6AV">
                                 <rect key="frame" x="0.0" y="56.666666666666686" width="414" height="679.33333333333326"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="viewColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hfO-OQ-V3a">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -291,7 +292,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cey-zr-Nr6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.043137254901960784" green="0.050980392156862744" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nwu-V6-6AV" firstAttribute="leading" secondItem="cey-zr-Nr6" secondAttribute="leading" id="2Lw-Hs-Vdu"/>
                             <constraint firstItem="nwu-V6-6AV" firstAttribute="top" secondItem="3CO-Hz-FRp" secondAttribute="bottom" id="3Lc-Pe-5ap"/>
@@ -303,6 +304,9 @@
                             <constraint firstItem="3CO-Hz-FRp" firstAttribute="leading" secondItem="cey-zr-Nr6" secondAttribute="leading" id="oLM-VV-3H7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="nwu-V6-6AV" id="U2a-Ju-7wd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjx-lh-oNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,6 +343,9 @@
         <image name="back" width="42.666667938232422" height="42.666667938232422"/>
         <image name="google" width="21.333333969116211" height="21.333333969116211"/>
         <image name="referenceScreen" width="750" height="1624"/>
+        <namedColor name="viewColor">
+            <color red="0.043137254901960784" green="0.050980392156862744" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

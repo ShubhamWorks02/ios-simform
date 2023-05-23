@@ -21,6 +21,7 @@
 		515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB642A0E550C009A3DE4 /* TableContentViewController.swift */; };
 		515ABB682A0E5579009A3DE4 /* IndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB662A0E5579009A3DE4 /* IndexTableViewCell.swift */; };
 		515ABB692A0E5579009A3DE4 /* IndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515ABB672A0E5579009A3DE4 /* IndexTableViewCell.xib */; };
+		5163A2162A1CA2EA0074862F /* DemoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5163A2152A1CA2EA0074862F /* DemoCollectionViewController.swift */; };
 		5188FA0B2A14FD8600696B25 /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA092A14FD8600696B25 /* ExpandableTableViewCell.swift */; };
 		5188FA0C2A14FD8600696B25 /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5188FA0A2A14FD8600696B25 /* ExpandableTableViewCell.xib */; };
 		5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */; };
@@ -54,6 +55,7 @@
 		515ABB642A0E550C009A3DE4 /* TableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableContentViewController.swift; sourceTree = "<group>"; };
 		515ABB662A0E5579009A3DE4 /* IndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTableViewCell.swift; sourceTree = "<group>"; };
 		515ABB672A0E5579009A3DE4 /* IndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndexTableViewCell.xib; sourceTree = "<group>"; };
+		5163A2152A1CA2EA0074862F /* DemoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewController.swift; sourceTree = "<group>"; };
 		5188FA092A14FD8600696B25 /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 		5188FA0A2A14FD8600696B25 /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableTableViewCell.xib; sourceTree = "<group>"; };
 		5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				510DB00E2A14932D00AFF737 /* PracticeTableViewController.swift */,
 				5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */,
 				5112E49D2A1B7FA50069AEF5 /* CollectionViewController.swift */,
+				5163A2152A1CA2EA0074862F /* DemoCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */,
 				515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */,
 				51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */,
+				5163A2162A1CA2EA0074862F /* DemoCollectionViewController.swift in Sources */,
 				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
 			);

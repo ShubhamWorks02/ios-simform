@@ -21,10 +21,13 @@ class ViewController: UIViewController {
         textLabelOutlet.backgroundColor = UIColor.blue
         let tap = UITapGestureRecognizer(target: self, action: #selector(changeBgColour(sender: )))
         textLabelOutlet.isUserInteractionEnabled = true
+//        let tap2 = UITapGestureRecognizer(target: self, action: #selector(printlink(sender: )))
         textLabelOutlet.addGestureRecognizer(tap)
+//        hyperlinkLabel.addGestureRecognizer(tap2)
         do {
             let str = try NSAttributedString(markdown: "*github* [link](https://github.com/) ")
             hyperlinkLabel.attributedText = str
+            
         }
         catch {
             
@@ -38,6 +41,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+//    @objc func printlink(sender: UITapGestureRecognizer){
+//        textLabelOutlet.text = hyperlinkLabel.attributedText as? String
+//    }
+    
     @objc func changeBgColour(sender: UITapGestureRecognizer){
         if(didTap) {
             textLabelOutlet.backgroundColor = UIColor.yellow
