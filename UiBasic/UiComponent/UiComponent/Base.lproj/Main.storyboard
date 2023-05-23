@@ -706,7 +706,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OJ-dt-tor">
                                 <rect key="frame" x="0.0" y="274" width="393" height="250"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTe-mU-suP" customClass="UITextField1" customModule="JobSeek" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="E-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTe-mU-suP" customClass="UITextField1" customModule="UiComponent" customModuleProvider="target">
                                         <rect key="frame" x="25" y="22.000000000000004" width="343" height="57.333333333333343"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -719,7 +719,7 @@
                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="mail"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACA-rA-PvP" customClass="UITextField1" customModule="JobSeek" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACA-rA-PvP" customClass="UITextField1" customModule="UiComponent" customModuleProvider="target">
                                         <rect key="frame" x="25" y="99.333333333333314" width="343" height="57.333333333333343"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -859,10 +859,10 @@
     </scenes>
     <designables>
         <designable name="ACA-rA-PvP">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="103" height="42.666666666666664"/>
         </designable>
         <designable name="xTe-mU-suP">
-            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
+            <size key="intrinsicContentSize" width="147.33333333333334" height="46"/>
         </designable>
     </designables>
     <resources>
