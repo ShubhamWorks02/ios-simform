@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="tvg-33-pQe" firstAttribute="centerY" secondItem="gyt-af-gT5" secondAttribute="centerY" id="cVG-7r-1xb"/>
                             <constraint firstItem="tvg-33-pQe" firstAttribute="centerX" secondItem="gyt-af-gT5" secondAttribute="centerX" id="giL-Mm-YGE"/>
@@ -44,6 +44,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.070588235289999995" green="0.60392156860000001" blue="0.602715373" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="gyt-af-gT5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H9F-ha-yN7"/>
                 <constraint firstItem="gyt-af-gT5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MFU-2b-CuC"/>
@@ -51,12 +52,16 @@
                 <constraint firstAttribute="bottom" secondItem="gyt-af-gT5" secondAttribute="bottom" id="aEQ-M3-TGR"/>
             </constraints>
             <size key="customSize" width="191" height="94"/>
+            <connections>
+                <outlet property="lblChapterStatus" destination="xTz-bq-e4S" id="foa-u0-ztY"/>
+                <outlet property="lblChapters" destination="tvg-33-pQe" id="6Tq-xL-nSK"/>
+            </connections>
             <point key="canvasLocation" x="237.40458015267174" y="4.2253521126760569"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

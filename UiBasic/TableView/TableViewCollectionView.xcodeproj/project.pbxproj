@@ -12,6 +12,7 @@
 		5112E49E2A1B7FA50069AEF5 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112E49D2A1B7FA50069AEF5 /* CollectionViewController.swift */; };
 		5112E4A12A1BB9110069AEF5 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112E49F2A1BB9110069AEF5 /* HeaderCollectionViewCell.swift */; };
 		5112E4A22A1BB9110069AEF5 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5112E4A02A1BB9110069AEF5 /* HeaderCollectionViewCell.xib */; };
+		5115C50B2A1E5E630091892D /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115C50A2A1E5E630091892D /* DateViewController.swift */; };
 		515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */; };
 		515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */; };
 		515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB532A0E486E009A3DE4 /* ViewController.swift */; };
@@ -32,9 +33,11 @@
 		519BC2F62A1233E200AE6B38 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519BC2F42A1233E200AE6B38 /* CompanyTableViewCell.xib */; };
 		519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */; };
 		519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */; };
+		51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6D7472A1E530600FAB665 /* PickerViewController.swift */; };
 		51BB301D2A1BBC2D0015E9E2 /* OpeningDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */; };
 		51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */; };
 		51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */; };
+		51BC2C652A1DE1DF00E146D7 /* ChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BC2C642A1DE1DF00E146D7 /* ChapterModel.swift */; };
 		51CB1DD62A1DCDC3006D2E95 /* ContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1DD42A1DCDC3006D2E95 /* ContainerTableViewCell.swift */; };
 		51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1DD52A1DCDC3006D2E95 /* ContainerTableViewCell.xib */; };
 		51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1DD82A1DCE7F006D2E95 /* NestedCollectionViewCell.swift */; };
@@ -49,6 +52,7 @@
 		5112E49D2A1B7FA50069AEF5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		5112E49F2A1BB9110069AEF5 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		5112E4A02A1BB9110069AEF5 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		5115C50A2A1E5E630091892D /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		515ABB4C2A0E486E009A3DE4 /* TableViewCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +75,11 @@
 		519BC2F42A1233E200AE6B38 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
 		519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 		519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJobModel.swift; sourceTree = "<group>"; };
+		51A6D7472A1E530600FAB665 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningDetails.swift; sourceTree = "<group>"; };
 		51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionViewCell.swift; sourceTree = "<group>"; };
 		51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCollectionViewCell.xib; sourceTree = "<group>"; };
+		51BC2C642A1DE1DF00E146D7 /* ChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterModel.swift; sourceTree = "<group>"; };
 		51CB1DD42A1DCDC3006D2E95 /* ContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewCell.swift; sourceTree = "<group>"; };
 		51CB1DD52A1DCDC3006D2E95 /* ContainerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerTableViewCell.xib; sourceTree = "<group>"; };
 		51CB1DD82A1DCE7F006D2E95 /* NestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 				519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */,
 				5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */,
 				51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */,
+				51BC2C642A1DE1DF00E146D7 /* ChapterModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +177,8 @@
 				5112E49D2A1B7FA50069AEF5 /* CollectionViewController.swift */,
 				5163A2152A1CA2EA0074862F /* DemoCollectionViewController.swift */,
 				51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */,
+				51A6D7472A1E530600FAB665 /* PickerViewController.swift */,
+				5115C50A2A1E5E630091892D /* DateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		515ABB4B2A0E486E009A3DE4 /* TableViewCollectionView */ = {
+		515ABB4B2A0E486E009A3DE4 /* TableViewCollectionViewCollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableViewCollectionView" */;
+			buildConfigurationList = 515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableViewCollectionViewCollectionView" */;
 			buildPhases = (
 				515ABB482A0E486E009A3DE4 /* Sources */,
 				515ABB492A0E486E009A3DE4 /* Frameworks */,
@@ -206,7 +215,7 @@
 			);
 			dependencies = (
 			);
-			name = TableViewCollectionView;
+			name = TableViewCollectionViewCollectionView;
 			productName = TableView;
 			productReference = 515ABB4C2A0E486E009A3DE4 /* TableViewCollectionView.app */;
 			productType = "com.apple.product-type.application";
@@ -239,7 +248,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				515ABB4B2A0E486E009A3DE4 /* TableViewCollectionView */,
+				515ABB4B2A0E486E009A3DE4 /* TableViewCollectionViewCollectionView */,
 			);
 		};
 /* End PBXProject section */
@@ -283,9 +292,12 @@
 				5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */,
 				519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */,
 				515ABB682A0E5579009A3DE4 /* IndexTableViewCell.swift in Sources */,
+				51BC2C652A1DE1DF00E146D7 /* ChapterModel.swift in Sources */,
 				519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */,
+				51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */,
 				519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */,
 				515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */,
+				5115C50B2A1E5E630091892D /* DateViewController.swift in Sources */,
 				515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */,
 				51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */,
 				5163A2162A1CA2EA0074862F /* DemoCollectionViewController.swift in Sources */,
@@ -440,7 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableView/Info.plist;
+				INFOPLIST_FILE = TableViewCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -452,7 +464,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.TableView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TableViewCollectionView;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,7 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableView/Info.plist;
+				INFOPLIST_FILE = TableViewCollectionView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -479,7 +491,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.TableView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TableViewCollectionView;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableViewCollectionView" */ = {
+		515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableViewCollectionViewCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515ABB612A0E486F009A3DE4 /* Debug */,

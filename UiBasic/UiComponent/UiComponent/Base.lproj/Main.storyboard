@@ -859,10 +859,10 @@
     </scenes>
     <designables>
         <designable name="ACA-rA-PvP">
-            <size key="intrinsicContentSize" width="32" height="34"/>
+            <size key="intrinsicContentSize" width="103" height="42.666666666666664"/>
         </designable>
         <designable name="xTe-mU-suP">
-            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
+            <size key="intrinsicContentSize" width="147.33333333333334" height="46"/>
         </designable>
     </designables>
     <resources>

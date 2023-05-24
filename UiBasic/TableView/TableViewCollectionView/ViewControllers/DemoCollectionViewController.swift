@@ -11,7 +11,7 @@ import UIKit
 class DemoCollectionViewController: UIViewController {
     
     // MARK: OUTLETS
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     // MARK: VARIABLES
     private var allCategories = Category.getAllCategories()
@@ -90,3 +90,4 @@ extension DemoCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
 
 }
+

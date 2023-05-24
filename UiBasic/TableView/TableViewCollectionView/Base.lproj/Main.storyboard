@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OZ6-dr-JLr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iE2-eP-AVF">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -13,7 +13,7 @@
         <!--Table Content View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TableContentViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TableContentViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
         <!--Company Table View Controller-->
         <scene sceneID="JhD-iL-BFb">
             <objects>
-                <viewController id="fMh-wW-bZ3" customClass="CompanyTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fMh-wW-bZ3" customClass="CompanyTableViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QuX-2o-sRG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
         <!--Practice Table View Controller-->
         <scene sceneID="qf7-fy-ghu">
             <objects>
-                <viewController id="GaI-5e-6hP" customClass="PracticeTableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GaI-5e-6hP" customClass="PracticeTableViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOi-jg-92v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--Expandable View Controller-->
         <scene sceneID="f3o-6F-cdi">
             <objects>
-                <viewController id="o78-zz-GbE" customClass="ExpandableViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o78-zz-GbE" customClass="ExpandableViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0Z-jj-kjh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
         <!--Collection View Controller-->
         <scene sceneID="ye4-iw-sox">
             <objects>
-                <viewController id="Ibm-yq-eBf" customClass="CollectionViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ibm-yq-eBf" customClass="CollectionViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eb-tQ-90A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +189,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DemoCollectionViewCell" id="QJj-nS-jg9" customClass="DemoCollectionViewCell" customModule="TableView" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DemoCollectionViewCell" id="QJj-nS-jg9" customClass="DemoCollectionViewCell" customModule="TableViewCollectionView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RYz-Vl-5cj">
@@ -249,7 +249,7 @@
         <!--Demo Collection View Controller-->
         <scene sceneID="Wxs-DR-z1o">
             <objects>
-                <viewController id="OZ6-dr-JLr" customClass="DemoCollectionViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OZ6-dr-JLr" customClass="DemoCollectionViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oe1-pt-Uru">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,6 +312,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjx-lh-oNC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3795.652173913044" y="19.565217391304348"/>
+        </scene>
+        <!--Nested Collection View Controller-->
+        <scene sceneID="j0L-N2-2bI">
+            <objects>
+                <viewController id="dT6-fE-gyI" customClass="NestedCollectionViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L9t-nk-L8y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qdj-dv-TLP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="616"/>
+                                <color key="backgroundColor" name="viewColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QNd-6w-00U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qdj-dv-TLP" firstAttribute="leading" secondItem="QNd-6w-00U" secondAttribute="leading" id="Ou4-cz-C6v"/>
+                            <constraint firstItem="qdj-dv-TLP" firstAttribute="top" secondItem="QNd-6w-00U" secondAttribute="top" id="Pqi-mS-tNG"/>
+                            <constraint firstItem="QNd-6w-00U" firstAttribute="bottom" secondItem="qdj-dv-TLP" secondAttribute="bottom" constant="120" id="SqU-9W-JxW"/>
+                            <constraint firstItem="QNd-6w-00U" firstAttribute="trailing" secondItem="qdj-dv-TLP" secondAttribute="trailing" id="z4b-q8-UeN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblContainer" destination="qdj-dv-TLP" id="Gdn-ag-Szz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xL-zB-6AR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4523" y="20"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="Eza-kg-FUu">
+            <objects>
+                <viewController id="IYB-HC-U72" customClass="PickerViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9LK-Ja-B39">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXr-SZ-Y0n">
+                                <rect key="frame" x="152" y="219" width="110.33333333333331" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AMw-E1-lBA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfItem" destination="aXr-SZ-Y0n" id="mgG-Mm-LpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WF0-eh-srU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5184" y="20"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="vQW-X9-uB0">
+            <objects>
+                <viewController id="iE2-eP-AVF" customClass="DateViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N43-g7-cbB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ec-za-SQL">
+                                <rect key="frame" x="186" y="634.33333333333337" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ym4-Sm-jmr">
+                                <rect key="frame" x="41.333333333333343" y="68" width="331.33333333333326" height="32"/>
+                                <segments>
+                                    <segment title="Compact"/>
+                                    <segment title="inline"/>
+                                    <segment title="Wheel"/>
+                                </segments>
+                                <connections>
+                                    <action selector="btnSegTapped:" destination="iE2-eP-AVF" eventType="valueChanged" id="OYa-d7-yb8"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="sJd-Ws-sut">
+                                <rect key="frame" x="20" y="148.99999999999997" width="374" height="385.33333333333326"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UAJ-TS-tOx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ym4-Sm-jmr" firstAttribute="width" secondItem="N43-g7-cbB" secondAttribute="width" multiplier="0.8" id="4xs-fp-4Jb"/>
+                            <constraint firstItem="UAJ-TS-tOx" firstAttribute="trailing" secondItem="sJd-Ws-sut" secondAttribute="trailing" constant="20" id="CyS-Mf-reg"/>
+                            <constraint firstItem="Ym4-Sm-jmr" firstAttribute="centerX" secondItem="UAJ-TS-tOx" secondAttribute="centerX" id="Pg4-aq-t0V"/>
+                            <constraint firstItem="1Ec-za-SQL" firstAttribute="centerX" secondItem="UAJ-TS-tOx" secondAttribute="centerX" id="UVt-bi-wuv"/>
+                            <constraint firstItem="Ym4-Sm-jmr" firstAttribute="top" secondItem="UAJ-TS-tOx" secondAttribute="top" constant="68" id="dwP-RM-oio"/>
+                            <constraint firstItem="sJd-Ws-sut" firstAttribute="leading" secondItem="N43-g7-cbB" secondAttribute="leading" constant="20" id="kwv-dc-WlD"/>
+                            <constraint firstItem="1Ec-za-SQL" firstAttribute="top" secondItem="sJd-Ws-sut" secondAttribute="bottom" constant="100" id="nuE-i6-d0g"/>
+                            <constraint firstItem="sJd-Ws-sut" firstAttribute="top" secondItem="Ym4-Sm-jmr" secondAttribute="bottom" constant="50" id="vJX-Cn-9FM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="sJd-Ws-sut" id="IF1-Ib-0zc"/>
+                        <outlet property="lblCurrentDate" destination="1Ec-za-SQL" id="C8f-bF-re6"/>
+                        <outlet property="segmentType" destination="Ym4-Sm-jmr" id="MNb-op-6a8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iC-S8-rVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5868.115942028986" y="20.380434782608699"/>
         </scene>
     </scenes>
     <resources>
