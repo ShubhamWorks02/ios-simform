@@ -35,6 +35,11 @@
 		51BB301D2A1BBC2D0015E9E2 /* OpeningDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */; };
 		51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */; };
 		51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */; };
+		51CB1DD62A1DCDC3006D2E95 /* ContainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1DD42A1DCDC3006D2E95 /* ContainerTableViewCell.swift */; };
+		51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1DD52A1DCDC3006D2E95 /* ContainerTableViewCell.xib */; };
+		51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1DD82A1DCE7F006D2E95 /* NestedCollectionViewCell.swift */; };
+		51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */; };
+		51CB1DDD2A1DCFB8006D2E95 /* NestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */; };
 		51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD4C2E2A179667000F463F /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +49,7 @@
 		5112E49D2A1B7FA50069AEF5 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		5112E49F2A1BB9110069AEF5 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		5112E4A02A1BB9110069AEF5 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
-		515ABB4C2A0E486E009A3DE4 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		515ABB4C2A0E486E009A3DE4 /* TableViewCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		515ABB532A0E486E009A3DE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +74,11 @@
 		51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningDetails.swift; sourceTree = "<group>"; };
 		51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionViewCell.swift; sourceTree = "<group>"; };
 		51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCollectionViewCell.xib; sourceTree = "<group>"; };
+		51CB1DD42A1DCDC3006D2E95 /* ContainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewCell.swift; sourceTree = "<group>"; };
+		51CB1DD52A1DCDC3006D2E95 /* ContainerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerTableViewCell.xib; sourceTree = "<group>"; };
+		51CB1DD82A1DCE7F006D2E95 /* NestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedCollectionViewCell.swift; sourceTree = "<group>"; };
+		51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestedCollectionViewCell.xib; sourceTree = "<group>"; };
+		51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedCollectionViewController.swift; sourceTree = "<group>"; };
 		51CD4C2E2A179667000F463F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +106,7 @@
 		515ABB432A0E486E009A3DE4 = {
 			isa = PBXGroup;
 			children = (
-				515ABB4E2A0E486E009A3DE4 /* TableView */,
+				515ABB4E2A0E486E009A3DE4 /* TableViewCollectionView */,
 				515ABB4D2A0E486E009A3DE4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,12 +114,12 @@
 		515ABB4D2A0E486E009A3DE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				515ABB4C2A0E486E009A3DE4 /* TableView.app */,
+				515ABB4C2A0E486E009A3DE4 /* TableViewCollectionView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		515ABB4E2A0E486E009A3DE4 /* TableView */ = {
+		515ABB4E2A0E486E009A3DE4 /* TableViewCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				51CD4C2D2A17964C000F463F /* Helper */,
@@ -122,7 +132,7 @@
 				515ABB5D2A0E486F009A3DE4 /* Info.plist */,
 				5112E4982A1B4EAB0069AEF5 /* Models */,
 			);
-			path = TableView;
+			path = TableViewCollectionView;
 			sourceTree = "<group>";
 		};
 		515ABB632A0E54CC009A3DE4 /* Cells */ = {
@@ -141,6 +151,10 @@
 				5112E4A02A1BB9110069AEF5 /* HeaderCollectionViewCell.xib */,
 				51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */,
 				51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */,
+				51CB1DD42A1DCDC3006D2E95 /* ContainerTableViewCell.swift */,
+				51CB1DD52A1DCDC3006D2E95 /* ContainerTableViewCell.xib */,
+				51CB1DD82A1DCE7F006D2E95 /* NestedCollectionViewCell.swift */,
+				51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -155,6 +169,7 @@
 				5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */,
 				5112E49D2A1B7FA50069AEF5 /* CollectionViewController.swift */,
 				5163A2152A1CA2EA0074862F /* DemoCollectionViewController.swift */,
+				51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		515ABB4B2A0E486E009A3DE4 /* TableView */ = {
+		515ABB4B2A0E486E009A3DE4 /* TableViewCollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableView" */;
+			buildConfigurationList = 515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableViewCollectionView" */;
 			buildPhases = (
 				515ABB482A0E486E009A3DE4 /* Sources */,
 				515ABB492A0E486E009A3DE4 /* Frameworks */,
@@ -191,9 +206,9 @@
 			);
 			dependencies = (
 			);
-			name = TableView;
+			name = TableViewCollectionView;
 			productName = TableView;
-			productReference = 515ABB4C2A0E486E009A3DE4 /* TableView.app */;
+			productReference = 515ABB4C2A0E486E009A3DE4 /* TableViewCollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 515ABB472A0E486E009A3DE4 /* Build configuration list for PBXProject "TableView" */;
+			buildConfigurationList = 515ABB472A0E486E009A3DE4 /* Build configuration list for PBXProject "TableViewCollectionView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,7 +239,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				515ABB4B2A0E486E009A3DE4 /* TableView */,
+				515ABB4B2A0E486E009A3DE4 /* TableViewCollectionView */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */,
+				51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */,
+				51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */,
 				515ABB5C2A0E486F009A3DE4 /* LaunchScreen.storyboard in Resources */,
 				515ABB592A0E486F009A3DE4 /* Assets.xcassets in Resources */,
 				5188FA0C2A14FD8600696B25 /* ExpandableTableViewCell.xib in Resources */,
@@ -256,6 +273,7 @@
 				5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */,
 				5112E49C2A1B7F200069AEF5 /* DemoCollectionViewCell.swift in Sources */,
 				5112E4A12A1BB9110069AEF5 /* HeaderCollectionViewCell.swift in Sources */,
+				51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */,
 				515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */,
 				519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */,
 				51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */,
@@ -271,7 +289,9 @@
 				515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */,
 				51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */,
 				5163A2162A1CA2EA0074862F /* DemoCollectionViewController.swift in Sources */,
+				51CB1DDD2A1DCFB8006D2E95 /* NestedCollectionViewController.swift in Sources */,
 				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
+				51CB1DD62A1DCDC3006D2E95 /* ContainerTableViewCell.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +489,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		515ABB472A0E486E009A3DE4 /* Build configuration list for PBXProject "TableView" */ = {
+		515ABB472A0E486E009A3DE4 /* Build configuration list for PBXProject "TableViewCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515ABB5E2A0E486F009A3DE4 /* Debug */,
@@ -478,7 +498,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableView" */ = {
+		515ABB602A0E486F009A3DE4 /* Build configuration list for PBXNativeTarget "TableViewCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				515ABB612A0E486F009A3DE4 /* Debug */,

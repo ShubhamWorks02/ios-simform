@@ -23,7 +23,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nm-cG-IEv">
-                        <rect key="frame" x="224" y="25" width="46" height="30"/>
+                        <rect key="frame" x="224" y="45" width="46" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="See all">
@@ -35,7 +35,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="p9s-zP-3MD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="22" id="Bps-sG-owA"/>
-                <constraint firstItem="8nm-cG-IEv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="MMZ-2R-wqP"/>
+                <constraint firstItem="8nm-cG-IEv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="45" id="MMZ-2R-wqP"/>
                 <constraint firstItem="p9s-zP-3MD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="45" id="OAX-PS-whi"/>
                 <constraint firstAttribute="trailing" secondItem="8nm-cG-IEv" secondAttribute="trailing" constant="15" id="o3M-ss-rL9"/>
             </constraints>

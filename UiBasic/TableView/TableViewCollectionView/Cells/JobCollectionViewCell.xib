@@ -28,10 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software Engineer" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-4b-YLM">
-                                <rect key="frame" x="27" y="80" width="120" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="2w3-Q8-gu8"/>
-                                </constraints>
+                                <rect key="frame" x="17.333333333333329" y="80" width="139.33333333333337" height="61"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -42,6 +39,7 @@
                             <constraint firstAttribute="bottom" secondItem="CWH-4b-YLM" secondAttribute="bottom" constant="10" id="1fn-BT-L8s"/>
                             <constraint firstItem="CWH-4b-YLM" firstAttribute="centerX" secondItem="teS-76-2ua" secondAttribute="centerX" id="Jm2-vP-N0v"/>
                             <constraint firstItem="YVx-Gp-Xq1" firstAttribute="centerX" secondItem="teS-76-2ua" secondAttribute="centerX" id="M22-uh-A0a"/>
+                            <constraint firstItem="CWH-4b-YLM" firstAttribute="width" secondItem="teS-76-2ua" secondAttribute="width" multiplier="0.8" id="R0i-yL-Rc9"/>
                             <constraint firstItem="CWH-4b-YLM" firstAttribute="top" secondItem="YVx-Gp-Xq1" secondAttribute="bottom" constant="10" id="aM0-Q1-PK3"/>
                             <constraint firstItem="YVx-Gp-Xq1" firstAttribute="top" secondItem="teS-76-2ua" secondAttribute="top" constant="10" id="mKR-Ig-CQ2"/>
                         </constraints>

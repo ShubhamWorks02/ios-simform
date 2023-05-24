@@ -16,8 +16,9 @@ class Category {
         self.name = name
         self.arrOfOpenings = arrOfOpenings
     }
+    
     static func getAllCategories() -> [Category] {
-        return [Category(name: "Popular", arrOfOpenings: OpeningDetails.getAllOpeningDetails())]
+        return [Category(name: "Popular", arrOfOpenings: OpeningDetails.getAllOpeningDetails()),Category(name: "Trending", arrOfOpenings: OpeningDetails.getAllOpeningDetails()),Category(name: "Sizzling", arrOfOpenings: OpeningDetails.getAllOpeningDetails())]
     }
 }
 
