@@ -10,8 +10,8 @@ import UIKit
 class NestedCollectionViewCell: UICollectionViewCell {
     
     // MARK: OUTLETS
-    @IBOutlet weak var lblChapterStatus: UILabel!
-    @IBOutlet weak var lblChapters: UILabel!
+    @IBOutlet weak private var lblChapterStatus: UILabel!
+    @IBOutlet weak private var lblChapters: UILabel!
     
 //    var cellsData =
     override func awakeFromNib() {

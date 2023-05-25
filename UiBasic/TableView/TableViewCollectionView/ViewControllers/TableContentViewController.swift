@@ -10,7 +10,7 @@ import UIKit
 class TableContentViewController: UIViewController {
 
     // MARK: OUTLETS
-    @IBOutlet weak var tblContents: UITableView!
+    @IBOutlet weak private var tblContents: UITableView!
     
     // MARK: VARIABLES
     var dataOfFruits: [String] = ["Apple", "Banana", "Cherry", "Durian"]
@@ -26,7 +26,7 @@ class TableContentViewController: UIViewController {
     private func initValues() {
         tblContents.delegate = self
         tblContents.dataSource = self
-        tblContents.register(UINib(nibName: "IndexTableViewCell", bundle: nil), forCellReuseIdentifier: "IndexTableViewCell")
+        tblContents.register(UINib(nibName: Constants.Cell.indexTableViewCell, bundle: nil), forCellReuseIdentifier:  Constants.Cell.indexTableViewCell)
         //tblContents.register(UINib(nibName: "EvenTableViewCell", bundle: nil), forCellReuseIdentifier: "EvenTableViewCell")
     }
     
@@ -35,6 +35,7 @@ class TableContentViewController: UIViewController {
 // MARK: DELEGATE METHODS
 extension TableContentViewController: UITableViewDelegate {
     
+    // ROW MANIPULATION
 //     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //            if editingStyle == .delete {
 //                dataOfFruits.remove(at: indexPath.row)
@@ -56,18 +57,10 @@ extension TableContentViewController: UITableViewDelegate {
 // MARK: DATASOURCE METHODS
 
 extension TableContentViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-//        print("prefetching row at ",indexPaths[indexPaths.count])
-//    }
-    
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let oddCell = tableView.dequeueReusableCell(withIdentifier: "IndexTableViewCell") as? IndexTableViewCell else {

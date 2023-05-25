@@ -19,20 +19,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchSelect: UISwitch!
     
     @IBAction func selectAllChanged(_ sender: UIButton) {
-        btnSelectAll.isSelected = true
+        btnSelectAll.isSelected.toggle()
         if switchSelect.isOn && btnSelectAll.isSelected {
             btnSelect1.isSelected = true
             btnSelect2.isSelected = true
             btnSelect3.isSelected = true
-        }
-        if !switchSelect.isOn {
-            
-        }
-//        } else {
-//            btnSelect1.isSelected = false
-//            btnSelect2.isSelected = false
-//            btnSelect3.isSelected = false
 //        }
+//        if !switchSelect.isOn {
+//
+//        }
+        } else {
+            btnSelect1.isSelected = false
+            btnSelect2.isSelected = false
+            btnSelect3.isSelected = false
+        }
     }
     
     @IBAction func select1Changed(_ sender: UIButton) {
@@ -82,6 +82,7 @@ class ViewController: UIViewController {
             btnSelect1.isSelected = false
             btnSelect2.isSelected = false
             btnSelect3.isSelected = false
+            btnSelectAll.isSelected = false
         }
     }
     

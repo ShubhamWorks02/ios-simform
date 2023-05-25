@@ -10,10 +10,9 @@ import UIKit
 class CollectionViewController: UIViewController {
 
     // MARK: OUTLETS
-    @IBOutlet weak var gridCollectionView: UICollectionView!
+    @IBOutlet weak private var gridCollectionView: UICollectionView!
     
     // MARK: VARIABLES
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,7 @@ extension CollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = gridCollectionView.dequeueReusableCell(withReuseIdentifier: "DemoCollectionViewCell", for: indexPath) as? DemoCollectionViewCell else {
+        guard let cell = gridCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cell.demoCollectionViewCell, for: indexPath) as? DemoCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.lblCompanyName.text = "Google"

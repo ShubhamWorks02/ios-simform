@@ -14,7 +14,7 @@ import UIKit
 class ExpandableViewController: UIViewController {
     
     // MARK: OUTLETS
-    @IBOutlet weak var tblExpandable: UITableView!
+    @IBOutlet weak private var tblExpandable: UITableView!
     
     // MARK: VARIABLES
     private var searchTimer: Timer?

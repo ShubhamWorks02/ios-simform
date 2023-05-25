@@ -10,9 +10,9 @@ import UIKit
 class JobCollectionViewCell: UICollectionViewCell {
 
     // MARK: OUTLETS
-    @IBOutlet weak var imgCompanyLogo: UIImageView!
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var lblRoleName: UILabel!
+    @IBOutlet weak private var imgCompanyLogo: UIImageView!
+    @IBOutlet weak private var containerView: UIView!
+    @IBOutlet weak private var lblRoleName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +29,6 @@ class JobCollectionViewCell: UICollectionViewCell {
     func configCell(data: OpeningDetails) {
         imgCompanyLogo.image = UIImage(named: data.imageName ?? "")
         lblRoleName.text = data.roleName
-        
     }
 
     

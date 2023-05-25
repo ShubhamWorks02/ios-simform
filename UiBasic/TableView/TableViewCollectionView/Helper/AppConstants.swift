@@ -11,5 +11,12 @@ struct Constants {
     
     struct Cell {
         static let expandableTableViewCell = "ExpandableTableViewCell"
+        static let indexTableViewCell = "IndexTableViewCell"
+        static let jobCollectionViewCell = "JobCollectionViewCell"
+        static let headerCollectionViewCell = "HeaderCollectionViewCell"
+        static let demoCollectionViewCell = "DemoCollectionViewCell"
+        static let containerTableViewCell = "ContainerTableViewCell"
+        static let nestedCollectionViewCell = "NestedCollectionViewCell"
     }
+    
 }

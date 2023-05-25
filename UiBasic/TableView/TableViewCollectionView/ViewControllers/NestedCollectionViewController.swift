@@ -10,8 +10,8 @@ import UIKit
 class NestedCollectionViewController: UIViewController {
 
     // MARK: OUTLETS
-    
     @IBOutlet private weak var tblContainer: UITableView!
+    
     // MARK: VARIABLES
     var tableRowCount = Data.names.count
     
@@ -20,10 +20,11 @@ class NestedCollectionViewController: UIViewController {
         initValues()
     }
     
+    // MARK: INITIALIZATION
     private func initValues() {
         tblContainer.delegate = self
         tblContainer.dataSource = self
-        tblContainer.register(UINib(nibName: "ContainerTableViewCell", bundle: nil), forCellReuseIdentifier: "ContainerTableViewCell")
+        tblContainer.register(UINib(nibName: Constants.Cell.containerTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.containerTableViewCell)
         
     }
     
@@ -37,7 +38,7 @@ extension NestedCollectionViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let tableCell = tblContainer.dequeueReusableCell(withIdentifier: "ContainerTableViewCell") as? ContainerTableViewCell else {
+        guard let tableCell = tblContainer.dequeueReusableCell(withIdentifier: Constants.Cell.containerTableViewCell) as? ContainerTableViewCell else {
             return UITableViewCell()
         }
         

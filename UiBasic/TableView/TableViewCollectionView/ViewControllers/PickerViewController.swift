@@ -9,18 +9,18 @@ import UIKit
 
 class PickerViewController: UIViewController {
     
-    @IBOutlet weak var tfItem: UITextField!
+    // MARK: OUTLETS
+    @IBOutlet weak private var txtItem: UITextField!
     let itemList = ["toy", "cutlery", "remote", "nothing"]
         let pickerView = UIPickerView()
         let toolbar = UIToolbar()
 
         override func viewDidLoad() {
             super.viewDidLoad()
-//            super.viewDidLoad()
-                    setupPickerView()
-                    setupToolbar()
-                    tfItem.inputView = pickerView
-                    tfItem.inputAccessoryView = toolbar
+            setupPickerView()
+            setupToolbar()
+            txtItem.inputView = pickerView
+            txtItem.inputAccessoryView = toolbar
             
         }
         
@@ -40,8 +40,8 @@ class PickerViewController: UIViewController {
         
         @objc func doneBtnPressed() {
             let selectedItem = itemList[pickerView.selectedRow(inComponent: 0)]
-            tfItem.text = selectedItem
-            tfItem.resignFirstResponder()
+            txtItem.text = selectedItem
+            txtItem.resignFirstResponder()
         }
 }
 

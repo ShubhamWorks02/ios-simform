@@ -15,10 +15,10 @@ class ExpandableTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var btnSeeMore: UIButton!
-    var seeMoreDelegate: BtnDelegate?
-     // var isSeeMoreSelected: Bool
     @IBOutlet weak var heightOut: NSLayoutConstraint!
     
+    // MARK: VARIABLES
+    var seeMoreDelegate: BtnDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,9 +42,8 @@ class ExpandableTableViewCell: UITableViewCell {
     
     // MARK: ACTIONS
     @IBAction func seeMoreTapped(_ sender: UIButton) {
-        
         seeMoreDelegate?.btnSeemoreTapped(cell: self)
-    
+
     }
 }
 

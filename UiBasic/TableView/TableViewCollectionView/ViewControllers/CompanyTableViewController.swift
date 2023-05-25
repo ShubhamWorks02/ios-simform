@@ -11,7 +11,7 @@ import Foundation
 class CompanyTableViewController: UIViewController {
 
     // MARK: OUTLETS
-    @IBOutlet weak var tblCompanyContents: UITableView!
+    @IBOutlet weak private var tblCompanyContents: UITableView!
     
     // MARK: VARIABLES
     var openingList: [FindJobModel] = FindJobModel.getCurrentOpening()
@@ -23,6 +23,7 @@ class CompanyTableViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: INITIALIZATION
     private func initValues() {
         tblCompanyContents.delegate = self
         tblCompanyContents.dataSource = self
@@ -38,7 +39,7 @@ class CompanyTableViewController: UIViewController {
 }
 
 
-// MARK: TBVDATASOURCE
+// MARK: TABLEVIEW DATASOURCE
 extension CompanyTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return openingList.count
@@ -50,11 +51,11 @@ extension CompanyTableViewController: UITableViewDataSource {
         }
         let indexData = openingList[indexPath.row]
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
-//        companyCell.imageDelegate = self
+        // companyCell.imageDelegate = self
         // companyCell.imageDelegate = self
         companyCell.configCell(data: indexData, tap: tapGesture)
-                // let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
-//        openingList[indexPath.] .addGestureRecognizer(tapGesture)
+        // let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
+        // openingList[indexPath.] .addGestureRecognizer(tapGesture)
         // companyCell.lblCompanyName.text = openingList[indexPath.row].companyName
         // companyCell.imgLogo.image = UIImage(named: openingList[indexPath.row].imageName!)
         return companyCell
@@ -69,23 +70,18 @@ extension CompanyTableViewController: UITableViewDataSource {
     @objc func imageSelectTapped(_ sender: UITapGestureRecognizer) {
         
         guard let indexPath = tblCompanyContents.indexPathForRow(at: sender.location(in: tblCompanyContents)) else {
-                return
+            return
         }
         let alertController = UIAlertController(title: "Selected", message: "You Have Selected \(indexPath.row+1)th company's opening", preferredStyle: .alert)
-
-            // Create the alert action
-            let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-                // Handle the user's response to the alert action
-                print("OK button tapped")
-            }
-
-            // Add the alert action to the alert controller
-            alertController.addAction(okAction)
-
-            // Present the alert controller
-            
+        // Create the alert action
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            // Handle the user's response to the alert action
+            print("OK button tapped")
+        }
+        // Add the alert action to the alert controller
+        alertController.addAction(okAction)
+        // Present the alert controller
         if indexPath.row == 0 {
-            
             print("tapped on row \(indexPath.row)")
         }
         if indexPath.row == 1 {
@@ -127,7 +123,7 @@ extension CompanyTableViewController: UITableViewDataSource {
 
 }
 
-// MARK: TBVDELEGATES
+// MARK: TABLEVIEW DELEGATES
 extension CompanyTableViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

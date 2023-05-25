@@ -27,6 +27,7 @@
 		5188FA0C2A14FD8600696B25 /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5188FA0A2A14FD8600696B25 /* ExpandableTableViewCell.xib */; };
 		5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */; };
 		5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */; };
+		5195CC002A1F41BC00304A59 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CBFF2A1F41BC00304A59 /* WebViewController.swift */; };
 		519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */; };
 		519BC2F22A12038B00AE6B38 /* EvenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519BC2F02A12038B00AE6B38 /* EvenTableViewCell.xib */; };
 		519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2F32A1233E200AE6B38 /* CompanyTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		5188FA0A2A14FD8600696B25 /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableTableViewCell.xib; sourceTree = "<group>"; };
 		5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsModel.swift; sourceTree = "<group>"; };
+		5195CBFF2A1F41BC00304A59 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenTableViewCell.swift; sourceTree = "<group>"; };
 		519BC2F02A12038B00AE6B38 /* EvenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvenTableViewCell.xib; sourceTree = "<group>"; };
 		519BC2F32A1233E200AE6B38 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */,
 				51A6D7472A1E530600FAB665 /* PickerViewController.swift */,
 				5115C50A2A1E5E630091892D /* DateViewController.swift */,
+				5195CBFF2A1F41BC00304A59 /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */,
+				5195CC002A1F41BC00304A59 /* WebViewController.swift in Sources */,
 				5112E49C2A1B7F200069AEF5 /* DemoCollectionViewCell.swift in Sources */,
 				5112E4A12A1BB9110069AEF5 /* HeaderCollectionViewCell.swift in Sources */,
 				51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */,

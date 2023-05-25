@@ -25,8 +25,8 @@ class DemoCollectionViewController: UIViewController {
     private func registerCells() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "JobCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "JobCollectionViewCell")
-        collectionView.register(UINib(nibName: "HeaderCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionViewCell")
+        collectionView.register(UINib(nibName: Constants.Cell.jobCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cell.jobCollectionViewCell)
+        collectionView.register(UINib(nibName: Constants.Cell.headerCollectionViewCell, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constants.Cell.headerCollectionViewCell)
     }
     
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class PracticeTableViewController: UIViewController {
 
-    @IBOutlet weak var tblViewPractice: UITableView!
+    @IBOutlet weak private var tblViewPractice: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

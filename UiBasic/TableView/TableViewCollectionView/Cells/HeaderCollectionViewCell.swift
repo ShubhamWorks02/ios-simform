@@ -10,8 +10,8 @@ import UIKit
 class HeaderCollectionViewCell: UICollectionReusableView {
 
     // MARK: OUTLETS
-    @IBOutlet weak var lblHeaderCategory: UILabel!
-    @IBOutlet weak var btnSeeAll: UIButton!
+    @IBOutlet weak private var lblHeaderCategory: UILabel!
+    @IBOutlet weak private var btnSeeAll: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
