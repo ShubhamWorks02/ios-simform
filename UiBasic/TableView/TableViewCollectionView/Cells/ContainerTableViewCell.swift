@@ -19,7 +19,7 @@ class ContainerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         registerCell()
-        
+        collectionTraineeDetails.layer.cornerRadius = 25
         // Initialization code
     }
     

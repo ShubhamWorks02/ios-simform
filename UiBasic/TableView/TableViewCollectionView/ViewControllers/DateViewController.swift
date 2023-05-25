@@ -65,5 +65,5 @@ class DateViewController: UIViewController {
         lblCurrentDate.text = selectedDate
     }
 
-
+// String to date
 }

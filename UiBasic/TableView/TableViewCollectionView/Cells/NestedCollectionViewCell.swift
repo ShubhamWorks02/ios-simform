@@ -12,11 +12,12 @@ class NestedCollectionViewCell: UICollectionViewCell {
     // MARK: OUTLETS
     @IBOutlet weak private var lblChapterStatus: UILabel!
     @IBOutlet weak private var lblChapters: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
-//    var cellsData =
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cellView.layer.cornerRadius = 25
     }
 
     func configureCell(chapterName: String, chapterNumber: String) {

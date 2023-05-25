@@ -11,26 +11,27 @@ class PickerViewController: UIViewController {
     
     // MARK: OUTLETS
     @IBOutlet weak private var txtItem: UITextField!
+//    @IBOutlet weak var txtItem: UITextField!
     let itemList = ["toy", "cutlery", "remote", "nothing"]
         let pickerView = UIPickerView()
         let toolbar = UIToolbar()
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            setupPickerView()
+            //setupPickerView()
             setupToolbar()
             txtItem.inputView = pickerView
             txtItem.inputAccessoryView = toolbar
-            
-        }
-        
-        func setupPickerView() {
             pickerView.delegate = self
             pickerView.dataSource = self
-            pickerView.frame = CGRect(x: 0, y: 0, width: 200, height: 400)
-            pickerView.center = view.center
-            view.addSubview(pickerView)
         }
+        
+//        func setupPickerView() {
+//
+//            // pickerView.frame = CGRect(x: 0, y: 0, width: 200, height: 400)
+//            pickerView.center = view.center
+//            view.addSubview(pickerView)
+//        }
         
         func setupToolbar() {
             toolbar.sizeToFit()

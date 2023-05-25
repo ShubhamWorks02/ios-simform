@@ -43,7 +43,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.070588235289999995" green="0.60392156860000001" blue="0.602715373" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="gyt-af-gT5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H9F-ha-yN7"/>
                 <constraint firstItem="gyt-af-gT5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MFU-2b-CuC"/>
@@ -52,6 +52,7 @@
             </constraints>
             <size key="customSize" width="191" height="94"/>
             <connections>
+                <outlet property="cellView" destination="gyt-af-gT5" id="0K3-bR-087"/>
                 <outlet property="lblChapterStatus" destination="xTz-bq-e4S" id="foa-u0-ztY"/>
                 <outlet property="lblChapters" destination="tvg-33-pQe" id="6Tq-xL-nSK"/>
             </connections>

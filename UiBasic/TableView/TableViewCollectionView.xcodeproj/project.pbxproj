@@ -28,6 +28,7 @@
 		5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */; };
 		5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */; };
 		5195CC002A1F41BC00304A59 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CBFF2A1F41BC00304A59 /* WebViewController.swift */; };
+		5195CC022A1F7E7200304A59 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CC012A1F7E7200304A59 /* MapViewController.swift */; };
 		519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */; };
 		519BC2F22A12038B00AE6B38 /* EvenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519BC2F02A12038B00AE6B38 /* EvenTableViewCell.xib */; };
 		519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2F32A1233E200AE6B38 /* CompanyTableViewCell.swift */; };
@@ -71,6 +72,7 @@
 		5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsModel.swift; sourceTree = "<group>"; };
 		5195CBFF2A1F41BC00304A59 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		5195CC012A1F7E7200304A59 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenTableViewCell.swift; sourceTree = "<group>"; };
 		519BC2F02A12038B00AE6B38 /* EvenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvenTableViewCell.xib; sourceTree = "<group>"; };
 		519BC2F32A1233E200AE6B38 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				51A6D7472A1E530600FAB665 /* PickerViewController.swift */,
 				5115C50A2A1E5E630091892D /* DateViewController.swift */,
 				5195CBFF2A1F41BC00304A59 /* WebViewController.swift */,
+				5195CC012A1F7E7200304A59 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
 				51CB1DD62A1DCDC3006D2E95 /* ContainerTableViewCell.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
+				5195CC022A1F7E7200304A59 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +461,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewCollectionView/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Hiiiiiii;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,6 +489,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewCollectionView/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Hiiiiiii;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
