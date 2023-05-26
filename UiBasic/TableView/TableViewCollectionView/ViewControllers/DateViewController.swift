@@ -7,15 +7,34 @@
 
 import UIKit
 
-class DateViewController: UIViewController {
+import CoreLocation
+    
+class DateViewController: UIViewController,CLLocationManagerDelegate {
 
     // MARK: OUTLETS
     @IBOutlet weak private var segmentType: UISegmentedControl!
     @IBOutlet weak private var datePicker: UIDatePicker!
     @IBOutlet weak private var lblCurrentDate: UILabel!
+    //let locationManager = SimulatorLocationManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // locationManager.getUserLocation(completion: <#T##(CLLocation?) -> Void#>)
+//        // locationManager.startUpdatingLocation()
+//        locationManager.startUpdatingLocation { [weak self] location in
+//            // Handle the user's location
+//            print("User location: \(location)")
+//            // Do something with the location
+//        }
+//        func getUserLocation() {
+//            locationManager.getUserLocation { location in
+//                // Handle the user's location
+//                print("User location: \(location)")
+//                // Do something with the location
+//            }
+//        }
+        
+        // print(locationManager.getUserLocation())
         datePicker.locale = .current
         datePicker.date = Date()
         datePicker.addTarget(self, action: #selector(dateSelection), for: .valueChanged)
@@ -62,6 +81,8 @@ class DateViewController: UIViewController {
         }
 
         let selectedDate = dateFormatter.string(from: datePicker.date)
+        let date  = dateFormatter.date(from: selectedDate)
+        
         lblCurrentDate.text = selectedDate
     }
 

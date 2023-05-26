@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5e-qE-7gQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otz-x2-wAR">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -486,7 +486,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-kE-1o7">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-kE-1o7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
@@ -507,6 +507,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOk-cY-m8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7264" y="18"/>
+        </scene>
+        <!--Second Map View Controller-->
+        <scene sceneID="aVR-zq-Atf">
+            <objects>
+                <viewController id="QLD-Tx-UTG" customClass="SecondMapViewController" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJ6-c8-QJm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPf-uD-Vd2">
+                                <rect key="frame" x="20" y="20" width="374" height="696"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xs1-dN-X7H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xs1-dN-X7H" firstAttribute="trailing" secondItem="JPf-uD-Vd2" secondAttribute="trailing" constant="20" id="jfM-fs-shf"/>
+                            <constraint firstItem="JPf-uD-Vd2" firstAttribute="leading" secondItem="Xs1-dN-X7H" secondAttribute="leading" constant="20" id="kLm-Kx-pqL"/>
+                            <constraint firstItem="Xs1-dN-X7H" firstAttribute="bottom" secondItem="JPf-uD-Vd2" secondAttribute="bottom" constant="20" id="sRP-fi-MPp"/>
+                            <constraint firstItem="JPf-uD-Vd2" firstAttribute="top" secondItem="Xs1-dN-X7H" secondAttribute="top" constant="20" id="zYc-74-RUI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="JPf-uD-Vd2" id="pex-Bd-Nic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASs-UB-dSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7945" y="18"/>
+        </scene>
+        <!--Date View Controller Demo-->
+        <scene sceneID="cfK-LA-UhJ">
+            <objects>
+                <viewController id="otz-x2-wAR" customClass="DateViewControllerDemo" customModule="TableViewCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SSI-zC-vK0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="R90-zX-GaM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="331"/>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="2xv-Rt-aj4">
+                                <rect key="frame" x="0.0" y="331" width="414" height="358"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NeJ-Ex-CBU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2xv-Rt-aj4" firstAttribute="leading" secondItem="SSI-zC-vK0" secondAttribute="leading" id="GHB-VC-aNt"/>
+                            <constraint firstAttribute="trailing" secondItem="2xv-Rt-aj4" secondAttribute="trailing" id="g4s-se-NRO"/>
+                            <constraint firstItem="R90-zX-GaM" firstAttribute="height" secondItem="SSI-zC-vK0" secondAttribute="height" multiplier="0.45" id="gaZ-dO-4Fn"/>
+                            <constraint firstItem="2xv-Rt-aj4" firstAttribute="top" secondItem="R90-zX-GaM" secondAttribute="bottom" id="jxD-px-vIY"/>
+                            <constraint firstItem="NeJ-Ex-CBU" firstAttribute="trailing" secondItem="R90-zX-GaM" secondAttribute="trailing" id="msW-NF-WUJ"/>
+                            <constraint firstItem="R90-zX-GaM" firstAttribute="top" secondItem="NeJ-Ex-CBU" secondAttribute="top" id="qor-4U-J4K"/>
+                            <constraint firstItem="R90-zX-GaM" firstAttribute="leading" secondItem="SSI-zC-vK0" secondAttribute="leading" id="xEa-sO-dBW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstDatePicker" destination="R90-zX-GaM" id="3EI-NT-bjt"/>
+                        <outlet property="secondDatePicker" destination="2xv-Rt-aj4" id="AVj-Nb-E7W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1M-5R-c5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8611.5942028985519" y="17.934782608695652"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tyS-8c-p9v">
+            <objects>
+                <viewController id="UfF-L0-5co" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFm-rf-zDy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2o-l7-nEr">
+                                <rect key="frame" x="0.0" y="346" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="GKE-ek-BBv"/>
+                                </items>
+                                <toolbarAppearance key="standardAppearance">
+                                    <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </toolbarAppearance>
+                                <toolbarAppearance key="scrollEdgeAppearance">
+                                    <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </toolbarAppearance>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VSf-gl-Lhd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k2o-l7-nEr" firstAttribute="centerY" secondItem="VSf-gl-Lhd" secondAttribute="centerY" id="V3C-XW-9kx"/>
+                            <constraint firstItem="k2o-l7-nEr" firstAttribute="centerX" secondItem="VSf-gl-Lhd" secondAttribute="centerX" id="ccv-wY-K4V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htr-fm-lvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9280" y="18"/>
         </scene>
     </scenes>
     <resources>

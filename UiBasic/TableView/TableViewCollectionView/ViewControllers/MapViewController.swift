@@ -20,12 +20,16 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapview.delegate = self
-        checkLocationService()
+        manager.delegate = self
+        mapview.showsUserLocation = true
         mapview.mapType = .satellite
         mapview.isZoomEnabled = true
         centerLocation()
         cameraBoundary()
+        checkLocationService()
+//        manager.
         // placeAnnotation()
+        
         customAnnotation()
         // Do any additional setup after loading the view.
     }
@@ -34,20 +38,37 @@ class MapViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             checkLocationAuth()
         } else {
-            print("disable")
+           
         }
     }
     
+    func createSettingsAlertController(title: String, message: String) {
+
+          let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+          let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
+          let settingsAction = UIAlertAction(title: NSLocalizedString("Settings", comment: ""), style: .default) { (UIAlertAction) in
+              UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)! as URL, options: [:], completionHandler: nil)
+          }
+
+          alertController.addAction(cancelAction)
+          alertController.addAction(settingsAction)
+          self.present(alertController, animated: true, completion: nil)
+
+       }
     func checkLocationAuth() {
-        switch CLLocationManager().authorizationStatus {
+        switch manager.authorizationStatus {
         case .authorizedAlways:
             break
         case .authorizedWhenInUse:
             mapview.showsUserLocation = true
             break
         case .denied:
+            print("denied")
+            createSettingsAlertController(title: "Location needed", message: "please allo")
             break
         case .notDetermined:
+//            manager.requestAlwaysAuthorization()
             manager.requestWhenInUseAuthorization()
             print("not")
             mapview.showsUserLocation = true
@@ -55,9 +76,24 @@ class MapViewController: UIViewController {
         case .restricted:
             break
         }
+//        switch manager.authorizationStatus {
+//                    case .notDetermined:
+//                        print("Not determined")
+//                    case .restricted:
+//                        print("Restricted")
+//                    case .denied:
+//                        print("Denied")
+//                    case .authorizedAlways:
+//                        print("Authorized Always")
+//                    case .authorizedWhenInUse:
+//            mapview.showsUserLocation = true
+//                        print("Authorized When in Use")
+//                    @unknown default:
+//                        print("Unknown status")
+//                    }
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.startUpdatingHeading()
-        manager.delegate = self
+        
         
     }
     
@@ -78,6 +114,7 @@ class MapViewController: UIViewController {
         let annotation = MKPointAnnotation()
         annotation.title = "Darshan Kingdom"
         annotation.coordinate = CLLocationCoordinate2D(latitude: initialLocation.coordinate.latitude, longitude: initialLocation.coordinate.longitude)
+        
         mapview.addAnnotation(annotation)
     }
     
@@ -85,35 +122,44 @@ class MapViewController: UIViewController {
         let customAnnotation = CustomAnnotation()
         customAnnotation.title = "Darshan Vaadi"
         customAnnotation.coordinate = CLLocationCoordinate2D(latitude: initialLocation.coordinate.latitude, longitude: initialLocation.coordinate.longitude)
+        
         mapview.addAnnotation(customAnnotation)
     }
 }
 
 extension MapViewController: CLLocationManagerDelegate {
+//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+//        //checkLocationService()
+//    }
+//
     
 }
 
 extension MapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is CustomAnnotation {
-            let reuseId = "CustomAnnotation"
-            var customView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
-            if customView == nil {
-                customView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                customView!.canShowCallout = true
-            } else {
-                customView!.annotation = annotation
-            }
-            guard let customAnnotation = annotation as? CustomAnnotation , let image = customAnnotation.image else {
+    
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            guard !(annotation is MKUserLocation) else {
                 return nil
             }
-            customView!.image = image
-            return customView
-
-        }else {
-            return nil
+            
+            let reuseIdentifier = "CustomAnnotation"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+            
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+                annotationView!.canShowCallout = true
+            } else {
+                annotationView!.annotation = annotation
+            }
+            
+            if let customAnnotation = annotation as? CustomAnnotation,
+               let image = customAnnotation.image {
+                annotationView!.image = image
+            }
+            
+            return annotationView
         }
-    }
+
 }
 
 class CustomAnnotation : MKPointAnnotation {

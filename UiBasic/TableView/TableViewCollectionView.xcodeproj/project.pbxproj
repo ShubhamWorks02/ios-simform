@@ -13,6 +13,9 @@
 		5112E4A12A1BB9110069AEF5 /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5112E49F2A1BB9110069AEF5 /* HeaderCollectionViewCell.swift */; };
 		5112E4A22A1BB9110069AEF5 /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5112E4A02A1BB9110069AEF5 /* HeaderCollectionViewCell.xib */; };
 		5115C50B2A1E5E630091892D /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5115C50A2A1E5E630091892D /* DateViewController.swift */; };
+		512DBC732A20934A00F554B3 /* SecondMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DBC722A20934A00F554B3 /* SecondMapViewController.swift */; };
+		512DBC752A20B98C00F554B3 /* SimulatorLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DBC742A20B98C00F554B3 /* SimulatorLocationManager.swift */; };
+		512DBC772A20D04C00F554B3 /* DateViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512DBC762A20D04C00F554B3 /* DateViewControllerDemo.swift */; };
 		515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */; };
 		515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */; };
 		515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515ABB532A0E486E009A3DE4 /* ViewController.swift */; };
@@ -55,6 +58,9 @@
 		5112E49F2A1BB9110069AEF5 /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		5112E4A02A1BB9110069AEF5 /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		5115C50A2A1E5E630091892D /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		512DBC722A20934A00F554B3 /* SecondMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMapViewController.swift; sourceTree = "<group>"; };
+		512DBC742A20B98C00F554B3 /* SimulatorLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorLocationManager.swift; sourceTree = "<group>"; };
+		512DBC762A20D04C00F554B3 /* DateViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewControllerDemo.swift; sourceTree = "<group>"; };
 		515ABB4C2A0E486E009A3DE4 /* TableViewCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		515ABB4F2A0E486E009A3DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515ABB512A0E486E009A3DE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 				5115C50A2A1E5E630091892D /* DateViewController.swift */,
 				5195CBFF2A1F41BC00304A59 /* WebViewController.swift */,
 				5195CC012A1F7E7200304A59 /* MapViewController.swift */,
+				512DBC722A20934A00F554B3 /* SecondMapViewController.swift */,
+				512DBC762A20D04C00F554B3 /* DateViewControllerDemo.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				51CD4C2E2A179667000F463F /* AppConstants.swift */,
+				512DBC742A20B98C00F554B3 /* SimulatorLocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -288,6 +297,7 @@
 				5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */,
 				5195CC002A1F41BC00304A59 /* WebViewController.swift in Sources */,
 				5112E49C2A1B7F200069AEF5 /* DemoCollectionViewCell.swift in Sources */,
+				512DBC752A20B98C00F554B3 /* SimulatorLocationManager.swift in Sources */,
 				5112E4A12A1BB9110069AEF5 /* HeaderCollectionViewCell.swift in Sources */,
 				51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */,
 				515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */,
@@ -295,8 +305,10 @@
 				51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */,
 				51BB301D2A1BBC2D0015E9E2 /* OpeningDetails.swift in Sources */,
 				5112E49E2A1B7FA50069AEF5 /* CollectionViewController.swift in Sources */,
+				512DBC772A20D04C00F554B3 /* DateViewControllerDemo.swift in Sources */,
 				5188FA0B2A14FD8600696B25 /* ExpandableTableViewCell.swift in Sources */,
 				5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */,
+				512DBC732A20934A00F554B3 /* SecondMapViewController.swift in Sources */,
 				519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */,
 				515ABB682A0E5579009A3DE4 /* IndexTableViewCell.swift in Sources */,
 				51BC2C652A1DE1DF00E146D7 /* ChapterModel.swift in Sources */,
