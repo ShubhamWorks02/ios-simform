@@ -15,13 +15,9 @@ class TabViewController: UITabBarController {
         let vc1 = FirstViewController()
         let vc2 = SecondViewController()
         
-        
-//        self.selectedIndex = 1
         vc1.tabBarItem = UITabBarItem(title: "First", image: UIImage(named: "folder"), selectedImage: UIImage(named: "folder"))
         vc2.tabBarItem = UITabBarItem(title: "Second", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
         
-        
-        // self.tabBar.setItems(<#T##[UITabBarItem]?#>, animated: <#T##Bool#>)
         self.setViewControllers([vc1,vc2], animated: true)
         print(self.selectedIndex)
         
@@ -34,9 +30,6 @@ class TabViewController: UITabBarController {
             }
         }
 
-        
-//        viewControllers = []
-        // Do any additional setup after loading the view.
     }
     
 }
