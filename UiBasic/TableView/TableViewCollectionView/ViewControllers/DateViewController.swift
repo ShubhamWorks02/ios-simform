@@ -7,18 +7,21 @@
 
 import UIKit
 
-import CoreLocation
+//import CoreLocation
     
-class DateViewController: UIViewController,CLLocationManagerDelegate {
+class DateViewController: UIViewController {
 
     // MARK: OUTLETS
     @IBOutlet weak private var segmentType: UISegmentedControl!
     @IBOutlet weak private var datePicker: UIDatePicker!
     @IBOutlet weak private var lblCurrentDate: UILabel!
-    //let locationManager = SimulatorLocationManager.shared
+    let locationManager = SimulatorLocationManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.getUserLocation{ location in
+            print("User location: \(location)")
+        }
         // locationManager.getUserLocation(completion: <#T##(CLLocation?) -> Void#>)
 //        // locationManager.startUpdatingLocation()
 //        locationManager.startUpdatingLocation { [weak self] location in
