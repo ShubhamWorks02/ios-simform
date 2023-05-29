@@ -13,18 +13,18 @@ class ViewControllerPHPicker: UIViewController,PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true, completion: nil)
         
-        //var imageIndex = 0
+        var imageIndex = 0
         var images = [UIImage]() // Array to store the selected images
         
-        //let dispatchGroup = DispatchGroup()
+        let dispatchGroup = DispatchGroup()
         
         for result in results {
-            //dispatchGroup.enter()
+            dispatchGroup.enter()
             
             result.itemProvider.loadFileRepresentation(forTypeIdentifier: UTType.image.identifier) { (url, error) in
                 if let error = error {
                     // Handle error
-                    //dispatchGroup.leave()
+                    dispatchGroup.leave()
                     return
                 }
                 
@@ -35,43 +35,28 @@ class ViewControllerPHPicker: UIViewController,PHPickerViewControllerDelegate {
                         images.append(image)
                     }
                 }
-                
-                
-//                if images.count == results.count {
-//                    DispatchQueue.main.async {
-//                        self.displayImagesWithTimeInterval(images)
-//                    }
-//                }
-                //dispatchGroup.leave()
-                
+                dispatchGroup.leave()
             }
-            
-            
         }
-        if images.count == results.count {
-             print("same images as per result")
+
+        
+        dispatchGroup.notify(queue: .main) {
             self.displayImagesWithTimeInterval(images)
         }
-        
-//        dispatchGroup.notify(queue: .main) {
-//            self.displayImagesWithTimeInterval(images)
-//        }
     }
     
     func displayImagesWithTimeInterval(_ images: [UIImage]) {
         var imageIndex = 0
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.imageView.image = images[imageIndex]
             imageIndex += 1
-            
             if imageIndex == images.count {
-                imageIndex = 0
+                imageIndex = imageIndex % images.count
             }
         }
+        
     }
-
-
 
     @IBOutlet weak var btnImagePick: UIButton!
     var imagesArr : [UIImage] = []
@@ -93,15 +78,5 @@ class ViewControllerPHPicker: UIViewController,PHPickerViewControllerDelegate {
         picker.delegate = self
        self.present(picker, animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

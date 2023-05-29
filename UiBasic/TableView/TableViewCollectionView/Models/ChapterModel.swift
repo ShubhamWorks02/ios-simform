@@ -17,10 +17,7 @@ class PersonModel {
         self.personName = Data.names[personId]
         self.chapterList = ChapterModel.getChapterDetails(personId: personId)
     }
-    
-//    static func getPersonDetails() -> [ChapterModel] {
-//        return
-//    }
+
 }
 
 class ChapterModel {
@@ -41,7 +38,6 @@ class ChapterModel {
             item.personID == personId
         }
     }
-    
 }
 
 class Data {
@@ -75,6 +71,7 @@ class Data {
         2:"Darshan",
         3:"shyam"
     ]
+    
 }
 
 

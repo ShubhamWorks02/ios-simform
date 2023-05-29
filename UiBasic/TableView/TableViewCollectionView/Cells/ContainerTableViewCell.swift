@@ -39,7 +39,7 @@ class ContainerTableViewCell: UITableViewCell {
         var person = PersonModel(personId: data.row)
         chapters = person.chapterList
         lblTraineeName.text = person.personName
-        collectionTraineeDetails.reloadData()
+//        collectionTraineeDetails.reloadData() // 1
     }
     
 }

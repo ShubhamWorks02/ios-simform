@@ -19,9 +19,25 @@ class DateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.getUserLocation{ location in
-            print("User location: \(location)")
-        }
+        // let userLocation = SimulatorLocationManager.shared.getUserLocation()
+//        print(locationManager.userLocation)
+        
+//        Task {
+//            if let currentLocation = await SimulatorLocationManager.shared.fetchUserLocation() {
+//                print("Current Location: \(currentLocation.coordinate.latitude), \(currentLocation.coordinate.longitude)")
+//            } else {
+//                print("Location not available")
+//            }
+//        }
+//        if let location = userLocation {
+//            print("User's location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
+//        } else {
+//            print("User's location is not available")
+//        }
+//        print(locationManager.currentLocation)
+//        locationManager.getUserLocation{ location in
+//            print("User location: \(location?.coordinate)")
+//        }
         // locationManager.getUserLocation(completion: <#T##(CLLocation?) -> Void#>)
 //        // locationManager.startUpdatingLocation()
 //        locationManager.startUpdatingLocation { [weak self] location in
@@ -45,6 +61,10 @@ class DateViewController: UIViewController {
         // Do any additional setup after loading the view.
         datePicker.setDate(Date().addingTimeInterval(-2 * 24 * 60 * 60), animated: false) // Set date 2 days before the current date
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(locationManager.userLocation)
     }
     
     // MARK: ACTIONS

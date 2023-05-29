@@ -44,6 +44,8 @@
 		519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */; };
 		519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */; };
 		51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6D7472A1E530600FAB665 /* PickerViewController.swift */; };
+		51ACE8352A24F6070091900F /* OpeningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACE8332A24F6070091900F /* OpeningTableViewCell.swift */; };
+		51ACE8362A24F6070091900F /* OpeningTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */; };
 		51BB301D2A1BBC2D0015E9E2 /* OpeningDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */; };
 		51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */; };
 		51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */; };
@@ -96,6 +98,8 @@
 		519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 		519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJobModel.swift; sourceTree = "<group>"; };
 		51A6D7472A1E530600FAB665 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		51ACE8332A24F6070091900F /* OpeningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningTableViewCell.swift; sourceTree = "<group>"; };
+		51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpeningTableViewCell.xib; sourceTree = "<group>"; };
 		51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningDetails.swift; sourceTree = "<group>"; };
 		51BB301E2A1BBD4C0015E9E2 /* JobCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionViewCell.swift; sourceTree = "<group>"; };
 		51BB301F2A1BBD4C0015E9E2 /* JobCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				51CB1DD52A1DCDC3006D2E95 /* ContainerTableViewCell.xib */,
 				51CB1DD82A1DCE7F006D2E95 /* NestedCollectionViewCell.swift */,
 				51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */,
+				51ACE8332A24F6070091900F /* OpeningTableViewCell.swift */,
+				51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 				51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */,
 				51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */,
 				51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */,
+				51ACE8362A24F6070091900F /* OpeningTableViewCell.xib in Resources */,
 				515ABB5C2A0E486F009A3DE4 /* LaunchScreen.storyboard in Resources */,
 				515ABB592A0E486F009A3DE4 /* Assets.xcassets in Resources */,
 				517969E52A22138400F16B02 /* StoryBoard.storyboard in Resources */,
@@ -334,6 +341,7 @@
 				51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */,
 				517969E32A21FE1700F16B02 /* TabViewController2.swift in Sources */,
 				517969DF2A21E1A400F16B02 /* FirstViewController.swift in Sources */,
+				51ACE8352A24F6070091900F /* OpeningTableViewCell.swift in Sources */,
 				519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */,
 				515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */,
 				5115C50B2A1E5E630091892D /* DateViewController.swift in Sources */,

@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "95A2EFF0-7E50-4828-B8C6-D244D1179D7B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UIComponent2/ViewControllerPHPicker.swift"
@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D1EBA18F-ADEE-4735-9226-CB6E08ED563D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UIComponent2/ViewControllerPHPicker.swift"
@@ -114,6 +114,54 @@
             endingLineNumber = "80"
             landmarkName = "picker(_:didFinishPicking:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "021B716B-B14A-4C2D-925B-6746AFC0E5ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIComponent2/ViewControllerPHPicker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "displayImagesWithTimeInterval(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "021B716B-B14A-4C2D-925B-6746AFC0E5ED - 34449af814347f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIComponent2.ViewControllerPHPicker.displayImagesWithTimeInterval(Swift.Array&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "UIComponent2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubham/Documents/SimformProject/DemoProject/Ios/UiBasic/UIComponent2/UIComponent2/ViewControllerPHPicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "021B716B-B14A-4C2D-925B-6746AFC0E5ED - 37704a6a2887ed2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (__C.NSTimer) -&gt; () in UIComponent2.ViewControllerPHPicker.displayImagesWithTimeInterval(Swift.Array&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "UIComponent2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shubham/Documents/SimformProject/DemoProject/Ios/UiBasic/UIComponent2/UIComponent2/ViewControllerPHPicker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "134">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

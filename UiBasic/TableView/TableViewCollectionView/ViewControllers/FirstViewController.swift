@@ -18,11 +18,13 @@ class FirstViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         if let tabBarController = self.tabBarController,
-                  let childViewControllers = tabBarController.viewControllers,
-                  let index = childViewControllers.firstIndex(where: { $0 is FirstViewController }) {
-                   print("Index: \(index)")
-               }
+           let childViewControllers = tabBarController.viewControllers,
+           let index = childViewControllers.firstIndex(where: { $0 is FirstViewController }) {
+            
+            print("Index: \(index)")
+        }
     }
 
 }

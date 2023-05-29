@@ -20,7 +20,7 @@ class TabViewController: UITabBarController {
         
         self.setViewControllers([vc1,vc2], animated: true)
         print(self.selectedIndex)
-        
+        self.selectedIndex = 0
         if let tabBarController = self.tabBarController {
             if let childViewControllers = tabBarController.viewControllers {
                 if let index = childViewControllers.firstIndex(of: self) {
