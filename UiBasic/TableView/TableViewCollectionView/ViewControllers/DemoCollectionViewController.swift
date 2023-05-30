@@ -73,7 +73,7 @@ extension DemoCollectionViewController: UICollectionViewDelegate {
 extension DemoCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.bounds.size.width - 40)/2   , height: (collectionView.bounds.size.width - 75)/2)
+        return CGSize(width: (collectionView.bounds.size.width - 40)   , height: (collectionView.bounds.size.width - 75)/2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

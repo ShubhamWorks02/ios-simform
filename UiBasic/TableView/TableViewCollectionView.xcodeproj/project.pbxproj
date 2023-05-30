@@ -37,6 +37,9 @@
 		5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */; };
 		5193748C2A25EA52007F594B /* UIDemoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */; };
 		5193748E2A25ECAF007F594B /* DemoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */; };
+		519374912A263389007F594B /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193748F2A263389007F594B /* LabelCollectionViewCell.swift */; };
+		519374922A263389007F594B /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519374902A263389007F594B /* LabelCollectionViewCell.xib */; };
+		519374942A263771007F594B /* LabeledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519374932A263771007F594B /* LabeledViewController.swift */; };
 		5195CC002A1F41BC00304A59 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CBFF2A1F41BC00304A59 /* WebViewController.swift */; };
 		5195CC022A1F7E7200304A59 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CC012A1F7E7200304A59 /* MapViewController.swift */; };
 		519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */; };
@@ -95,6 +98,9 @@
 		5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsModel.swift; sourceTree = "<group>"; };
 		5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDemoScreenViewController.swift; sourceTree = "<group>"; };
 		5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabBarViewController.swift; sourceTree = "<group>"; };
+		5193748F2A263389007F594B /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		519374902A263389007F594B /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
+		519374932A263771007F594B /* LabeledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledViewController.swift; sourceTree = "<group>"; };
 		5195CBFF2A1F41BC00304A59 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5195CC012A1F7E7200304A59 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenTableViewCell.swift; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 				51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */,
 				519E456D2A24FCA30027671F /* JobDetailCollectionViewCell.swift */,
 				519E456E2A24FCA30027671F /* JobDetailCollectionViewCell.xib */,
+				5193748F2A263389007F594B /* LabelCollectionViewCell.swift */,
+				519374902A263389007F594B /* LabelCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 				517969E22A21FE1700F16B02 /* TabViewController2.swift */,
 				5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */,
 				5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */,
+				519374932A263771007F594B /* LabeledViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 				51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */,
 				51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */,
 				519E45702A24FCA30027671F /* JobDetailCollectionViewCell.xib in Resources */,
+				519374922A263389007F594B /* LabelCollectionViewCell.xib in Resources */,
 				51ACE8362A24F6070091900F /* OpeningTableViewCell.xib in Resources */,
 				515ABB5C2A0E486F009A3DE4 /* LaunchScreen.storyboard in Resources */,
 				515ABB592A0E486F009A3DE4 /* Assets.xcassets in Resources */,
@@ -353,6 +363,7 @@
 				51BC2C652A1DE1DF00E146D7 /* ChapterModel.swift in Sources */,
 				519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */,
 				51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */,
+				519374942A263771007F594B /* LabeledViewController.swift in Sources */,
 				517969E32A21FE1700F16B02 /* TabViewController2.swift in Sources */,
 				5193748E2A25ECAF007F594B /* DemoTabBarViewController.swift in Sources */,
 				517969DF2A21E1A400F16B02 /* FirstViewController.swift in Sources */,
@@ -361,6 +372,7 @@
 				515ABB502A0E486E009A3DE4 /* AppDelegate.swift in Sources */,
 				5115C50B2A1E5E630091892D /* DateViewController.swift in Sources */,
 				515ABB652A0E550C009A3DE4 /* TableContentViewController.swift in Sources */,
+				519374912A263389007F594B /* LabelCollectionViewCell.swift in Sources */,
 				51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */,
 				5163A2162A1CA2EA0074862F /* DemoCollectionViewController.swift in Sources */,
 				51CB1DDD2A1DCFB8006D2E95 /* NestedCollectionViewController.swift in Sources */,

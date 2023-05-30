@@ -9,8 +9,10 @@ import UIKit
 
 class OpeningTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tableViewContainer: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        tableViewContainer.layer.cornerRadius = 20
         // Initialization code
     }
 
