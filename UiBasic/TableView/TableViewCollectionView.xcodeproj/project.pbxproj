@@ -35,6 +35,8 @@
 		5188FA0C2A14FD8600696B25 /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5188FA0A2A14FD8600696B25 /* ExpandableTableViewCell.xib */; };
 		5188FA0E2A1501BC00696B25 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */; };
 		5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */; };
+		5193748C2A25EA52007F594B /* UIDemoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */; };
+		5193748E2A25ECAF007F594B /* DemoTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */; };
 		5195CC002A1F41BC00304A59 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CBFF2A1F41BC00304A59 /* WebViewController.swift */; };
 		5195CC022A1F7E7200304A59 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5195CC012A1F7E7200304A59 /* MapViewController.swift */; };
 		519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */; };
@@ -43,6 +45,8 @@
 		519BC2F62A1233E200AE6B38 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519BC2F42A1233E200AE6B38 /* CompanyTableViewCell.xib */; };
 		519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */; };
 		519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */; };
+		519E456F2A24FCA30027671F /* JobDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519E456D2A24FCA30027671F /* JobDetailCollectionViewCell.swift */; };
+		519E45702A24FCA30027671F /* JobDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519E456E2A24FCA30027671F /* JobDetailCollectionViewCell.xib */; };
 		51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A6D7472A1E530600FAB665 /* PickerViewController.swift */; };
 		51ACE8352A24F6070091900F /* OpeningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ACE8332A24F6070091900F /* OpeningTableViewCell.swift */; };
 		51ACE8362A24F6070091900F /* OpeningTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */; };
@@ -89,6 +93,8 @@
 		5188FA0A2A14FD8600696B25 /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableTableViewCell.xib; sourceTree = "<group>"; };
 		5188FA0D2A1501BC00696B25 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
 		5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailsModel.swift; sourceTree = "<group>"; };
+		5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDemoScreenViewController.swift; sourceTree = "<group>"; };
+		5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabBarViewController.swift; sourceTree = "<group>"; };
 		5195CBFF2A1F41BC00304A59 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5195CC012A1F7E7200304A59 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		519BC2EF2A12038B00AE6B38 /* EvenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		519BC2F42A1233E200AE6B38 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
 		519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewController.swift; sourceTree = "<group>"; };
 		519BC2FD2A123D4400AE6B38 /* FindJobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindJobModel.swift; sourceTree = "<group>"; };
+		519E456D2A24FCA30027671F /* JobDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		519E456E2A24FCA30027671F /* JobDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		51A6D7472A1E530600FAB665 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		51ACE8332A24F6070091900F /* OpeningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningTableViewCell.swift; sourceTree = "<group>"; };
 		51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpeningTableViewCell.xib; sourceTree = "<group>"; };
@@ -189,6 +197,8 @@
 				51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */,
 				51ACE8332A24F6070091900F /* OpeningTableViewCell.swift */,
 				51ACE8342A24F6070091900F /* OpeningTableViewCell.xib */,
+				519E456D2A24FCA30027671F /* JobDetailCollectionViewCell.swift */,
+				519E456E2A24FCA30027671F /* JobDetailCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 				517969DE2A21E1A400F16B02 /* FirstViewController.swift */,
 				517969E02A21E1AF00F16B02 /* SecondViewController.swift */,
 				517969E22A21FE1700F16B02 /* TabViewController2.swift */,
+				5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */,
+				5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -297,6 +309,7 @@
 				51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */,
 				51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */,
 				51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */,
+				519E45702A24FCA30027671F /* JobDetailCollectionViewCell.xib in Resources */,
 				51ACE8362A24F6070091900F /* OpeningTableViewCell.xib in Resources */,
 				515ABB5C2A0E486F009A3DE4 /* LaunchScreen.storyboard in Resources */,
 				515ABB592A0E486F009A3DE4 /* Assets.xcassets in Resources */,
@@ -325,6 +338,7 @@
 				51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */,
 				515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */,
 				519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */,
+				5193748C2A25EA52007F594B /* UIDemoScreenViewController.swift in Sources */,
 				517969DD2A21D97200F16B02 /* TabViewController.swift in Sources */,
 				51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */,
 				51BB301D2A1BBC2D0015E9E2 /* OpeningDetails.swift in Sources */,
@@ -340,6 +354,7 @@
 				519BC2FE2A123D4400AE6B38 /* FindJobModel.swift in Sources */,
 				51A6D7482A1E530600FAB665 /* PickerViewController.swift in Sources */,
 				517969E32A21FE1700F16B02 /* TabViewController2.swift in Sources */,
+				5193748E2A25ECAF007F594B /* DemoTabBarViewController.swift in Sources */,
 				517969DF2A21E1A400F16B02 /* FirstViewController.swift in Sources */,
 				51ACE8352A24F6070091900F /* OpeningTableViewCell.swift in Sources */,
 				519BC2F52A1233E200AE6B38 /* CompanyTableViewCell.swift in Sources */,
@@ -352,6 +367,7 @@
 				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
 				51CB1DD62A1DCDC3006D2E95 /* ContainerTableViewCell.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
+				519E456F2A24FCA30027671F /* JobDetailCollectionViewCell.swift in Sources */,
 				5195CC022A1F7E7200304A59 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
