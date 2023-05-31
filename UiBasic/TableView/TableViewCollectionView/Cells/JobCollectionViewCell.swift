@@ -13,6 +13,7 @@ class JobCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var imgCompanyLogo: UIImageView!
     @IBOutlet weak private var containerView: UIView!
     @IBOutlet weak private var lblRoleName: UILabel!
+    @IBOutlet weak private var stackViewContainer: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +27,14 @@ class JobCollectionViewCell: UICollectionViewCell {
         containerView.backgroundColor = UIColor(red: 19/255, green: 21/255, blue: 30/255, alpha: 1)
     }
     
-    func configCell(data: OpeningDetails) {
+    func configCell(data: OpeningDetails, isExpanded: Bool = true) {
         imgCompanyLogo.image = UIImage(named: data.imageName ?? "")
+//        imgCompanyLogo.image? = isExpanded ? CGSize(width: 75, height: 75) : CGSize(width: 55, height: 55)
         lblRoleName.text = data.roleName
+        stackViewContainer.axis = isExpanded ? .horizontal : .vertical
+        stackViewContainer.spacing = isExpanded ? 35 : 25
     }
-
+    
+    
     
 }

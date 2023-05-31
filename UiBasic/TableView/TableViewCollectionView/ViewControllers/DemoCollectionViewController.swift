@@ -15,7 +15,7 @@ class DemoCollectionViewController: UIViewController {
     
     // MARK: VARIABLES
     private var allCategories = Category.getAllCategories()
-    
+    var isExp = false
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
@@ -48,7 +48,7 @@ extension DemoCollectionViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         let openingDetails = allCategories[indexPath.section].arrOfOpenings[indexPath.row]
-        cell.configCell(data: openingDetails)
+        cell.configCell(data: openingDetails, isExpanded: isExp)
         return cell
     }
     
@@ -63,6 +63,7 @@ extension DemoCollectionViewController: UICollectionViewDelegate {
             
             let categoryName = allCategories[indexPath.section].name
             headerView.configure(categoryName: categoryName ?? "")
+            headerView.btnDelegate = self
             return headerView
         }
         return UICollectionReusableView()
@@ -73,7 +74,7 @@ extension DemoCollectionViewController: UICollectionViewDelegate {
 extension DemoCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.bounds.size.width - 40)   , height: (collectionView.bounds.size.width - 75)/2)
+        return CGSize(width: (collectionView.bounds.size.width - 40)/(isExp ? 1 : 2 ) , height: (collectionView.bounds.size.width - (isExp ? 175 : 75))/2)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -91,3 +92,10 @@ extension DemoCollectionViewController: UICollectionViewDelegateFlowLayout {
 
 }
 
+extension DemoCollectionViewController: HeaderCollectionView {
+    func toggleType() -> Bool {
+        isExp.toggle()
+        collectionView.reloadData()
+        return !isExp
+    }
+}

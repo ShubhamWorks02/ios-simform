@@ -9,9 +9,10 @@ import UIKit
 
 class JobDetailCollectionViewCell: UICollectionViewCell {
 
+    // MARK: OUTLETS
     @IBOutlet weak var containerView: UIView!
-    
     @IBOutlet weak var companyPick: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 24

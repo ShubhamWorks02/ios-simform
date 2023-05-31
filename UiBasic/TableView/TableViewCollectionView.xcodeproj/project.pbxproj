@@ -63,6 +63,12 @@
 		51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */; };
 		51CB1DDD2A1DCFB8006D2E95 /* NestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */; };
 		51CD4C2F2A179667000F463F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD4C2E2A179667000F463F /* AppConstants.swift */; };
+		51FA1EBE2A271555003269A2 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA1EBC2A271555003269A2 /* DetailsTableViewCell.swift */; };
+		51FA1EBF2A271555003269A2 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA1EBD2A271555003269A2 /* DetailsTableViewCell.xib */; };
+		51FA1EC12A2718EB003269A2 /* BulletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA1EC02A2718EB003269A2 /* BulletedViewController.swift */; };
+		51FA1EC32A272644003269A2 /* BulletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA1EC22A272644003269A2 /* BulletModel.swift */; };
+		51FA1EC62A273ACA003269A2 /* LBl2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA1EC42A273ACA003269A2 /* LBl2CollectionViewCell.swift */; };
+		51FA1EC72A273ACA003269A2 /* LBl2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA1EC52A273ACA003269A2 /* LBl2CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +130,12 @@
 		51CB1DD92A1DCE7F006D2E95 /* NestedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestedCollectionViewCell.xib; sourceTree = "<group>"; };
 		51CB1DDC2A1DCFB8006D2E95 /* NestedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedCollectionViewController.swift; sourceTree = "<group>"; };
 		51CD4C2E2A179667000F463F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		51FA1EBC2A271555003269A2 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		51FA1EBD2A271555003269A2 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		51FA1EC02A2718EB003269A2 /* BulletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletedViewController.swift; sourceTree = "<group>"; };
+		51FA1EC22A272644003269A2 /* BulletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletModel.swift; sourceTree = "<group>"; };
+		51FA1EC42A273ACA003269A2 /* LBl2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBl2CollectionViewCell.swift; sourceTree = "<group>"; };
+		51FA1EC52A273ACA003269A2 /* LBl2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBl2CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +156,7 @@
 				5188FA0F2A1508CB00696B25 /* MemberDetailsModel.swift */,
 				51BB301C2A1BBC2D0015E9E2 /* OpeningDetails.swift */,
 				51BC2C642A1DE1DF00E146D7 /* ChapterModel.swift */,
+				51FA1EC22A272644003269A2 /* BulletModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +220,10 @@
 				519E456E2A24FCA30027671F /* JobDetailCollectionViewCell.xib */,
 				5193748F2A263389007F594B /* LabelCollectionViewCell.swift */,
 				519374902A263389007F594B /* LabelCollectionViewCell.xib */,
+				51FA1EBC2A271555003269A2 /* DetailsTableViewCell.swift */,
+				51FA1EBD2A271555003269A2 /* DetailsTableViewCell.xib */,
+				51FA1EC42A273ACA003269A2 /* LBl2CollectionViewCell.swift */,
+				51FA1EC52A273ACA003269A2 /* LBl2CollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -235,6 +252,7 @@
 				5193748B2A25EA52007F594B /* UIDemoScreenViewController.swift */,
 				5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */,
 				519374932A263771007F594B /* LabeledViewController.swift */,
+				51FA1EC02A2718EB003269A2 /* BulletedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,11 +335,13 @@
 			files = (
 				51BB30212A1BBD4C0015E9E2 /* JobCollectionViewCell.xib in Resources */,
 				51CB1DD72A1DCDC3006D2E95 /* ContainerTableViewCell.xib in Resources */,
+				51FA1EBF2A271555003269A2 /* DetailsTableViewCell.xib in Resources */,
 				51CB1DDB2A1DCE7F006D2E95 /* NestedCollectionViewCell.xib in Resources */,
 				519E45702A24FCA30027671F /* JobDetailCollectionViewCell.xib in Resources */,
 				519374922A263389007F594B /* LabelCollectionViewCell.xib in Resources */,
 				51ACE8362A24F6070091900F /* OpeningTableViewCell.xib in Resources */,
 				515ABB5C2A0E486F009A3DE4 /* LaunchScreen.storyboard in Resources */,
+				51FA1EC72A273ACA003269A2 /* LBl2CollectionViewCell.xib in Resources */,
 				515ABB592A0E486F009A3DE4 /* Assets.xcassets in Resources */,
 				517969E52A22138400F16B02 /* StoryBoard.storyboard in Resources */,
 				5188FA0C2A14FD8600696B25 /* ExpandableTableViewCell.xib in Resources */,
@@ -345,9 +365,12 @@
 				5112E49C2A1B7F200069AEF5 /* DemoCollectionViewCell.swift in Sources */,
 				512DBC752A20B98C00F554B3 /* SimulatorLocationManager.swift in Sources */,
 				5112E4A12A1BB9110069AEF5 /* HeaderCollectionViewCell.swift in Sources */,
+				51FA1EC32A272644003269A2 /* BulletModel.swift in Sources */,
 				51CB1DDA2A1DCE7F006D2E95 /* NestedCollectionViewCell.swift in Sources */,
+				51FA1EBE2A271555003269A2 /* DetailsTableViewCell.swift in Sources */,
 				515ABB542A0E486E009A3DE4 /* ViewController.swift in Sources */,
 				519BC2F12A12038B00AE6B38 /* EvenTableViewCell.swift in Sources */,
+				51FA1EC62A273ACA003269A2 /* LBl2CollectionViewCell.swift in Sources */,
 				5193748C2A25EA52007F594B /* UIDemoScreenViewController.swift in Sources */,
 				517969DD2A21D97200F16B02 /* TabViewController.swift in Sources */,
 				51BB30202A1BBD4C0015E9E2 /* JobCollectionViewCell.swift in Sources */,
@@ -357,6 +380,7 @@
 				5188FA0B2A14FD8600696B25 /* ExpandableTableViewCell.swift in Sources */,
 				5188FA102A1508CB00696B25 /* MemberDetailsModel.swift in Sources */,
 				512DBC732A20934A00F554B3 /* SecondMapViewController.swift in Sources */,
+				51FA1EC12A2718EB003269A2 /* BulletedViewController.swift in Sources */,
 				519BC2FC2A12395F00AE6B38 /* CompanyTableViewController.swift in Sources */,
 				515ABB682A0E5579009A3DE4 /* IndexTableViewCell.swift in Sources */,
 				517969E12A21E1AF00F16B02 /* SecondViewController.swift in Sources */,
