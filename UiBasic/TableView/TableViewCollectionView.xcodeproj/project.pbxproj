@@ -69,6 +69,8 @@
 		51FA1EC32A272644003269A2 /* BulletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA1EC22A272644003269A2 /* BulletModel.swift */; };
 		51FA1EC62A273ACA003269A2 /* LBl2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA1EC42A273ACA003269A2 /* LBl2CollectionViewCell.swift */; };
 		51FA1EC72A273ACA003269A2 /* LBl2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51FA1EC52A273ACA003269A2 /* LBl2CollectionViewCell.xib */; };
+		51FC9BC22A2884CF00F7B9F3 /* cmp1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FC9BC12A2884CF00F7B9F3 /* cmp1.storyboard */; };
+		51FC9BC42A28BA3C00F7B9F3 /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC9BC32A28BA3C00F7B9F3 /* IntervalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,8 @@
 		51FA1EC22A272644003269A2 /* BulletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletModel.swift; sourceTree = "<group>"; };
 		51FA1EC42A273ACA003269A2 /* LBl2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBl2CollectionViewCell.swift; sourceTree = "<group>"; };
 		51FA1EC52A273ACA003269A2 /* LBl2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LBl2CollectionViewCell.xib; sourceTree = "<group>"; };
+		51FC9BC12A2884CF00F7B9F3 /* cmp1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = cmp1.storyboard; sourceTree = "<group>"; };
+		51FC9BC32A28BA3C00F7B9F3 /* IntervalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		515ABB4E2A0E486E009A3DE4 /* TableViewCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				51FC9BC02A2884AE00F7B9F3 /* StoryBoards */,
 				51CD4C2D2A17964C000F463F /* Helper */,
 				519BC2FA2A12388500AE6B38 /* AppDelegate */,
 				519BC2F92A1237E500AE6B38 /* ViewControllers */,
@@ -231,6 +236,7 @@
 		519BC2F92A1237E500AE6B38 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				51FC9BBF2A28824900F7B9F3 /* AddedVC */,
 				515ABB532A0E486E009A3DE4 /* ViewController.swift */,
 				515ABB642A0E550C009A3DE4 /* TableContentViewController.swift */,
 				519BC2FB2A12395F00AE6B38 /* CompanyTableViewController.swift */,
@@ -253,6 +259,7 @@
 				5193748D2A25ECAF007F594B /* DemoTabBarViewController.swift */,
 				519374932A263771007F594B /* LabeledViewController.swift */,
 				51FA1EC02A2718EB003269A2 /* BulletedViewController.swift */,
+				51FC9BC32A28BA3C00F7B9F3 /* IntervalViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +280,21 @@
 				512DBC742A20B98C00F554B3 /* SimulatorLocationManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		51FC9BBF2A28824900F7B9F3 /* AddedVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddedVC;
+			sourceTree = "<group>";
+		};
+		51FC9BC02A2884AE00F7B9F3 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				51FC9BC12A2884CF00F7B9F3 /* cmp1.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +372,7 @@
 				5112E4A22A1BB9110069AEF5 /* HeaderCollectionViewCell.xib in Resources */,
 				515ABB692A0E5579009A3DE4 /* IndexTableViewCell.xib in Resources */,
 				515ABB572A0E486E009A3DE4 /* Main.storyboard in Resources */,
+				51FC9BC22A2884CF00F7B9F3 /* cmp1.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +426,7 @@
 				510DB00F2A14932D00AFF737 /* PracticeTableViewController.swift in Sources */,
 				51CB1DD62A1DCDC3006D2E95 /* ContainerTableViewCell.swift in Sources */,
 				515ABB522A0E486E009A3DE4 /* SceneDelegate.swift in Sources */,
+				51FC9BC42A28BA3C00F7B9F3 /* IntervalViewController.swift in Sources */,
 				519E456F2A24FCA30027671F /* JobDetailCollectionViewCell.swift in Sources */,
 				5195CC022A1F7E7200304A59 /* MapViewController.swift in Sources */,
 			);

@@ -40,7 +40,7 @@ extension BulletedViewController: UITableViewDataSource, UITableViewDelegate {
         if section == 0 {
             return 0 // Number of rows for section 0
         } else {
-            return 4
+            return LabelData.labelData.count
         }
     }
     
@@ -52,7 +52,7 @@ extension BulletedViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 2
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

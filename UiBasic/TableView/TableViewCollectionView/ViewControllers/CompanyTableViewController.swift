@@ -49,11 +49,13 @@ extension CompanyTableViewController: UITableViewDataSource {
         guard let companyCell = tblCompanyContents.dequeueReusableCell(withIdentifier: "CompanyTableViewCell") as? CompanyTableViewCell else {
             return UITableViewCell()
         }
+        
         let indexData = openingList[indexPath.row]
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
         // companyCell.imageDelegate = self
         // companyCell.imageDelegate = self
-        companyCell.configCell(data: indexData, tap: tapGesture)
+         companyCell.configData = openingList[indexPath.row]
+        // companyCell.configCell(data: indexData, tap: tapGesture)
         // let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageSelectTapped(_:)))
         // openingList[indexPath.] .addGestureRecognizer(tapGesture)
         // companyCell.lblCompanyName.text = openingList[indexPath.row].companyName

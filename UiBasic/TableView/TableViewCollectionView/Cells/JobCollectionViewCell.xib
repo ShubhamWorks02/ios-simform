@@ -20,11 +20,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teS-76-2ua">
                         <rect key="frame" x="0.0" y="0.0" width="174" height="151"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-Bp-P2H">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-Bp-P2H">
                                 <rect key="frame" x="14" y="34.999999999999993" width="146.33333333333334" height="81.333333333333314"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="designer" translatesAutoresizingMaskIntoConstraints="NO" id="YVx-Gp-Xq1">
-                                        <rect key="frame" x="49" y="0.0" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="48"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software Engineer" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-4b-YLM">
                                         <rect key="frame" x="0.0" y="61.000000000000007" width="146.33333333333334" height="20.333333333333336"/>
