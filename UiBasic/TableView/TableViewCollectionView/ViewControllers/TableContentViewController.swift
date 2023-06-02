@@ -12,7 +12,7 @@ class TableContentViewController: UIViewController {
     // MARK: OUTLETS
     @IBOutlet weak private var tblContents: UITableView!
     
-    // MARK: VARIABLES
+    // MARK: - Variables
     var dataOfFruits: [String] = ["Apple", "Banana", "Cherry", "Durian"]
     
     override func viewDidLoad() {
@@ -21,40 +21,22 @@ class TableContentViewController: UIViewController {
         // navigationItem.leftBarButtonItem = editButtonItem
     }
     
-    
-    
     private func initValues() {
         tblContents.delegate = self
         tblContents.dataSource = self
-        tblContents.register(UINib(nibName: Constants.Cell.indexTableViewCell, bundle: nil), forCellReuseIdentifier:  Constants.Cell.indexTableViewCell)
+        tblContents.register(UINib(nibName: Constants.Cell.indexTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.indexTableViewCell)
         //tblContents.register(UINib(nibName: "EvenTableViewCell", bundle: nil), forCellReuseIdentifier: "EvenTableViewCell")
     }
     
 }
 
-// MARK: DELEGATE METHODS
+// MARK: - Delegate Methods
+
 extension TableContentViewController: UITableViewDelegate {
-    
-    // ROW MANIPULATION
-//     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//            if editingStyle == .delete {
-//                dataOfFruits.remove(at: indexPath.row)
-//                tableView.deleteRows(at: [indexPath], with: .automatic)
-//            }
-//
-//         if editingStyle == .insert {
-//             dataOfFruits.append("added Fruit")
-//             tableView.insertRows(at: [indexPath], with: .automatic)
-//         }
-//        }
-//
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("selected row is : \(indexPath)")
-//    }
+
 }
 
-// MARK: DATASOURCE METHODS
+// MARK: - DataSource Methods
 
 extension TableContentViewController: UITableViewDataSource {
 
@@ -66,30 +48,14 @@ extension TableContentViewController: UITableViewDataSource {
         guard let oddCell = tableView.dequeueReusableCell(withIdentifier: "IndexTableViewCell") as? IndexTableViewCell else {
             return UITableViewCell()
         }
-        oddCell.layoutSubviews()
-        oddCell.layoutIfNeeded()
-//        oddCell.leading.constant = 50
-//        guard let evenCell = tableView.dequeueReusableCell(withIdentifier: "EvenTableViewCell") as? EvenTableViewCell else {
-//            return UITableViewCell()
-//        }
-        // oddCell.lblIndex.text = dataOfFruits[indexPath.row]
-         // evenCell.lblEven.text = dataOfFruits[indexPath.row]
-//        if indexPath.row % 2 == 0 {
-//            evenCell.lblEven.text = "hklsdhfkrehsdfhdhfhidhfhjfdhfhgdfhdesfhidhghdefhdhgfhdhfhdihghdfdhfhdhfhhufhduhfghhklsdhfkrehsdfhdhfhidhfhjfdhfhgdfhdesfhidhghdefhdhgfhdhfhdihghdfdhfhdhfhhufhduhfghhklsdhfkrehsdfhdhfhidhfhjfdhfhgdfhdesfhidhghdefhdhgfhdhfhdihghdfdhfhdhfhhufhduhfgh"
-//            evenCell.backgroundColor = .green
-//            return evenCell
-//        } else {
-//            oddCell.lblIndex.numberOfLines = 0
-//            oddCell.lblIndex.text = "hklsdhfkrehsdfhdhfhidhfhjfdhfhgdfhdesfhidhghdefhdhgfhdhfhdihghdfdhfhdhfhhufhduhfghhklsdhfkrehsdfhdhfhidhfhjfdhfhgdfhdesfhidhghdefhdhgfhdhfhdihghdfdhfhdhfhhufhduhfghhklsdhfkrehsdfhdhfhidhfhjfdhfhgdfhdesfhidhghdefhdhgfhdhfhdihghdfdhfhdhfhhufhduhfgh"
-            oddCell.backgroundColor = .gray
-        oddCell.contentView.backgroundColor = .blue
-            return oddCell
         
-        // return oddCell
-
+        oddCell.backgroundColor = .gray
+        oddCell.contentView.backgroundColor = .blue
+        return oddCell
     }
     
-//
+    // MARK: - Optional Delegate Methods
+    
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //         return UITableView.automaticDimension
 //    }

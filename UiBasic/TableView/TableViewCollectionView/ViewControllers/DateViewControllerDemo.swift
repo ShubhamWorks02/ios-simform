@@ -11,7 +11,6 @@ class DateViewControllerDemo: UIViewController {
 
     
     @IBOutlet weak var secondDatePicker: UIDatePicker!
-    
     @IBOutlet weak var firstDatePicker: UIDatePicker!
     
     override func viewDidLoad() {

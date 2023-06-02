@@ -14,8 +14,8 @@ class CompanyTableViewController: UIViewController {
     @IBOutlet weak private var tblCompanyContents: UITableView!
     
     // MARK: VARIABLES
-    var openingList: [FindJobModel] = FindJobModel.getCurrentOpening()
-    var isHeaderSelected: Bool = false
+    private var openingList: [FindJobModel] = FindJobModel.getCurrentOpening()
+    private var isHeaderSelected: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
