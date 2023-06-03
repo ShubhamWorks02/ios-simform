@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var imgProfile: UIImageView!
     
+    @IBOutlet weak var applFilter: UILabel!
+    
+    
     // MARK: VIEWCONTROLLER LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +56,8 @@ class ViewController: UIViewController {
         button2.backgroundColor = .green
         button2.layer.cornerRadius = 10
         profileView.addSubview(button2)
-        
+//        applFilter.font = 
+//        applFilter.attributedText = NSAttributedString(string: "Applied Filters (2)",attributes: [.font: UIFont.st])
     }
     
     // MARK: INITIALIZATION
@@ -116,7 +120,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 29
     }
 }
 
@@ -162,13 +166,12 @@ extension ViewController: UICollectionViewDelegate {
 // MARK: COLLECTIONVIEW FLOWLAYOUT
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        collectionView.bounds.height - 30
-    }
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        collectionView.bounds.height
+//    }
+//
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        10
-    }
+        0    }
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 //        return CGSize(width: collectionOfFilters.bounds.width, height: 10)
 //    }

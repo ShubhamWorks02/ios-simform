@@ -24,18 +24,18 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-fG-d1E">
-                            <rect key="frame" x="269" y="-4.3333333333333321" width="89" height="28"/>
+                            <rect key="frame" x="253" y="-5.6666666666666661" width="105" height="30.666666666666664"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
                                 <attributedString key="attributedTitle">
                                     <fragment content="Clear Filters">
                                         <attributes>
-                                            <color key="NSColor" red="0.11372549019607843" green="0.18431372549019609" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="12" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                            <integer key="NSUnderline" value="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
+                                <color key="baseForegroundColor" name="headerThemeColor"/>
                             </buttonConfiguration>
                         </button>
                     </subviews>
@@ -55,10 +55,17 @@
                 <constraint firstAttribute="bottom" secondItem="Gn9-RB-SkV" secondAttribute="bottom" id="Zqm-cU-Yrv"/>
                 <constraint firstAttribute="leading" secondItem="Gn9-RB-SkV" secondAttribute="leading" id="v2o-3W-4o2"/>
             </constraints>
+            <connections>
+                <outlet property="btnClearFilter" destination="WJE-fG-d1E" id="tC0-MG-xMa"/>
+                <outlet property="lblFilterCount" destination="BR0-k3-uOb" id="eMT-ID-PY4"/>
+            </connections>
             <point key="canvasLocation" x="89" y="-6"/>
         </collectionReusableView>
     </objects>
     <resources>
+        <namedColor name="headerThemeColor">
+            <color red="0.11372549019607843" green="0.18431372549019609" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

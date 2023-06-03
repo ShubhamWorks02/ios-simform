@@ -9,6 +9,9 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var lblSectionName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
