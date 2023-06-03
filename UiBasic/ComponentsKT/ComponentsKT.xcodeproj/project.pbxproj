@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5151E97F2A2B3E1B008699CD /* DocumentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E97E2A2B3E1B008699CD /* DocumentStatus.swift */; };
 		51EEE17A2A29D5E700816C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE1792A29D5E700816C0D /* AppDelegate.swift */; };
 		51EEE17C2A29D5E700816C0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE17B2A29D5E700816C0D /* SceneDelegate.swift */; };
 		51EEE17E2A29D5E700816C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE17D2A29D5E700816C0D /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5151E97E2A2B3E1B008699CD /* DocumentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStatus.swift; sourceTree = "<group>"; };
 		51EEE1762A29D5E700816C0D /* ComponentsKT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentsKT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EEE1792A29D5E700816C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51EEE17B2A29D5E700816C0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				51EEE1A32A2A16B800816C0D /* DocumentDetailsModel.swift */,
+				5151E97E2A2B3E1B008699CD /* DocumentStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				51EEE1A42A2A16B800816C0D /* DocumentDetailsModel.swift in Sources */,
 				51EEE18E2A29DEFF00816C0D /* TextFieldCustom.swift in Sources */,
 				51FC40882A2A497500A9BB51 /* HeaderTableViewCell.swift in Sources */,
+				5151E97F2A2B3E1B008699CD /* DocumentStatus.swift in Sources */,
 				51EEE17E2A29D5E700816C0D /* ViewController.swift in Sources */,
 				51EEE17A2A29D5E700816C0D /* AppDelegate.swift in Sources */,
 				51EEE17C2A29D5E700816C0D /* SceneDelegate.swift in Sources */,

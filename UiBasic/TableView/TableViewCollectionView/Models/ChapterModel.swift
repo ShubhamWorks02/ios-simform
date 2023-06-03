@@ -17,7 +17,7 @@ class PersonModel {
         self.personName = Data.names[personId]
         self.chapterList = ChapterModel.getChapterDetails(personId: personId)
     }
-
+    
 }
 
 class ChapterModel {

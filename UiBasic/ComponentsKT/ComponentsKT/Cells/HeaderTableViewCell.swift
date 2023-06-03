@@ -10,7 +10,17 @@ import UIKit
 class HeaderTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var lblSectionName: UILabel!
+    @IBOutlet weak var lblSectionName: UILabel!{
+        didSet {
+            lblSectionName.text = sectionName
+        }
+    }
+    
+    var sectionName: String? {
+        didSet {
+            lblSectionName.text = sectionName
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +32,6 @@ class HeaderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     
 }
