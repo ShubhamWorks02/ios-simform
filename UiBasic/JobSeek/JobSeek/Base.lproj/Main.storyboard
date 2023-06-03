@@ -480,16 +480,16 @@
     </scenes>
     <designables>
         <designable name="2m1-Oj-vwN">
-            <size key="intrinsicContentSize" width="83" height="42.666666666666664"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="6wu-L7-BrJ">
-            <size key="intrinsicContentSize" width="127.33333333333333" height="46"/>
+            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
         </designable>
         <designable name="mfo-yZ-JyO">
-            <size key="intrinsicContentSize" width="83" height="42.666666666666664"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
         <designable name="qn1-VP-gol">
-            <size key="intrinsicContentSize" width="127.33333333333333" height="46"/>
+            <size key="intrinsicContentSize" width="76.666666666666671" height="34"/>
         </designable>
     </designables>
     <resources>

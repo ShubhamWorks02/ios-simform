@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5151E97F2A2B3E1B008699CD /* DocumentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E97E2A2B3E1B008699CD /* DocumentStatus.swift */; };
+		5151E9822A2B5AA2008699CD /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E9812A2B5AA2008699CD /* FormViewController.swift */; };
+		5151E9842A2B5C1F008699CD /* ActualGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E9832A2B5C1F008699CD /* ActualGradientButton.swift */; };
+		5151E9862A2B6293008699CD /* UITextFieldCustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E9852A2B6293008699CD /* UITextFieldCustomImage.swift */; };
 		51EEE17A2A29D5E700816C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE1792A29D5E700816C0D /* AppDelegate.swift */; };
 		51EEE17C2A29D5E700816C0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE17B2A29D5E700816C0D /* SceneDelegate.swift */; };
 		51EEE17E2A29D5E700816C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE17D2A29D5E700816C0D /* ViewController.swift */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		5151E97E2A2B3E1B008699CD /* DocumentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStatus.swift; sourceTree = "<group>"; };
+		5151E9812A2B5AA2008699CD /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		5151E9832A2B5C1F008699CD /* ActualGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGradientButton.swift; sourceTree = "<group>"; };
+		5151E9852A2B6293008699CD /* UITextFieldCustomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldCustomImage.swift; sourceTree = "<group>"; };
 		51EEE1762A29D5E700816C0D /* ComponentsKT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentsKT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EEE1792A29D5E700816C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51EEE17B2A29D5E700816C0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5151E9802A2B5A82008699CD /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				51EEE17D2A29D5E700816C0D /* ViewController.swift */,
+				5151E9812A2B5AA2008699CD /* FormViewController.swift */,
+			);
+			path = ViewControlles;
+			sourceTree = "<group>";
+		};
 		51EEE16D2A29D5E700816C0D = {
 			isa = PBXGroup;
 			children = (
@@ -84,17 +99,19 @@
 		51EEE1782A29D5E700816C0D /* ComponentsKT */ = {
 			isa = PBXGroup;
 			children = (
+				5151E9802A2B5A82008699CD /* ViewControlles */,
 				51EEE1A22A2A139000816C0D /* Models */,
 				51EEE1912A29F3B400816C0D /* Cells */,
 				51EEE1792A29D5E700816C0D /* AppDelegate.swift */,
 				51EEE17B2A29D5E700816C0D /* SceneDelegate.swift */,
-				51EEE17D2A29D5E700816C0D /* ViewController.swift */,
 				51EEE17F2A29D5E700816C0D /* Main.storyboard */,
 				51EEE1822A29D5E800816C0D /* Assets.xcassets */,
 				51EEE1842A29D5E800816C0D /* LaunchScreen.storyboard */,
 				51EEE1872A29D5E800816C0D /* Info.plist */,
 				51EEE18D2A29DEFF00816C0D /* TextFieldCustom.swift */,
 				51EEE18F2A29E8C200816C0D /* RoundedBottomView.swift */,
+				5151E9832A2B5C1F008699CD /* ActualGradientButton.swift */,
+				5151E9852A2B6293008699CD /* UITextFieldCustomImage.swift */,
 			);
 			path = ComponentsKT;
 			sourceTree = "<group>";
@@ -203,6 +220,7 @@
 			files = (
 				51EEE19C2A2A0BDF00816C0D /* HeaderCollectionReusableView.swift in Sources */,
 				51EEE1A02A2A125400816C0D /* FilterCollectionViewCell.swift in Sources */,
+				5151E9862A2B6293008699CD /* UITextFieldCustomImage.swift in Sources */,
 				51EEE1982A2A02BB00816C0D /* DeleteTableViewCell.swift in Sources */,
 				51EEE1A42A2A16B800816C0D /* DocumentDetailsModel.swift in Sources */,
 				51EEE18E2A29DEFF00816C0D /* TextFieldCustom.swift in Sources */,
@@ -213,6 +231,8 @@
 				51EEE17C2A29D5E700816C0D /* SceneDelegate.swift in Sources */,
 				51EEE1942A29F3E300816C0D /* DocumentTableViewCell.swift in Sources */,
 				51EEE1902A29E8C200816C0D /* RoundedBottomView.swift in Sources */,
+				5151E9822A2B5AA2008699CD /* FormViewController.swift in Sources */,
+				5151E9842A2B5C1F008699CD /* ActualGradientButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
