@@ -8,9 +8,8 @@
 import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
-
-   
     
+    // MARK: OUTLETS
     @IBOutlet weak var imgClearFilter: UIImageView!
     @IBOutlet weak var cellContainerView: UIView!
     @IBOutlet weak var lblFilterTitle: UILabel!
@@ -19,7 +18,10 @@ class FilterCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        cellContainerView.layer.cornerRadius = 10
+        setUpCell()
     }
 
+    private func setUpCell() {
+        cellContainerView.layer.cornerRadius = 10
+    }
 }

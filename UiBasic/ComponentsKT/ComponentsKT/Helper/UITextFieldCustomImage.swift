@@ -80,10 +80,10 @@ class UITextFieldCustomImage: UITextField {
       
       private func updateView() {
           layer.masksToBounds = true
-          layer.cornerRadius = 10
-          layer.borderWidth = 1
+          layer.cornerRadius = 11
+          layer.borderWidth = 0
           layer.borderColor = UIColor.lightGray.cgColor
-          returnKeyType = .done
+          returnKeyType = .next
       }
     override func layoutSubviews() {
             super.layoutSubviews()
@@ -111,14 +111,13 @@ class UITextFieldCustomImage: UITextField {
 }
 
 extension UITextFieldCustomImage {
-    func setBoldBlackPlaceholderText(_ text: String) {
+    func setSemiBoldBlackPlaceholderText(_ text: String) {
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.black,
-            .font: UIFont.boldSystemFont(ofSize: 17)
+            .font: UIFont.systemFont(ofSize: 13, weight: .semibold)
         ]
         attributedPlaceholder = NSAttributedString(string: text, attributes: attributes)
     }
-    
 }
 // Usage:
 

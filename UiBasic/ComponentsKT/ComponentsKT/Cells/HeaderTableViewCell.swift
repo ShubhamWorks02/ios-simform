@@ -9,13 +9,10 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
 
+    // MARK: OUTLETS
+    @IBOutlet weak private var lblSectionName: UILabel!
     
-    @IBOutlet weak var lblSectionName: UILabel!{
-        didSet {
-            lblSectionName.text = sectionName
-        }
-    }
-    
+    // MARK: VARIABLES
     var sectionName: String? {
         didSet {
             lblSectionName.text = sectionName
@@ -32,6 +29,5 @@ class HeaderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
     
 }

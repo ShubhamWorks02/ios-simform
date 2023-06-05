@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o78-zz-GbE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nec-Lp-qpK">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -1392,40 +1392,10 @@
                     <view key="view" contentMode="scaleToFill" id="3aB-G8-1Uh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2v-Vb-dJj">
-                                <rect key="frame" x="20" y="203" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jEf-Uk-iZN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UKn-UR-FI7">
-                                <rect key="frame" x="20" y="297" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KDm-lH-65G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cW0-Jr-zpo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="cW0-Jr-zpo" firstAttribute="trailing" secondItem="a2v-Vb-dJj" secondAttribute="trailing" constant="20" id="1Qp-Ac-bRv"/>
-                            <constraint firstItem="UKn-UR-FI7" firstAttribute="top" secondItem="a2v-Vb-dJj" secondAttribute="bottom" constant="44" id="8ws-Ku-Ldz"/>
-                            <constraint firstItem="UKn-UR-FI7" firstAttribute="leading" secondItem="a2v-Vb-dJj" secondAttribute="leading" id="IVc-br-Anz"/>
-                            <constraint firstItem="UKn-UR-FI7" firstAttribute="trailing" secondItem="a2v-Vb-dJj" secondAttribute="trailing" id="VcT-eZ-hhv"/>
-                            <constraint firstItem="a2v-Vb-dJj" firstAttribute="top" secondItem="cW0-Jr-zpo" secondAttribute="top" constant="203" id="ZK1-PU-lSl"/>
-                            <constraint firstItem="a2v-Vb-dJj" firstAttribute="leading" secondItem="cW0-Jr-zpo" secondAttribute="leading" constant="20" id="jnh-2J-ADZ"/>
-                        </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="736"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="a2v-Vb-dJj" id="qQr-q2-Z0i"/>
-                        <outlet property="passwordTextField" destination="UKn-UR-FI7" id="chp-TR-Alm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnk-f8-2gn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

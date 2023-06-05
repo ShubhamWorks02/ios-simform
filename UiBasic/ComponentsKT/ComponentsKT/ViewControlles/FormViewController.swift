@@ -9,42 +9,223 @@ import UIKit
 
 class FormViewController: UIViewController {
     
-    @IBOutlet weak var btnSaveInfo: ActualGradientButton!
-    @IBOutlet weak var txtFirstName: UITextFieldCustomImage!
+    // MARK: OUTLETS
+    @IBOutlet weak private var btnSaveInfo: ActualGradientButton!
+    @IBOutlet weak private var txtFirstName: UITextFieldCustomImage!
+    @IBOutlet weak private var txtLastName: UITextFieldCustomImage!
+    @IBOutlet weak private var txtEmail: UITextFieldCustomImage!
+    @IBOutlet weak private var txtJobTitle: UITextFieldCustomImage!
+    @IBOutlet weak private var txtCompanyName: UITextFieldCustomImage!
+    @IBOutlet weak private var navigationView: UIView!
+    @IBOutlet weak private var mainView: UIView!
+    @IBOutlet weak var imgContainerView: UIView!
+    @IBOutlet weak private var imgProfileView: UIImageView!
     
-    @IBOutlet weak var txtLastName: UITextFieldCustomImage!
     
-    @IBOutlet weak var txtEmail: UITextFieldCustomImage!
-    
-    @IBOutlet weak var txtJobTitle: UITextFieldCustomImage!
-    
-    
-    @IBOutlet weak var txtCompanyName: UITextFieldCustomImage!
+    // MARK: VARIABLES
+    private var keyboardHeight: CGFloat = 0.0
+    private var viewPlacementHeight = 0.0
+    private var txtFieldList: [UITextFieldCustomImage] = []
+    private var isValidationCompleted: Bool = false
+    // MARK: VIEWCONTROLLER LIFECYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtFirstName.translatesAutoresizingMaskIntoConstraints = false
-//        let container = UIView(frame: txtFirstName.frame)
-//        container.addSubview(txtFirstName)
-//
-//        let shadowLayer = CALayer()
-//        shadowLayer.frame = CGRect(x: 0, y: container.frame.height - 2, width: container.frame.width, height: 2)
-//        shadowLayer.backgroundColor = UIColor.black.cgColor
-//        shadowLayer.shadowColor = UIColor.black.cgColor
-//        shadowLayer.shadowOffset = CGSize(width: 0, height: 2)
-//        shadowLayer.shadowOpacity = 0.3
-//        shadowLayer.shadowRadius = 2
-//        shadowLayer.masksToBounds = false
-//
-//        container.layer.addSublayer(shadowLayer)
-//
-//        // Add the container view to your view hierarchy
-//        self.view.addSubview(container)
-
-
+        viewPlacementHeight = mainView.bounds.origin.y
+        configureTextFields()
+        configureUI()
+        placeImageOnProfile()
+        adjustHeight()
+        setUpReturnKeyForTextField()
     }
     
+    // MARK: CUSTOMIZATION
+//    private func configureTextFields() {
+//        txtFirstName.setSemiBoldBlackPlaceholderText("First Name")
+//        txtLastName.setSemiBoldBlackPlaceholderText("Last Name")
+//        txtEmail.setSemiBoldBlackPlaceholderText("Email")
+//        txtJobTitle.setSemiBoldBlackPlaceholderText("Job Title")
+//        txtCompanyName.setSemiBoldBlackPlaceholderText("Company Name")
+//    }
     
+    private func configureUI() {
+        // txtFirstName.translatesAutoresizingMaskIntoConstraints = false
+        navigationView.layer.cornerRadius = 8
+        mainView.layer.cornerRadius = 35
+        mainView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        btnSaveInfo.isHidden = true
+        //btnSaveInfo.layer.cornerRadius = btnSaveInfo.bounds.height/2
+    }
+    
+    private func placeImageOnProfile() {
+        let childView = UIView()
+        childView.frame = CGRect(x: (imgProfileView.bounds.width) - 22, y: imgProfileView.bounds.height - 25, width: 28, height: 28)
+        childView.backgroundColor = UIColor(named: "emailColor")
+        childView.layer.cornerRadius = childView.bounds.width/2
+        let cameraImg = UIImageView()
+        cameraImg.image = UIImage(named: "camera")
+//        cameraImg.contentMode = .scaleAspectFill
+        cameraImg.frame = CGRect(x: childView.bounds.midX - 6.5, y: childView.bounds.midY - 6.5, width: 13, height: 13)
+        childView.layer.borderWidth = 2
+        childView.layer.borderColor = UIColor.white.cgColor
+        cameraImg.layer.cornerRadius = cameraImg.bounds.width / 2
+        //childView.contentMode = .scaleAspectFill
+        
+        childView.clipsToBounds = true
+        cameraImg.isUserInteractionEnabled = true
+        childView.isUserInteractionEnabled = true
+        imgProfileView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(camBtnTapped(_ :)))
+        cameraImg.addGestureRecognizer(tap)
+        childView.addSubview(cameraImg)
+        childView.layer.cornerRadius = childView.bounds.height / 2
+        imgProfileView.layer.cornerRadius = imgProfileView.bounds.height/2
+        imgContainerView.addSubview(childView)
+    }
+    
+    private func adjustHeight() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
+        // Add a tap gesture recognizer to dismiss the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+
+        keyboardHeight = keyboardFrame.height
+
+        // Adjust the text field's position based on the keyboard height
+        UIView.animate(withDuration: 0.3) {
+        self.mainView.frame.origin.y = self.view.bounds.height - self.keyboardHeight - self.txtCompanyName.frame.height*8 - 10
+        }
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        // Reset the text field's position
+        UIView.animate(withDuration: 0.3) {
+            self.mainView.frame.origin.y = self.view.bounds.height - self.mainView.bounds.height
+        }
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    deinit {
+        // Remove keyboard notification observers
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: TEXTFIELD DELEGATES
+extension FormViewController: UITextFieldDelegate {
+    
+    func setUpReturnKeyForTextField() {
+        txtCompanyName.returnKeyType = .done
+        txtFieldList = [txtFirstName,txtLastName,txtEmail,txtJobTitle,txtCompanyName]
+        for textField in txtFieldList {
+            textField.delegate = self
+        }
+    }
+    
+    private func configureTextFields() {
+        txtFirstName.setSemiBoldBlackPlaceholderText("First Name")
+        txtLastName.setSemiBoldBlackPlaceholderText("Last Name")
+        txtEmail.setSemiBoldBlackPlaceholderText("Email")
+        txtJobTitle.setSemiBoldBlackPlaceholderText("Job Title")
+        txtCompanyName.setSemiBoldBlackPlaceholderText("Company Name")
+
+        // Set delegate for each text field
+        txtFirstName.delegate = self
+        txtLastName.delegate = self
+        txtEmail.delegate = self
+        txtJobTitle.delegate = self
+        txtCompanyName.delegate = self
+
+        // Add text fields to the txtFieldList array
+        // txtFieldList = [txtFirstName, txtLastName, txtEmail, txtJobTitle, txtCompanyName]
+    }
+    
+}
+
+// MARK: IMAGEPICKER DELEGATES
+extension FormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @objc func camBtnTapped(_ sender: UIImageView) {
+        let imageController = UIImagePickerController()
+        imageController.delegate = self
+        imageController.sourceType = UIImagePickerController.SourceType.photoLibrary
+        self.present(imageController, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imgProfileView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        imgProfileView.contentMode = .scaleAspectFill
+        dismiss(animated: true)
+    }
+}
+
+// MARK: TEXTFIELD VALIDATION
+extension FormViewController {
+    
+    private func isTextFieldEmpty(_ textField: UITextField) -> Bool {
+        return textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true
+    }
+    
+    private func showAlert(for textField: UITextField, with message: String) {
+        let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let currentIndex = txtFieldList.firstIndex(of: textField as! UITextFieldCustomImage) {
+            // If it's the last text field, resign first responder and perform necessary actions
+            if currentIndex == txtFieldList.count - 1 {
+                textField.resignFirstResponder()
+                // Perform any final actions here
+            } else {
+                // Otherwise, move to the next text field and set it as the first responder
+                let nextTextField = txtFieldList[currentIndex + 1]
+                
+                // Perform validation based on the current text field
+                if textField == txtEmail {
+                    if !isTextFieldEmpty(textField) && isValidEmail(textField.text ?? "") {
+                        nextTextField.becomeFirstResponder()
+                    } else {
+                        showAlert(for: textField, with: "Please enter a valid email address.")
+                    }
+                } else {
+                    if !isTextFieldEmpty(textField) && containsOnlyLetters(textField.text ?? "") {
+                        nextTextField.becomeFirstResponder()
+                    } else {
+                        showAlert(for: textField, with: "Please enter a valid input (only letters allowed).")
+                    }
+                }
+            }
+        }
+        
+        // Update validation status
+        isValidationCompleted = txtFieldList.allSatisfy { !isTextFieldEmpty($0) }
+        // Show/hide saveInfo button
+        btnSaveInfo.isHidden = !isValidationCompleted
+        return true
+    }
+
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
+
+    private func containsOnlyLetters(_ string: String) -> Bool {
+        let letterCharacterSet = CharacterSet.letters
+        return string.rangeOfCharacter(from: letterCharacterSet.inverted) == nil
+    }
 
 }

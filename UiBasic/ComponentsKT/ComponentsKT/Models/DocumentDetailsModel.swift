@@ -8,21 +8,6 @@
 import Foundation
 import UIKit
 
-class SectionDetailsModel {
-    
-    var sectionName: String?
-    var documentList: [DocumentDetailsModel]
-    var sectionId: Int?
-    
-    init(sectionName: String) {
-        self.sectionName = sectionName
-        self.documentList = DocumentDetailsModel.getDocumentDetails(sectionName: sectionName)
-        self.sectionId = Data.sectionNumber[sectionName]
-    }
-    
-    
-}
-
 class DocumentDetailsModel {
     let sectionName: String?
     let id: String?
@@ -32,7 +17,7 @@ class DocumentDetailsModel {
     let date: String?
     var status: DocumentStatus? // Added status parameter
     
-    init(sectionName: String, id: String, subject: String, emailID: String, type: String, date: String, status: DocumentStatus?) {
+    init(sectionName: String?, id: String?, subject: String?, emailID: String?, type: String?, date: String?, status: DocumentStatus?) {
         self.sectionName = sectionName
         self.id = id
         self.subject = subject
@@ -51,7 +36,7 @@ class DocumentDetailsModel {
 
 class Data {
     static var data = [
-            DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
+            DocumentDetailsModel(sectionName: "All Document",id: nil, subject: "Test Request Compliance Approval Test Request Compliance Approval ", emailID: "DavisBaptista@domain.name DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
             DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .awaitingApproval),
             DocumentDetailsModel(sectionName: "All", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
             DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .awaitingApproval),

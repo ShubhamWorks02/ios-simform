@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "suitcase.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "suitcase32.png",
+      "filename" : "back (1) 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

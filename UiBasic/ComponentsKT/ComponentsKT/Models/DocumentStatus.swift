@@ -21,7 +21,7 @@ enum DocumentStatus: String, CaseIterable {
     func getColor() -> UIColor {
         switch self {
         case .approved: return UIColor(red: 80/255, green: 175/255, blue: 87/255, alpha: 1.0)
-        case .awaitingApproval: return UIColor(red: 204/255, green: 99/255, blue: 0/255, alpha: 1.0) // Custom color for Awaiting Approval case
+        case .awaitingApproval: return UIColor(red: 204/255, green: 99/255, blue: 0/255, alpha: 1.0)
         }
     }
 }
