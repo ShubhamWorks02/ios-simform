@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak private var imgProfile: UIImageView!
     @IBOutlet weak private var applFilter: UILabel!
     @IBOutlet weak private var lblUserName: UILabel!
-    @IBOutlet weak var btnClearFilters: UIButton!
-    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak private var btnClearFilters: UIButton!
+    @IBOutlet weak private var collectionViewHeight: NSLayoutConstraint!
     
     
     // MARK: VARIABLES
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         collectionOfFilters.delegate = self
         collectionOfFilters.dataSource = self
         collectionOfFilters.register(UINib(nibName: Constants.Cell.filterCollectionViewCell, bundle: nil),
-                                 forCellWithReuseIdentifier: Constants.Cell.filterCollectionViewCell)
+                                     forCellWithReuseIdentifier: Constants.Cell.filterCollectionViewCell)
         collectionOfFilters.layer.cornerRadius = 10
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -59,7 +59,6 @@ class ViewController: UIViewController {
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
-    
     
     @IBAction func btnClearFiltersTapped(_ sender: Any) {
         applFilter.text = "Applied Filters (0)"
@@ -81,9 +80,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionName = sectionData[section]
-        let documentDetails = DocumentDetailsModel.getDocumentDetails(sectionName: sectionName)
+        let documentDetails = DocumentDetailsModel.getDocumentDetails(sectionName: sectionName) // ternary
         return documentDetails.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -95,7 +93,7 @@ extension ViewController: UITableViewDataSource {
         let documentDetails = DocumentDetailsModel.getDocumentDetails(sectionName: sectionName)
         let document = documentDetails[indexPath.row]
         tableCell.document = document
-    
+        
         return tableCell
     }
     
@@ -139,21 +137,16 @@ extension ViewController: UICollectionViewDataSource {
     
 }
 
-// MARK: COLLECTIONVIEW DELEGATES
-extension ViewController: UICollectionViewDelegate {
-    
-}
-
 // MARK: COLLECTIONVIEW FLOWLAYOUT
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        0
+        .zero
     }
-
+    
 }
 
-// MARK: CUSTOMIZATION
+// MARK: CUSTOMIZATION METHODS
 extension ViewController {
     
     private func customizeComponent() {
@@ -164,12 +157,12 @@ extension ViewController {
         customizeProfileView()
         customizeUserName()
     }
-
+    
     private func customizeFixedProfileHeaderView() {
         fixedProfileHeaderView.layer.cornerRadius = 35
         fixedProfileHeaderView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
-
+    
     private func customizeSearchTextField() {
         txtSearch.borderStyle = .none
     }
@@ -181,10 +174,10 @@ extension ViewController {
             .foregroundColor: UIColor.white
         ]
         attributedString.addAttributes(attributes, range: NSRange(location: 0, length: attributedString.length))
-
+        
         lblUserName.attributedText = attributedString
     }
-
+    
     private func customizeImageView() {
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: imgV.bounds.width - 12 , y: 0, width: 10, height: 10)
@@ -194,11 +187,11 @@ extension ViewController {
         imgV.layer.cornerRadius = imgV.bounds.width / 2
         imgV.addSubview(button)
     }
-
+    
     private func customizeFilterView() {
         filterView.layer.cornerRadius = 25
     }
-
+    
     private func customizeProfileView() {
         let button2 = UIButton(type: .custom)
         button2.frame = CGRect(x: profileView.bounds.width - 25 , y: profileView.bounds.height - 35, width: 20, height: 20)

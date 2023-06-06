@@ -1,13 +1,13 @@
 //
-//  FourthVC.swift
+//  FirstVC.swift
 //  UINavigation
 //
-//  Created by Shubham Bhatt on 01/06/23.
+//  Created by Shubham Bhatt on 06/06/23.
 //
 
 import UIKit
 
-class FourthVC: UIViewController {
+class FirstVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,17 +15,13 @@ class FourthVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+
+    
     override func viewDidAppear(_ animated: Bool) {
-        print(self.navigationController?.viewControllers, "stack in 4" )
-        print(self.navigationController?.topViewController, "topviewcontroller in 4" )
+        print(self.navigationController?.viewControllers, "stack in 1" )
+        print(self.navigationController?.topViewController, "topviewcontroller in 1" )
     }
-    
-    
-    @IBAction func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-        //self.dismiss(animated: true)
-    }
-    
     
     /*
     // MARK: - Navigation

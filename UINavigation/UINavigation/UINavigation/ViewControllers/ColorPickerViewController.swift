@@ -1,13 +1,13 @@
 //
-//  FourthVC.swift
+//  ColorPickerViewController.swift
 //  UINavigation
 //
-//  Created by Shubham Bhatt on 01/06/23.
+//  Created by Shubham Bhatt on 06/06/23.
 //
 
 import UIKit
 
-class FourthVC: UIViewController {
+class ColorPickerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,17 +15,21 @@ class FourthVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print(self.navigationController?.viewControllers, "stack in 4" )
-        print(self.navigationController?.topViewController, "topviewcontroller in 4" )
+    @IBAction func didTapRedBtn(_ sender: UIButton) {
+        pushVC(title: "red", color: .red)
     }
     
     
-    @IBAction func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-        //self.dismiss(animated: true)
+    @IBAction func didTapGreenBtn(_ sender: UIButton) {
+        pushVC(title: "green", color: .green)
     }
     
+    private func pushVC(title: String, color: UIColor) {
+        let vc = UIViewController()
+        vc.view.backgroundColor = color
+        vc.title = title
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     /*
     // MARK: - Navigation

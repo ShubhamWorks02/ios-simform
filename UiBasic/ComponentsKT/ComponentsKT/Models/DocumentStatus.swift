@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum DocumentStatus: String, CaseIterable {
+enum DocumentStatus: String{
     case approved, awaitingApproval
     
     func getStatus() -> String {

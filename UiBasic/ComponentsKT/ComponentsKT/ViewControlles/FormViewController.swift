@@ -18,7 +18,7 @@ class FormViewController: UIViewController {
     @IBOutlet weak private var txtCompanyName: UITextFieldCustomImage!
     @IBOutlet weak private var navigationView: UIView!
     @IBOutlet weak private var mainView: UIView!
-    @IBOutlet weak var imgContainerView: UIView!
+    @IBOutlet weak private var imgContainerView: UIView!
     @IBOutlet weak private var imgProfileView: UIImageView!
     
     
@@ -27,8 +27,8 @@ class FormViewController: UIViewController {
     private var viewPlacementHeight = 0.0
     private var txtFieldList: [UITextFieldCustomImage] = []
     private var isValidationCompleted: Bool = false
-    // MARK: VIEWCONTROLLER LIFECYCLE
     
+    // MARK: VIEWCONTROLLER LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         viewPlacementHeight = mainView.bounds.origin.y
@@ -40,14 +40,6 @@ class FormViewController: UIViewController {
     }
     
     // MARK: CUSTOMIZATION
-//    private func configureTextFields() {
-//        txtFirstName.setSemiBoldBlackPlaceholderText("First Name")
-//        txtLastName.setSemiBoldBlackPlaceholderText("Last Name")
-//        txtEmail.setSemiBoldBlackPlaceholderText("Email")
-//        txtJobTitle.setSemiBoldBlackPlaceholderText("Job Title")
-//        txtCompanyName.setSemiBoldBlackPlaceholderText("Company Name")
-//    }
-    
     private func configureUI() {
         // txtFirstName.translatesAutoresizingMaskIntoConstraints = false
         navigationView.layer.cornerRadius = 8
@@ -57,20 +49,35 @@ class FormViewController: UIViewController {
         //btnSaveInfo.layer.cornerRadius = btnSaveInfo.bounds.height/2
     }
     
+    private func configureTextFields() {
+        txtFirstName.setSemiBoldBlackPlaceholderText("First Name")
+        txtLastName.setSemiBoldBlackPlaceholderText("Last Name")
+        txtEmail.setSemiBoldBlackPlaceholderText("Email")
+        txtJobTitle.setSemiBoldBlackPlaceholderText("Job Title")
+        txtCompanyName.setSemiBoldBlackPlaceholderText("Company Name")
+
+        // Set delegate for each text field
+        txtFirstName.delegate = self
+        txtLastName.delegate = self
+        txtEmail.delegate = self
+        txtJobTitle.delegate = self
+        txtCompanyName.delegate = self
+
+    }
+    
     private func placeImageOnProfile() {
         let childView = UIView()
         childView.frame = CGRect(x: (imgProfileView.bounds.width) - 22, y: imgProfileView.bounds.height - 25, width: 28, height: 28)
         childView.backgroundColor = UIColor(named: "emailColor")
         childView.layer.cornerRadius = childView.bounds.width/2
         let cameraImg = UIImageView()
+        
         cameraImg.image = UIImage(named: "camera")
-//        cameraImg.contentMode = .scaleAspectFill
         cameraImg.frame = CGRect(x: childView.bounds.midX - 6.5, y: childView.bounds.midY - 6.5, width: 13, height: 13)
         childView.layer.borderWidth = 2
         childView.layer.borderColor = UIColor.white.cgColor
         cameraImg.layer.cornerRadius = cameraImg.bounds.width / 2
-        //childView.contentMode = .scaleAspectFill
-        
+
         childView.clipsToBounds = true
         cameraImg.isUserInteractionEnabled = true
         childView.isUserInteractionEnabled = true
@@ -133,24 +140,6 @@ extension FormViewController: UITextFieldDelegate {
         }
     }
     
-    private func configureTextFields() {
-        txtFirstName.setSemiBoldBlackPlaceholderText("First Name")
-        txtLastName.setSemiBoldBlackPlaceholderText("Last Name")
-        txtEmail.setSemiBoldBlackPlaceholderText("Email")
-        txtJobTitle.setSemiBoldBlackPlaceholderText("Job Title")
-        txtCompanyName.setSemiBoldBlackPlaceholderText("Company Name")
-
-        // Set delegate for each text field
-        txtFirstName.delegate = self
-        txtLastName.delegate = self
-        txtEmail.delegate = self
-        txtJobTitle.delegate = self
-        txtCompanyName.delegate = self
-
-        // Add text fields to the txtFieldList array
-        // txtFieldList = [txtFirstName, txtLastName, txtEmail, txtJobTitle, txtCompanyName]
-    }
-    
 }
 
 // MARK: IMAGEPICKER DELEGATES
@@ -193,28 +182,65 @@ extension FormViewController {
                 // Otherwise, move to the next text field and set it as the first responder
                 let nextTextField = txtFieldList[currentIndex + 1]
                 
-                // Perform validation based on the current text field
-                if textField == txtEmail {
-                    if !isTextFieldEmpty(textField) && isValidEmail(textField.text ?? "") {
-                        nextTextField.becomeFirstResponder()
-                    } else {
-                        showAlert(for: textField, with: "Please enter a valid email address.")
-                    }
-                } else {
-                    if !isTextFieldEmpty(textField) && containsOnlyLetters(textField.text ?? "") {
-                        nextTextField.becomeFirstResponder()
-                    } else {
-                        showAlert(for: textField, with: "Please enter a valid input (only letters allowed).")
-                    }
+                // Validate the current text field before moving to the next one
+                let isCurrentFieldValid = validateTextField(textField)
+                
+                if isCurrentFieldValid {
+                    nextTextField.becomeFirstResponder()
                 }
             }
         }
         
         // Update validation status
-        isValidationCompleted = txtFieldList.allSatisfy { !isTextFieldEmpty($0) }
+        isValidationCompleted = txtFieldList.allSatisfy { !isTextFieldEmpty($0) && ($0 == txtEmail ? isValidEmail($0.text ?? "") : containsOnlyLetters($0.text ?? "")) }
+        
         // Show/hide saveInfo button
         btnSaveInfo.isHidden = !isValidationCompleted
+        
         return true
+    }
+
+    private func validateTextField(_ textField: UITextField) -> Bool {
+        if textField == txtEmail {
+            if !isTextFieldEmpty(textField) && isValidEmail(textField.text ?? "") {
+                removeBorderError(textField)
+                return true
+            } else {
+                setBorderError(textField)
+                return false
+            }
+        } else {
+            if !isTextFieldEmpty(textField) && containsOnlyLetters(textField.text ?? "") {
+                removeBorderError(textField)
+                return true
+            } else {
+                setBorderError(textField)
+                return false
+            }
+        }
+    }
+
+    private func setBorderError(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.borderWidth = 1.0
+    }
+
+    private func removeBorderError(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.green.cgColor
+        textField.layer.borderWidth = 1.0
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        validateTextField(textField)
+        updateValidationStatus()
+    }
+    
+    private func updateValidationStatus() {
+        // Update validation status
+        isValidationCompleted = txtFieldList.allSatisfy { !isTextFieldEmpty($0) && ($0 == txtEmail ? isValidEmail($0.text ?? "") : containsOnlyLetters($0.text ?? "")) }
+        
+        // Show/hide saveInfo button
+        btnSaveInfo.isHidden = !isValidationCompleted
     }
 
     private func isValidEmail(_ email: String) -> Bool {

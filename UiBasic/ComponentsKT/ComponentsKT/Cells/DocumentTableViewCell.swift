@@ -35,12 +35,8 @@ class DocumentTableViewCell: UITableViewCell {
         // Initialization code
         listView.layer.cornerRadius = 14
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
-    private func setButtonCornerRadius(_ button: UIButton, cornerRadius: CGFloat) {
+    private func setButtonCornerRadius(cornerRadius: CGFloat) {
         btnApplicationStatus.layer.cornerRadius = cornerRadius
         btnApplicationStatus.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
     }
@@ -49,7 +45,7 @@ class DocumentTableViewCell: UITableViewCell {
         button.setTitle(document?.status?.getStatus() ?? "NA", for: .normal)
         button.backgroundColor = document?.status == .awaitingApproval ? UIColor(red: 249/255, green: 230/255, blue: 209/255, alpha: 1.0) : UIColor(red: 221/255, green: 242/255, blue: 222/255, alpha: 1.0)
         button.setTitleColor(document?.status?.getColor(), for: .normal)
-        setButtonCornerRadius(btnApplicationStatus, cornerRadius: 14)
+        setButtonCornerRadius(cornerRadius: 14)
     }
 
 }

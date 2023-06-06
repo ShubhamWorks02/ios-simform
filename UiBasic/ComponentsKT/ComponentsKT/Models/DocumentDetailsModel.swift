@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 class DocumentDetailsModel {
     let sectionName: String?
@@ -40,7 +39,8 @@ class Data {
             DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .awaitingApproval),
             DocumentDetailsModel(sectionName: "All", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
             DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .awaitingApproval),
-            DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved)
+            DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
+           // DocumentDetailsModel(sectionName: "All Document54725734", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved)
         ]
     
     static var sectionNumber: [String: Int] = [
