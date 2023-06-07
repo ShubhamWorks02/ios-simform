@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5142D4272A30CF1A00710664 /* rootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142D4262A30CF1A00710664 /* rootVC.swift */; };
+		5142D4292A30CF5E00710664 /* p2ndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142D4282A30CF5E00710664 /* p2ndVC.swift */; };
+		5142D42B2A30CF7200710664 /* p3rdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142D42A2A30CF7200710664 /* p3rdVC.swift */; };
 		51A32A782A2F06B300A96378 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A32A772A2F06B300A96378 /* FirstVC.swift */; };
 		51A32A7A2A2F2B5D00A96378 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */; };
 		51A32A7C2A2F6ACE00A96378 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A32A7B2A2F6ACE00A96378 /* FifthViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5142D4262A30CF1A00710664 /* rootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootVC.swift; sourceTree = "<group>"; };
+		5142D4282A30CF5E00710664 /* p2ndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p2ndVC.swift; sourceTree = "<group>"; };
+		5142D42A2A30CF7200710664 /* p3rdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p3rdVC.swift; sourceTree = "<group>"; };
 		51A32A772A2F06B300A96378 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		51A32A7B2A2F6ACE00A96378 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,9 @@
 				51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */,
 				51FC9BBB2A285F6400F7B9F3 /* ThirdVC.swift */,
 				51A32A7D2A2F709300A96378 /* SixthVC.swift */,
+				5142D4262A30CF1A00710664 /* rootVC.swift */,
+				5142D4282A30CF5E00710664 /* p2ndVC.swift */,
+				5142D42A2A30CF7200710664 /* p3rdVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5142D4292A30CF5E00710664 /* p2ndVC.swift in Sources */,
 				51A32A7C2A2F6ACE00A96378 /* FifthViewController.swift in Sources */,
+				5142D42B2A30CF7200710664 /* p3rdVC.swift in Sources */,
 				51FC9BBE2A28690200F7B9F3 /* FourthVC.swift in Sources */,
 				51FA1ED92A2785F3003269A2 /* ViewController.swift in Sources */,
 				51FA1ED52A2785F3003269A2 /* AppDelegate.swift in Sources */,
@@ -177,6 +188,7 @@
 				51FA1ED72A2785F3003269A2 /* SceneDelegate.swift in Sources */,
 				51A32A7A2A2F2B5D00A96378 /* ColorPickerViewController.swift in Sources */,
 				51FC9BBC2A285F6400F7B9F3 /* ThirdVC.swift in Sources */,
+				5142D4272A30CF1A00710664 /* rootVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

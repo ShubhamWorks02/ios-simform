@@ -10,10 +10,14 @@ import UIKit
 class FifthViewController: UIViewController {
     
     weak var fifthDelegate: DataPreserve?
+    var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textField = UITextField(frame: CGRect(x: 50, y: 100, width: 200, height: 30))
+                textField.borderStyle = .roundedRect
+                textField.placeholder = "Enter text"
+                view.addSubview(textField)
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +38,7 @@ class FifthViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fifthToSecond" {
             if let destinationVC = segue.destination as? SecondVC {
-                destinationVC.getPoppedVcData(data: "dataToBePassed")
+                destinationVC.getPoppedVcData(data: textField.text ?? "")
             }
         }
     }

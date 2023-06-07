@@ -11,19 +11,28 @@ class SecondVC: UIViewController, DataPreserve {
 
     var details: String = ""
     var delegate: DataPreserve?
-    
+    var label: UILabel?
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
         imageView.contentMode = .scaleAspectFit
         let image = UIImage(named: "email")
         imageView.image = image
         navigationItem.titleView = imageView
+        label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                label?.center = view.center
+                label?.textAlignment = .center
+        label?.text = "dfdfdf"
+        view.addSubview(label!)
+        self.navigationController?.navigationBar.backgroundColor = .red
         // Do any additional setup after loading the view.
         // print("details: ",details)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         print(self.navigationController?.viewControllers, "stack in 2" )
         print(self.navigationController?.topViewController, "topviewcontroller in 2" )
         // print(delegate?.getPoppedVcData())
@@ -50,7 +59,7 @@ class SecondVC: UIViewController, DataPreserve {
     }
     
     func getPoppedVcData(data: String) {
-        print("data: ",data)
+        label?.text = data
     }
     
     

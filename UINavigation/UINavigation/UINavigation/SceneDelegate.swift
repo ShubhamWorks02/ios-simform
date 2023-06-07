@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
 //        window = UIWindow(windowScene: windowScene)
-//        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PickAColor")
+//        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "rootVC")
 //        let navigationController = UINavigationController(rootViewController: rootVC)
 //        navigationController.setNavigationBarHidden(true, animated: true)
 //        window?.rootViewController = navigationController
