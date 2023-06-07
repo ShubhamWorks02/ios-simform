@@ -7,9 +7,10 @@
 
 import UIKit
 
-class FourthVC: UIViewController, DataPreserve  {
+class FourthVC: UIViewController {
 
     var dataToBePassed = "dataToBePassed"
+    weak var fourthDelegate: DataPreserve?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,22 +18,34 @@ class FourthVC: UIViewController, DataPreserve  {
         // Do any additional setup after loading the view.
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        print(self.navigationController?.viewControllers, "stack in 4" )
-//        print(self.navigationController?.topViewController, "topviewcontroller in 4" )
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        print(self.navigationController?.viewControllers, "stack in 4" )
+        print(self.navigationController?.topViewController, "topviewcontroller in 4" )
+        
+    }
     
     
     @IBAction func goBack(_ sender: UIButton) {
         if let secondVC = navigationController?.viewControllers.filter({ $0 is SecondVC }).first as? SecondVC {
-            secondVC.delegate = self
+            // self.fourthDelegate?.getPoppedVcData(data: dataToBePassed)
+            self.navigationController?.popToViewController(secondVC, animated: true)
         }
-        self.navigationController?.popViewController(animated: true)
+        
         //self.dismiss(animated: true)
     }
     
-    func getPoppedVcData() -> String {
-        return dataToBePassed
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fourthToFIfth" {
+            if let destinationVC = segue.destination as? FifthViewController {
+                destinationVC.fifthDelegate = fourthDelegate
+            }
+        }
+
+//        if segue.identifier == "forwardSegues" {
+//            if let destinationVC = segue.destination as? SixthVC {
+//                destinationVC.data = "data arrived in forward direction"
+//            }
+//        }
     }
     
     /*
@@ -46,4 +59,6 @@ class FourthVC: UIViewController, DataPreserve  {
     */
 
 }
+
+
 

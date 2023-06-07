@@ -87,10 +87,10 @@
 				51FA1ED82A2785F3003269A2 /* ViewController.swift */,
 				51A32A772A2F06B300A96378 /* FirstVC.swift */,
 				51FC9BB92A285F4C00F7B9F3 /* SecondVC.swift */,
-				51FC9BBB2A285F6400F7B9F3 /* ThirdVC.swift */,
 				51FC9BBD2A28690200F7B9F3 /* FourthVC.swift */,
-				51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */,
 				51A32A7B2A2F6ACE00A96378 /* FifthViewController.swift */,
+				51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */,
+				51FC9BBB2A285F6400F7B9F3 /* ThirdVC.swift */,
 				51A32A7D2A2F709300A96378 /* SixthVC.swift */,
 			);
 			path = ViewControllers;

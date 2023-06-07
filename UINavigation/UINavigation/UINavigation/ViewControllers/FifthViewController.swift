@@ -8,7 +8,9 @@
 import UIKit
 
 class FifthViewController: UIViewController {
-
+    
+    weak var fifthDelegate: DataPreserve?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,19 +27,21 @@ class FifthViewController: UIViewController {
     }
     */
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fifthToSecond" {
             if let destinationVC = segue.destination as? SecondVC {
-                destinationVC.details = "data passed through fifth to second"
-            }
-        }
-        
-        if segue.identifier == "forwardSegues" {
-            if let destinationVC = segue.destination as? SixthVC {
-                destinationVC.data = "data arrived in forward direction"
+                destinationVC.getPoppedVcData(data: "dataToBePassed")
             }
         }
     }
 
+}
+
+
+protocol DataPreserve: AnyObject {
+    func getPoppedVcData(data: String) -> ()
 }
