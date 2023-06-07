@@ -15,9 +15,6 @@ class FirstVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-
-    
     override func viewDidAppear(_ animated: Bool) {
         print(self.navigationController?.viewControllers, "stack in 1" )
         print(self.navigationController?.topViewController, "topviewcontroller in 1" )

@@ -516,7 +516,7 @@ Bapista</string>
                         <outlet property="applFilter" destination="0xT-hV-sMI" id="4Yz-3m-rzG"/>
                         <outlet property="btnClearFilters" destination="pM1-eA-wog" id="NoN-J5-4bu"/>
                         <outlet property="collectionOfFilters" destination="BYb-wo-1LV" id="rDO-51-006"/>
-                        <outlet property="collectionViewHeight" destination="YNe-4f-QAz" id="hty-tC-MsM"/>
+                        <outlet property="collectionViewHeightConstraint" destination="YNe-4f-QAz" id="8Hf-yf-zqF"/>
                         <outlet property="filterView" destination="JEn-wA-TkI" id="VoF-Fo-Oki"/>
                         <outlet property="fixedProfileHeaderView" destination="qSB-nd-LG4" id="KIY-Y8-Cp4"/>
                         <outlet property="imgBellicon" destination="eCK-5u-ebc" id="BOV-9n-Sh7"/>

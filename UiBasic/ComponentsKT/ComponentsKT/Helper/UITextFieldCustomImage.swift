@@ -23,22 +23,22 @@ class UITextFieldCustomImage: UITextField {
           }
       }
     
-    @objc private func toggleVisibility() {
-        self.isSecureTextEntry.toggle()
-    }
+//    @objc private func toggleVisibility() {
+//        self.isSecureTextEntry.toggle()
+//    }
     
-    @IBInspectable var rightImage: UIImage? {
-        didSet {
-            let btn = UIButton(frame: CGRectMake( 100 , 0, 24, 24))
-            btn.setImage(UIImage(named: "eye"), for: .normal)
-            btn.addTarget(self, action: #selector(toggleVisibility), for: .touchUpInside)
-            rightViewMode = .whileEditing
-            rightView = btn
-            btn.contentMode = .right
-            rightView?.isUserInteractionEnabled = true
-            rightView?.tintColor = .lightGray
-        }
-    }
+//    @IBInspectable var rightImage: UIImage? {
+//        didSet {
+//            let btn = UIButton(frame: CGRectMake( 100 , 0, 24, 24))
+//            btn.setImage(UIImage(named: "eye"), for: .normal)
+//            //btn.addTarget(self, action: #selector(toggleVisibility), for: .touchUpInside)
+//            rightViewMode = .whileEditing
+//            rightView = btn
+//            btn.contentMode = .right
+//            rightView?.isUserInteractionEnabled = true
+//            rightView?.tintColor = .lightGray
+//        }
+//    }
       
       let textPadding = UIEdgeInsets(top: 10, left: 45, bottom: 10, right: 20)
       
@@ -56,11 +56,11 @@ class UITextFieldCustomImage: UITextField {
           return bounds.inset(by: .init(top: 0, left: 20, bottom: 0, right: 0))
           
       }
-    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        var rect = super.rightViewRect(forBounds: bounds)
-        rect.origin.x = bounds.width - rect.width - textPadding.right
-        return rect
-    }
+//    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+//        var rect = super.rightViewRect(forBounds: bounds)
+//        rect.origin.x = bounds.width - rect.width - textPadding.right
+//        return rect
+//    }
 
 //        override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
 //            return bounds.inset(by: .init(top: 0, left: 0, bottom: 0, right: 20))

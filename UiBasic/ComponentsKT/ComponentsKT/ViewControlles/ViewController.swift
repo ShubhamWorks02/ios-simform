@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak private var applFilter: UILabel!
     @IBOutlet weak private var lblUserName: UILabel!
     @IBOutlet weak private var btnClearFilters: UIButton!
-    @IBOutlet weak private var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak private var collectionViewHeightConstraint: NSLayoutConstraint!
     
     
     // MARK: VARIABLES
@@ -32,12 +32,12 @@ class ViewController: UIViewController {
     // MARK: VIEWCONTROLLER LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        initValues()
+        setUpUI()
         customizeComponent()
     }
     
     // MARK: INITIALIZATION
-    private func initValues() {
+    private func setUpUI() {
         tblDocumentList.delegate = self
         tblDocumentList.dataSource = self
         tblDocumentList.register(UINib(nibName: Constants.Cell.documentTableViewCell, bundle: nil),
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         collectionOfFilters.register(UINib(nibName: Constants.Cell.filterCollectionViewCell, bundle: nil),
                                      forCellWithReuseIdentifier: Constants.Cell.filterCollectionViewCell)
         collectionOfFilters.layer.cornerRadius = 10
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)) //
         view.addGestureRecognizer(tapGesture)
     }
     
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnClearFiltersTapped(_ sender: Any) {
         applFilter.text = "Applied Filters (0)"
-        collectionViewHeight.constant = 0
+        collectionViewHeightConstraint.constant = 0
         btnClearFilters.isHidden = true
     }
     

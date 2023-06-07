@@ -8,7 +8,7 @@
 import UIKit
 
 class ThirdVC: UIViewController {
-
+    weak var delegate: DataPreserve?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +18,7 @@ class ThirdVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print(self.navigationController?.viewControllers, "stack in 3" )
         print(self.navigationController?.topViewController, "topviewcontroller in 3" )
+        // delegate?.getPoppedVcData()
     }
 
 }

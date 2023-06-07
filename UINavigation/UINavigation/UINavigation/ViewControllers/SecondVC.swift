@@ -7,9 +7,10 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+class SecondVC: UIViewController{
 
     var details: String = ""
+    var delegate: DataPreserve?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +26,18 @@ class SecondVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print(self.navigationController?.viewControllers, "stack in 2" )
         print(self.navigationController?.topViewController, "topviewcontroller in 2" )
+        print(delegate?.getPoppedVcData())
+        let sb = storyboard?.instantiateViewController(withIdentifier: "ThirdVC") as? ThirdVC
+        sb?.delegate = self.delegate
     }
     
-    @IBAction func goBack(_ sender: UIButton) {
-        
-    }
+//    @IBAction func goBack(_ sender: UIButton) {
+//
+//    }
     
     
+}
+
+protocol DataPreserve: AnyObject {
+    func getPoppedVcData() -> String
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class SixthVC: UIViewController {
 
-    var data = ""
+    var data = " "
     override func viewDidLoad() {
         super.viewDidLoad()
         print(data)
