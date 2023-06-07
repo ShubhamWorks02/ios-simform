@@ -9,6 +9,7 @@ import UIKit
 
 class ThirdVC: UIViewController {
     weak var delegate: DataPreserve?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
