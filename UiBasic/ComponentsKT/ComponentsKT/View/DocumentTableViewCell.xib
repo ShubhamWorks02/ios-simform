@@ -21,10 +21,10 @@
                         <rect key="frame" x="10" y="10" width="455" height="219"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="s3E-x2-00W" userLabel="ParentStackView">
-                                <rect key="frame" x="10" y="10" width="435" height="149"/>
+                                <rect key="frame" x="10" y="10" width="435" height="132"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-FH-f82">
-                                        <rect key="frame" x="0.0" y="0.0" width="435" height="94.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="435" height="77.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="745AF6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QS7-dd-xCK">
                                                 <rect key="frame" x="0.0" y="0.0" width="435" height="20.333333333333332"/>
@@ -33,7 +33,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="751" text="Test Request Compliance ryfyguhgih ohohjhjouhouhi ygvgvgvdfghiuh iluhuhiygtufryyrfjrydfjrtydfjrty fryfryfry" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLl-41-9oy">
-                                                <rect key="frame" x="0.0" y="21.333333333333336" width="435" height="73"/>
+                                                <rect key="frame" x="0.0" y="21.333333333333336" width="435" height="56.000000000000007"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FZc-qT-hA1" userLabel="NestedStackView">
-                                        <rect key="frame" x="0.0" y="110.33333333333336" width="435" height="38.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="93.333333333333329" width="435" height="38.666666666666671"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wZk-K9-sMt" userLabel="LeftStackView">
                                                 <rect key="frame" x="0.0" y="0.0" width="295.33333333333331" height="38.666666666666664"/>
@@ -53,7 +53,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="DavisBaptista@domain.name" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVL-gi-QcZ">
-                                                        <rect key="frame" x="0.0" y="19.333333333333314" width="295.33333333333331" height="19.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="19.333333333333329" width="295.33333333333331" height="19.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" name="emailColor"/>
                                                         <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" text="Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR8-Dn-a0i">
-                                                        <rect key="frame" x="0.0" y="19.333333333333314" width="139.66666666666666" height="19.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="19.333333333333329" width="139.66666666666666" height="19.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" name="emailColor"/>
                                                         <nil key="highlightedColor"/>
@@ -111,8 +111,8 @@
                             <constraint firstAttribute="trailing" secondItem="6HA-kH-dn3" secondAttribute="trailing" id="4hi-B8-uem"/>
                             <constraint firstItem="2Cq-N6-Vwq" firstAttribute="leading" secondItem="mac-1x-5Tk" secondAttribute="leading" constant="10" id="BRH-On-XmK"/>
                             <constraint firstItem="s3E-x2-00W" firstAttribute="leading" secondItem="mac-1x-5Tk" secondAttribute="leading" constant="10" id="CuJ-K8-hbB"/>
+                            <constraint firstItem="6HA-kH-dn3" firstAttribute="top" secondItem="s3E-x2-00W" secondAttribute="bottom" constant="45" id="DG2-m0-d47"/>
                             <constraint firstAttribute="bottom" secondItem="2Cq-N6-Vwq" secondAttribute="bottom" constant="8" id="eDL-oh-Jlh"/>
-                            <constraint firstAttribute="bottom" secondItem="s3E-x2-00W" secondAttribute="bottom" constant="60" id="lFk-dm-GrR"/>
                             <constraint firstAttribute="trailing" secondItem="s3E-x2-00W" secondAttribute="trailing" constant="10" id="tVM-Ie-LTN"/>
                         </constraints>
                     </view>
@@ -137,7 +137,7 @@
                 <outlet property="lblDocID" destination="QS7-dd-xCK" id="piv-5a-RsC"/>
                 <outlet property="listView" destination="mac-1x-5Tk" id="8st-5f-muT"/>
             </connections>
-            <point key="canvasLocation" x="1093.8931297709923" y="42.95774647887324"/>
+            <point key="canvasLocation" x="208" y="54"/>
         </tableViewCell>
     </objects>
     <resources>

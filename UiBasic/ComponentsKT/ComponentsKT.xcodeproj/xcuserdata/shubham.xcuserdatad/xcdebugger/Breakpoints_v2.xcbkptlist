@@ -71,22 +71,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E0959C24-477F-44BF-A5ED-6FD0D9554CCE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ComponentsKT/ViewControlles/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "btnBellPressed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "48B69723-2C17-48E8-81A8-DD981695E4E1"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -94,8 +78,8 @@
             filePath = "ComponentsKT/ViewControlles/FormViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "camBtnTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +94,8 @@
             filePath = "ComponentsKT/ViewControlles/FormViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +110,8 @@
             filePath = "ComponentsKT/ViewControlles/FormViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "FormViewController"
             landmarkType = "21">
          </BreakpointContent>
