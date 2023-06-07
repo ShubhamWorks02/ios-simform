@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 class SectionDetailsModel {
     
@@ -21,4 +20,3 @@ class SectionDetailsModel {
     }
     
 }
-

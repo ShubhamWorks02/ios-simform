@@ -513,7 +513,6 @@ Bapista</string>
                     </view>
                     <navigationItem key="navigationItem" id="oED-63-F2V"/>
                     <connections>
-                        <outlet property="applFilter" destination="0xT-hV-sMI" id="4Yz-3m-rzG"/>
                         <outlet property="btnClearFilters" destination="pM1-eA-wog" id="NoN-J5-4bu"/>
                         <outlet property="collectionOfFilters" destination="BYb-wo-1LV" id="rDO-51-006"/>
                         <outlet property="collectionViewHeightConstraint" destination="YNe-4f-QAz" id="8Hf-yf-zqF"/>
@@ -523,6 +522,7 @@ Bapista</string>
                         <outlet property="imgProfile" destination="b1U-hy-PNm" id="jYw-Aj-76f"/>
                         <outlet property="imgV" destination="THu-Og-HXc" id="Mde-Fz-hAu"/>
                         <outlet property="lblUserName" destination="gSA-Ci-cIL" id="Rl9-MX-1TP"/>
+                        <outlet property="lblapplFilter" destination="0xT-hV-sMI" id="kts-Hs-qKn"/>
                         <outlet property="profileView" destination="y6B-2k-Alp" id="2Ns-V1-PwE"/>
                         <outlet property="tblDocumentList" destination="hs9-wX-7i1" id="eUQ-Oq-mau"/>
                         <outlet property="txtSearch" destination="CXq-mL-f5U" id="WKR-eK-wCk"/>

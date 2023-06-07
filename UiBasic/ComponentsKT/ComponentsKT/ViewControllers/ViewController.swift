@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak private var collectionOfFilters: UICollectionView!
     @IBOutlet weak private var profileView: UIView!
     @IBOutlet weak private var imgProfile: UIImageView!
-    @IBOutlet weak private var applFilter: UILabel!
+    @IBOutlet weak private var lblapplFilter: UILabel!
     @IBOutlet weak private var lblUserName: UILabel!
     @IBOutlet weak private var btnClearFilters: UIButton!
     @IBOutlet weak private var collectionViewHeightConstraint: NSLayoutConstraint!
@@ -49,26 +49,30 @@ class ViewController: UIViewController {
         collectionOfFilters.register(UINib(nibName: Constants.Cell.filterCollectionViewCell, bundle: nil),
                                      forCellWithReuseIdentifier: Constants.Cell.filterCollectionViewCell)
         collectionOfFilters.layer.cornerRadius = 10
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)) //
-        view.addGestureRecognizer(tapGesture)
+        
+        // Singleton instance Of KeyboardHelper class
+        KeyboardHelper.shared.setupKeyboardDismissal(for: view)
     }
     
-    // MARK: ACTION METHODS
+}
+
+// MARK: ACTION METHODS
+extension ViewController {
+    
+    
     @IBAction func btnBellPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
-        self.navigationController?.pushViewController(destinationVC, animated: true)
+        let storyboard = UIStoryboard(name: Constants.StoryBoards.main, bundle: nil)
+        if let destinationVC = storyboard.instantiateViewController(withIdentifier: Constants.VCs.formViewController) as? FormViewController {
+            self.navigationController?.pushViewController(destinationVC, animated: true)
+        }
     }
     
     @IBAction func btnClearFiltersTapped(_ sender: Any) {
-        applFilter.text = "Applied Filters (0)"
+        lblapplFilter.text = Constants.Strings.lblFilterStr
         collectionViewHeightConstraint.constant = 0
         btnClearFilters.isHidden = true
     }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
+
 }
 
 // MARK: TABLEVIEW DATASOURCE
@@ -80,8 +84,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionName = sectionData[section]
-        let documentDetails = DocumentDetailsModel.getDocumentDetails(sectionName: sectionName) // ternary
-        return documentDetails.count
+        return Data.data.count >= DocumentDetailsModel.getDocumentDetails(sectionName: sectionName).count ? DocumentDetailsModel.getDocumentDetails(sectionName: sectionName).count :  0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -101,10 +104,6 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: TABLEVIEW DELEGATES
 extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerCell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.headerTableViewCell) as? HeaderTableViewCell else {
             return nil
@@ -118,14 +117,14 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 29
+        return Constants.TableViewConstants.heightForHeader
     }
 }
 
 // MARK: COLLECTIONVIEW DATASOURCE
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        return Constants.CollectionViewConstants.numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -153,7 +152,7 @@ extension ViewController {
         customizeFixedProfileHeaderView()
         customizeSearchTextField()
         customizeImageView()
-        customizeFilterView()
+        filterView.layer.cornerRadius = 25
         customizeProfileView()
         customizeUserName()
     }
@@ -168,7 +167,7 @@ extension ViewController {
     }
     
     private func customizeUserName() {
-        let attributedString = NSMutableAttributedString(string: "Davis\nBapista")
+        let attributedString = NSMutableAttributedString(string: Constants.Strings.lblUserNameStr)
         let attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .bold),
             .foregroundColor: UIColor.white
@@ -186,10 +185,6 @@ extension ViewController {
         button.backgroundColor = .green
         imgV.layer.cornerRadius = imgV.bounds.width / 2
         imgV.addSubview(button)
-    }
-    
-    private func customizeFilterView() {
-        filterView.layer.cornerRadius = 25
     }
     
     private func customizeProfileView() {
