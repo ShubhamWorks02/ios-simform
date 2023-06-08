@@ -26,7 +26,6 @@ class SecondVC: UIViewController, DataPreserve {
                 label?.textAlignment = .center
         label?.text = "dfdfdf"
         view.addSubview(label!)
-        self.navigationController?.navigationBar.backgroundColor = .red
         // Do any additional setup after loading the view.
         // print("details: ",details)
     }

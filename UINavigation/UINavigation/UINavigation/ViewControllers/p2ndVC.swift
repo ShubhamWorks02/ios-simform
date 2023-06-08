@@ -17,7 +17,7 @@ class p2ndVC: UIViewController {
     
     @IBAction func goToThird(_ sender: UIButton) {
         guard let vc3 = storyboard?.instantiateViewController(withIdentifier: "p3rdVC") else { return  }
-        let nav = UINavigationController(rootViewController: vc3)
-        self.present(nav, animated: true)
+//        let nav = UINavigationControlle
+//        self.present(nav, animated: true)
     }
 }

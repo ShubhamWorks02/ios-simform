@@ -10,6 +10,15 @@
 		5142D4272A30CF1A00710664 /* rootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142D4262A30CF1A00710664 /* rootVC.swift */; };
 		5142D4292A30CF5E00710664 /* p2ndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142D4282A30CF5E00710664 /* p2ndVC.swift */; };
 		5142D42B2A30CF7200710664 /* p3rdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5142D42A2A30CF7200710664 /* p3rdVC.swift */; };
+		516E48882A31C9E100592E64 /* NavControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E48872A31C9E100592E64 /* NavControl.swift */; };
+		5175ECF32A31DA6C00D0ED71 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECF22A31DA6C00D0ED71 /* Coordinator.swift */; };
+		5175ECF52A31DAB500D0ED71 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECF42A31DAB500D0ED71 /* AppCoordinator.swift */; };
+		5175ECF72A31DE4400D0ED71 /* FirstVcCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECF62A31DE4400D0ED71 /* FirstVcCoordinator.swift */; };
+		5175ECF92A31ED5600D0ED71 /* Tab1Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECF82A31ED5600D0ED71 /* Tab1Vc.swift */; };
+		5175ECFB2A31ED7100D0ED71 /* Tab2Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECFA2A31ED7100D0ED71 /* Tab2Vc.swift */; };
+		5175ECFD2A31ED7C00D0ED71 /* Tab3Vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECFC2A31ED7C00D0ED71 /* Tab3Vc.swift */; };
+		5175ECFF2A31F27800D0ED71 /* TabBarVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ECFE2A31F27800D0ED71 /* TabBarVc.swift */; };
+		5175ED012A3213D500D0ED71 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5175ED002A3213D500D0ED71 /* LoginVC.swift */; };
 		51A32A782A2F06B300A96378 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A32A772A2F06B300A96378 /* FirstVC.swift */; };
 		51A32A7A2A2F2B5D00A96378 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */; };
 		51A32A7C2A2F6ACE00A96378 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A32A7B2A2F6ACE00A96378 /* FifthViewController.swift */; };
@@ -29,6 +38,15 @@
 		5142D4262A30CF1A00710664 /* rootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootVC.swift; sourceTree = "<group>"; };
 		5142D4282A30CF5E00710664 /* p2ndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p2ndVC.swift; sourceTree = "<group>"; };
 		5142D42A2A30CF7200710664 /* p3rdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = p3rdVC.swift; sourceTree = "<group>"; };
+		516E48872A31C9E100592E64 /* NavControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControl.swift; sourceTree = "<group>"; };
+		5175ECF22A31DA6C00D0ED71 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5175ECF42A31DAB500D0ED71 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5175ECF62A31DE4400D0ED71 /* FirstVcCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVcCoordinator.swift; sourceTree = "<group>"; };
+		5175ECF82A31ED5600D0ED71 /* Tab1Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1Vc.swift; sourceTree = "<group>"; };
+		5175ECFA2A31ED7100D0ED71 /* Tab2Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2Vc.swift; sourceTree = "<group>"; };
+		5175ECFC2A31ED7C00D0ED71 /* Tab3Vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Vc.swift; sourceTree = "<group>"; };
+		5175ECFE2A31F27800D0ED71 /* TabBarVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVc.swift; sourceTree = "<group>"; };
+		5175ED002A3213D500D0ED71 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		51A32A772A2F06B300A96378 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		51A32A792A2F2B5D00A96378 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		51A32A7B2A2F6ACE00A96378 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5175ECF12A31DA4600D0ED71 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5175ECF22A31DA6C00D0ED71 /* Coordinator.swift */,
+				5175ECF42A31DAB500D0ED71 /* AppCoordinator.swift */,
+				5175ECF62A31DE4400D0ED71 /* FirstVcCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		51FA1EC82A2785F3003269A2 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +104,7 @@
 		51FA1ED32A2785F3003269A2 /* UINavigation */ = {
 			isa = PBXGroup;
 			children = (
+				5175ECF12A31DA4600D0ED71 /* Coordinator */,
 				51FC9BB82A285F1F00F7B9F3 /* ViewControllers */,
 				51FA1ED42A2785F3003269A2 /* AppDelegate.swift */,
 				51FA1ED62A2785F3003269A2 /* SceneDelegate.swift */,
@@ -101,6 +130,12 @@
 				5142D4262A30CF1A00710664 /* rootVC.swift */,
 				5142D4282A30CF5E00710664 /* p2ndVC.swift */,
 				5142D42A2A30CF7200710664 /* p3rdVC.swift */,
+				516E48872A31C9E100592E64 /* NavControl.swift */,
+				5175ECF82A31ED5600D0ED71 /* Tab1Vc.swift */,
+				5175ECFA2A31ED7100D0ED71 /* Tab2Vc.swift */,
+				5175ECFC2A31ED7C00D0ED71 /* Tab3Vc.swift */,
+				5175ECFE2A31F27800D0ED71 /* TabBarVc.swift */,
+				5175ED002A3213D500D0ED71 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,16 +211,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5175ED012A3213D500D0ED71 /* LoginVC.swift in Sources */,
 				5142D4292A30CF5E00710664 /* p2ndVC.swift in Sources */,
+				5175ECFF2A31F27800D0ED71 /* TabBarVc.swift in Sources */,
+				516E48882A31C9E100592E64 /* NavControl.swift in Sources */,
+				5175ECFD2A31ED7C00D0ED71 /* Tab3Vc.swift in Sources */,
+				5175ECFB2A31ED7100D0ED71 /* Tab2Vc.swift in Sources */,
 				51A32A7C2A2F6ACE00A96378 /* FifthViewController.swift in Sources */,
 				5142D42B2A30CF7200710664 /* p3rdVC.swift in Sources */,
+				5175ECF52A31DAB500D0ED71 /* AppCoordinator.swift in Sources */,
 				51FC9BBE2A28690200F7B9F3 /* FourthVC.swift in Sources */,
+				5175ECF32A31DA6C00D0ED71 /* Coordinator.swift in Sources */,
 				51FA1ED92A2785F3003269A2 /* ViewController.swift in Sources */,
 				51FA1ED52A2785F3003269A2 /* AppDelegate.swift in Sources */,
 				51A32A782A2F06B300A96378 /* FirstVC.swift in Sources */,
 				51A32A7E2A2F709300A96378 /* SixthVC.swift in Sources */,
 				51FC9BBA2A285F4C00F7B9F3 /* SecondVC.swift in Sources */,
+				5175ECF72A31DE4400D0ED71 /* FirstVcCoordinator.swift in Sources */,
 				51FA1ED72A2785F3003269A2 /* SceneDelegate.swift in Sources */,
+				5175ECF92A31ED5600D0ED71 /* Tab1Vc.swift in Sources */,
 				51A32A7A2A2F2B5D00A96378 /* ColorPickerViewController.swift in Sources */,
 				51FC9BBC2A285F6400F7B9F3 /* ThirdVC.swift in Sources */,
 				5142D4272A30CF1A00710664 /* rootVC.swift in Sources */,
