@@ -24,7 +24,21 @@ class LoginVC: UIViewController {
             fatalError("Unable to instantiate TabBarVc from storyboard")
         }
 
-        navigationController?.viewControllers = [tabVC]
+        guard let window = getApplicationWindow() else {
+            print("windo")
+            return }
+        window.rootViewController = tabVC
+        window.makeKeyAndVisible()
     }
     
+    func getApplicationWindow() -> UIWindow? {
+        if #available(iOS 13.0, *) {
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                return windowScene.windows.first { $0.isKeyWindow }
+            }
+        } else {
+            return UIApplication.shared.keyWindow
+        }
+        return nil
+    }
 }

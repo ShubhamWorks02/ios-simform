@@ -30,23 +30,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarVc") as? TabBarVc else {
             fatalError("Unable to instantiate TabBarVc from storyboard")
         }
-        var navigationController = UINavigationController(rootViewController: tabVC)
+         // var navigationController = UINavigationController(rootViewController: tabVC)
         if !UserDefaults.standard.bool(forKey: "isLoggedIn") {
             if let loginVc = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC  {
-                navigationController = UINavigationController(rootViewController: loginVc)
+                // navigationController = UINavigationController(rootViewController: loginVc)
                 // tabVC.selectedIndex = 1
                 
                  // window?.rootViewController = tabVC
                 
-                window?.makeKeyAndVisible()
+                window?.rootViewController = loginVc
+                // window?.makeKeyAndVisible()
             }
             // return true
         } else {
 //            navigationController = UINavigationController(rootViewController: tabVC)
+            window?.rootViewController = tabVC
             tabVC.selectedIndex = 1
 
         }
-        window?.rootViewController = navigationController
+        
         window?.makeKeyAndVisible()
     }
         

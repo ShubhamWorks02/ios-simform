@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandableTableViewCell" rowHeight="161" id="VoX-Vn-Yes" customClass="ExpandableTableViewCell" customModule="URLSession">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VoX-Vn-Yes" id="hJ0-mG-GyU">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shubham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8lR-fz-NBr">
+                        <rect key="frame" x="8" y="8" width="86.333333333333329" height="23"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Is a member since 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAZ-6S-Oyf">
+                        <rect key="frame" x="8" y="39" width="170.66666666666666" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wK-Dy-Kld">
+                        <rect key="frame" x="8" y="122.33333333333333" width="395" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="KEJ-zc-jUs"/>
+                        </constraints>
+                        <string key="text">By reusing the prototype cell, you can efficiently manage the creation and recycling of cells as the table view is scrolled. This approach helps improve performance and memory usage by reusing existing cells instead of creating new ones for each row.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24th Jan 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-QN-7vz">
+                        <rect key="frame" x="8" y="130" width="111.66666666666667" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgg-B7-M0l">
+                        <rect key="frame" x="333" y="129.33333333333334" width="58" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="See More"/>
+                        <connections>
+                            <action selector="seeMoreTapped:" destination="VoX-Vn-Yes" eventType="touchUpInside" id="q5U-Cs-rc3"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4wK-Dy-Kld" secondAttribute="trailing" constant="8" id="0PG-Er-Wb7"/>
+                    <constraint firstItem="4wK-Dy-Kld" firstAttribute="top" secondItem="BAZ-6S-Oyf" secondAttribute="bottom" constant="8" id="1BP-p3-x8Y"/>
+                    <constraint firstItem="Dgg-B7-M0l" firstAttribute="top" secondItem="4wK-Dy-Kld" secondAttribute="bottom" constant="7" id="598-lE-rPE"/>
+                    <constraint firstAttribute="bottom" secondItem="PQ5-QN-7vz" secondAttribute="bottom" constant="10" id="6R1-M7-fWs"/>
+                    <constraint firstAttribute="bottom" secondItem="Dgg-B7-M0l" secondAttribute="bottom" constant="3.6666666666666572" id="JgS-tt-eK1"/>
+                    <constraint firstItem="8lR-fz-NBr" firstAttribute="top" secondItem="hJ0-mG-GyU" secondAttribute="top" constant="8" id="LXe-Mi-afV"/>
+                    <constraint firstItem="PQ5-QN-7vz" firstAttribute="top" secondItem="4wK-Dy-Kld" secondAttribute="bottom" constant="7.6666666666666572" id="NHz-Fe-nBA"/>
+                    <constraint firstAttribute="trailing" secondItem="Dgg-B7-M0l" secondAttribute="trailing" constant="20" symbolic="YES" id="Oau-5W-edv"/>
+                    <constraint firstItem="PQ5-QN-7vz" firstAttribute="leading" secondItem="hJ0-mG-GyU" secondAttribute="leading" constant="8" id="Onn-DS-NWK"/>
+                    <constraint firstItem="BAZ-6S-Oyf" firstAttribute="leading" secondItem="hJ0-mG-GyU" secondAttribute="leading" constant="8" id="PcZ-Ic-P9A"/>
+                    <constraint firstItem="BAZ-6S-Oyf" firstAttribute="top" secondItem="8lR-fz-NBr" secondAttribute="bottom" constant="8" symbolic="YES" id="Z4d-lf-R3r"/>
+                    <constraint firstItem="8lR-fz-NBr" firstAttribute="leading" secondItem="hJ0-mG-GyU" secondAttribute="leading" constant="8" id="hco-UV-JDa"/>
+                    <constraint firstItem="4wK-Dy-Kld" firstAttribute="leading" secondItem="hJ0-mG-GyU" secondAttribute="leading" constant="8" id="vZo-kJ-Cev"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KLQ-Vn-AsB"/>
+            <connections>
+                <outlet property="btnSeeMore" destination="Dgg-B7-M0l" id="ETk-eH-VTZ"/>
+                <outlet property="heightOut" destination="KEJ-zc-jUs" id="HYW-r0-TVU"/>
+                <outlet property="lblDate" destination="PQ5-QN-7vz" id="IYz-AS-5yG"/>
+                <outlet property="lblDescription" destination="4wK-Dy-Kld" id="PEq-ys-KcD"/>
+                <outlet property="lblMemberDuration" destination="BAZ-6S-Oyf" id="74N-vO-qNc"/>
+                <outlet property="lblPersonName" destination="8lR-fz-NBr" id="pAf-mx-cHO"/>
+            </connections>
+            <point key="canvasLocation" x="199.23664122137404" y="20.070422535211268"/>
+        </tableViewCell>
+    </objects>
+</document>

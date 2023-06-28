@@ -13,6 +13,7 @@ class NavControl: UINavigationController {
         super.viewDidLoad()
         self.delegate = self
         // Do any additional setup after loading the view.
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

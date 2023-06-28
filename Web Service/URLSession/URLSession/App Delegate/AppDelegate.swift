@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  UINavigation
+//  URLSession
 //
-//  Created by Shubham Bhatt on 31/05/23.
+//  Created by Shubham Bhatt on 27/06/23.
 //
 
 import UIKit
@@ -10,28 +10,16 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    // var window: UIWindow?
-    
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Override point for customization after application launch..
-        UINavigationBar.appearance().backgroundColor = .red
-        let navigationBarAppearance = UINavigationBarAppearance()
-            navigationBarAppearance.configureWithOpaqueBackground()
-            navigationBarAppearance.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor : UIColor.white
-            ]
-            navigationBarAppearance.backgroundColor = UIColor.red
-            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
-            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
-            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        // Override point for customization after application launch.
         return true
     }
 
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-       
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
