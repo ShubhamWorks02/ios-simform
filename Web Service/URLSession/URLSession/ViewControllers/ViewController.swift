@@ -18,30 +18,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // getDataFromServer()
-//        let newUser = User(email: "eve.holt@reqres.in", password: "pistol")
-//        register(user: newUser)
-        ApiService.shared.get(endpoint: "api/users?page=2") { (result: Result<Welcome, Error>) in
-            switch result {
-            case .success(let welcome):
-                // Access the response data
-                print("Page: \(welcome.page)")
-                print("Total Users: \(welcome.data.count)")
-                // Access individual user data
-                for user in welcome.data {
-                    print("User ID: \(user.id)")
-                    print("Email: \(user.email)")
-                    print("First Name: \(user.firstName)")
-                    print("Last Name: \(user.lastName)")
-                    print("Avatar: \(user.avatar)")
-                    print("---")
+        fetchData()
+    }
+    
+    private func fetchData() {
+            Task {
+                do {
+                    let welcome: Welcome = try await ApiService.shared.get(endpoint: "api/users?page=2")
+                    // Access the response data
+                    print("Page: \(welcome.page)")
+                    print("Total Users: \(welcome.data.count)")
+                    // Access individual user data
+                    for user in welcome.data {
+                        print("User ID: \(user.id)")
+                        print("Email: \(user.email)")
+                        print("First Name: \(user.firstName)")
+                        print("Last Name: \(user.lastName)")
+                        print("Avatar: \(user.avatar)")
+                        print("---")
+                    }
+                } catch {
+                    // Handle error
+                    print("Error: \(error)")
                 }
-            case .failure(let error):
-                // Handle error
-                print("Error: \(error)")
             }
         }
-    }
     
     func getDataFromServer() {
         if let url = URL(string: "https://reqres.in/api/users?page=2") {

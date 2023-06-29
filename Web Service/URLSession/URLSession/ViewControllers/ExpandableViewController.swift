@@ -41,21 +41,25 @@ class ExpandableViewController: UIViewController {
     
     func getNews() {
         let endPoint = "v2/top-headlines?country=us&category=business&apiKey=e4a998b5b52847ab9676f1907648c874"
-        ApiService.shared.get(endpoint: endPoint) {[weak self] (result: Result<NewsModel, Error>) in
-            switch result {
-            case .success(let news):
-                self?.articleList = news.articles!
-                DispatchQueue.main.async {
-                    self?.tblExpandable.reloadData()
+        
+        Task {
+            do {
+                let news: NewsModel = try await ApiService.shared.get(endpoint: endPoint)
+                
+                if let articles = news.articles {
+                    self.articleList = articles
                 }
-                break
-            case .failure(let error):
+                
+                DispatchQueue.main.async {
+                    self.tblExpandable.reloadData()
+                }
+            } catch {
                 // Handle error
                 print("Error: \(error)")
             }
         }
     }
-    
+
 }
 
 // MARK: SEARCHBAR DELEGATE
@@ -82,6 +86,7 @@ extension ExpandableViewController: UITableViewDataSource, BtnDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchIsActive ? filteredArticleList.count : articleList.count
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
