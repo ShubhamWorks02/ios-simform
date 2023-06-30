@@ -6,6 +6,7 @@ target 'URLSession' do
   use_frameworks!
   pod 'Kingfisher', '~> 7.0'
   pod 'R.swift'
+  pod 'ReachabilitySwift'
   # Pods for URLSession
 
 end

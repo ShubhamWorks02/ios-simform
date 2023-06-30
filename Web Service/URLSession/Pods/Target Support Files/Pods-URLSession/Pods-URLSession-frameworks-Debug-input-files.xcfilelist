@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-URLSession/Pods-URLSession-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/R.swift/RswiftResources.framework
+${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework

@@ -23,7 +23,7 @@ class ImageUploadVc: UIViewController, URLSessionTaskDelegate {
     @IBAction func pickImage(_ sender: UIButton) {
         progessView.progress = 0
         DispatchQueue.global(qos: .background).async {
-            self.uploadData(image: UIImage(named: "starShot")!, type: ImageUploadModel.self) {(result: Result<ImageUploadModel, Error>) in
+            self.uploadData(image: UIImage(named: "starShot") ?? UIImage(), type: ImageUploadModel.self) {(result: Result<ImageUploadModel, Error>) in
                 switch result {
                 case .success(let imageResponse):
                     print("Response: ",imageResponse.data.displayURL)
@@ -61,7 +61,7 @@ extension  ImageUploadVc {
         }
     }
     
-    func uploadData<T: Decodable>(image: UIImage,type : T.Type , completion : @escaping ((Result<T,Error>) -> ()) ) {
+    func uploadData<T: Decodable>(image: UIImage, type : T.Type , completion : @escaping ((Result<T,Error>) -> ()) ) {
         if var url = URL(string: "https://api.imgbb.com/1/upload") {
             url.append(queryItems: [URLQueryItem(name: "key", value: "dd7832bb31a876cce8cc739a31728d44")])
             var urlRequest = URLRequest(url: url)

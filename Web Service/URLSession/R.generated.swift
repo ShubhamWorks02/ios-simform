@@ -161,7 +161,7 @@ struct _R {
 
     /// Storyboard `Main`.
     struct main: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = ExpandableViewController
+      typealias InitialController = ViewController
 
       let bundle: Foundation.Bundle
 
