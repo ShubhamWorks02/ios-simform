@@ -14,6 +14,8 @@ class ExpandableViewController: UIViewController {
     @IBOutlet weak private var tblExpandable: UITableView!
     
     // MARK: VARIABLES
+    var coordinator: NewsCoordinator?
+    var viewModel: NewsViewModel = NewsViewModel()
     private var searchTimer: Timer?
     private var searchBar: UISearchBar = UISearchBar()
     private var isSelectAllBtnSelected = false
@@ -27,7 +29,24 @@ class ExpandableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initValues()
-        getNews()
+        bindVm()
+        viewModel.getNews()
+    }
+    
+    private func bindVm() {
+        viewModel.onSuccess.bind { articles in
+            if let articles = articles {
+                self.articleList = articles
+            }
+            DispatchQueue.main.async {
+                self.tblExpandable.reloadData()
+            }
+        }
+    }
+    
+    
+    @IBAction func btnGotoExchange(_ sender: UIButton) {
+        coordinator?.gotoExchange()
     }
     
     // MARK: INITIALIZATION
@@ -38,27 +57,6 @@ class ExpandableViewController: UIViewController {
         tblExpandable.estimatedRowHeight = 60
         configureRefreshControl()
         searchBar.isUserInteractionEnabled = true
-    }
-    
-    func getNews() {
-        let endPoint = "v2/top-headlines?country=us&category=business&apiKey=e4a998b5b52847ab9676f1907648c874"
-        
-        Task {
-            do {
-                let news: NewsModel = try await ApiService.shared.get(endpoint: endPoint)
-                
-                if let articles = news.articles {
-                    self.articleList = articles
-                }
-                
-                DispatchQueue.main.async {
-                    self.tblExpandable.reloadData()
-                }
-            } catch {
-                // Handle error
-                print("Error: \(error)")
-            }
-        }
     }
 
 }

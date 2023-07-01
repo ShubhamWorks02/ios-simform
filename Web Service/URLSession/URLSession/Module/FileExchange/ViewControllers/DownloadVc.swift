@@ -13,6 +13,8 @@ class DownloadVc: UIViewController, URLSessionDownloadDelegate {
     @IBOutlet weak var progressView: UIProgressView!
     
     // MARK: Variables
+    var coordinator: ExchangeCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView.progress = 0
@@ -30,6 +32,11 @@ class DownloadVc: UIViewController, URLSessionDownloadDelegate {
             let downloadTask = session.downloadTask(with: url ) // change
             downloadTask.resume()
         }
+    }
+    
+    
+    @IBAction func getRoot(_ sender: UIButton) {
+        coordinator?.gotoRoot()
     }
     
     // MARK: URLSessionDownloadDelegate

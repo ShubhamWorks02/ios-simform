@@ -14,6 +14,8 @@ class ImageUploadVc: UIViewController, URLSessionTaskDelegate {
     @IBOutlet weak var progessView: UIProgressView!
     
     // MARK: VARIABLES
+    var coordinator: ExchangeCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         progessView.progress = 0

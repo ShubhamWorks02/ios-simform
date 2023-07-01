@@ -21,11 +21,23 @@ enum AlamofireCallType {
 
 class ViewController: UIViewController {
     
+    // MARK: VARIABLES
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // fetchData()
         apiCallUsingAlamofire(callType: .getJsonCall)
     }
+    
+    @IBAction func btnGoToNews(_ sender: UIButton) {
+        coordinator?.gotoNews()
+    }
+    
+    @IBAction func btnGoToUpload(_ sender: UIButton) {
+        coordinator?.gotoUpload()
+    }
+    
     
     private func fetchData() {
         Task {
@@ -99,7 +111,6 @@ class ViewController: UIViewController {
     }
     
     private func apiCallUsingAlamofireDecode() {
-        
         let request = AF.request("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e4a998b5b52847ab9676f1907648c874")
         request.responseDecodable(of: NewsModel.self) { (response) in
             switch response.result {

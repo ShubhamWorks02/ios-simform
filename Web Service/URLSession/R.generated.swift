@@ -103,7 +103,7 @@ struct _R {
             let bundle: Foundation.Bundle
             var uiSceneConfigurationName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneConfigurationName") ?? "Default Configuration" }
             var uiSceneDelegateClassName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate" }
-            var uiSceneStoryboardFile: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneStoryboardFile") ?? "Main" }
+            var uiSceneStoryboardFile: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneStoryboardFile") ?? "News" }
           }
         }
       }
@@ -129,23 +129,48 @@ struct _R {
     let expandableTableViewCell: RswiftResources.ReuseIdentifier<ExpandableTableViewCell> = .init(identifier: "ExpandableTableViewCell")
   }
 
-  /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `_R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
+    var exchange: exchange { .init(bundle: bundle) }
     var launchScreen: launchScreen { .init(bundle: bundle) }
     var main: main { .init(bundle: bundle) }
+    var news: news { .init(bundle: bundle) }
 
+    func exchange(bundle: Foundation.Bundle) -> exchange {
+      .init(bundle: bundle)
+    }
     func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
       .init(bundle: bundle)
     }
     func main(bundle: Foundation.Bundle) -> main {
       .init(bundle: bundle)
     }
+    func news(bundle: Foundation.Bundle) -> news {
+      .init(bundle: bundle)
+    }
     func validate() throws {
+      try self.exchange.validate()
       try self.launchScreen.validate()
       try self.main.validate()
+      try self.news.validate()
     }
 
+
+    /// Storyboard `Exchange`.
+    struct exchange: RswiftResources.StoryboardReference {
+      let bundle: Foundation.Bundle
+
+      let name = "Exchange"
+
+      var downloadVc: RswiftResources.StoryboardViewControllerIdentifier<DownloadVc> { .init(identifier: "DownloadVc", storyboard: name, bundle: bundle) }
+      var imageUploadVc: RswiftResources.StoryboardViewControllerIdentifier<ImageUploadVc> { .init(identifier: "ImageUploadVc", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if downloadVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'downloadVc' could not be loaded from storyboard 'Exchange' as 'DownloadVc'.") }
+        if imageUploadVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'imageUploadVc' could not be loaded from storyboard 'Exchange' as 'ImageUploadVc'.") }
+      }
+    }
 
     /// Storyboard `LaunchScreen`.
     struct launchScreen: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
@@ -160,14 +185,30 @@ struct _R {
     }
 
     /// Storyboard `Main`.
-    struct main: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = ViewController
-
+    struct main: RswiftResources.StoryboardReference {
       let bundle: Foundation.Bundle
 
       let name = "Main"
-      func validate() throws {
 
+      var viewController: RswiftResources.StoryboardViewControllerIdentifier<ViewController> { .init(identifier: "ViewController", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if viewController() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'viewController' could not be loaded from storyboard 'Main' as 'ViewController'.") }
+      }
+    }
+
+    /// Storyboard `News`.
+    struct news: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
+      typealias InitialController = ExpandableViewController
+
+      let bundle: Foundation.Bundle
+
+      let name = "News"
+
+      var expandableViewController: RswiftResources.StoryboardViewControllerIdentifier<ExpandableViewController> { .init(identifier: "ExpandableViewController", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if expandableViewController() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'expandableViewController' could not be loaded from storyboard 'News' as 'ExpandableViewController'.") }
       }
     }
   }

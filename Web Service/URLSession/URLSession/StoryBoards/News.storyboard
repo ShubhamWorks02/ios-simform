@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wpT-Wv-Ci0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Expandable View Controller-->
+        <scene sceneID="n83-Pt-iIh">
+            <objects>
+                <viewController restorationIdentifier="ExpandableViewController" storyboardIdentifier="ExpandableViewController" id="wpT-Wv-Ci0" customClass="ExpandableViewController" customModule="URLSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QEg-t5-T0n">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mfU-ME-qRg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-DZ-Ahl">
+                                <rect key="frame" x="121.66666666666667" y="791" width="149.66666666666663" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GOTO Exchange"/>
+                                <connections>
+                                    <action selector="btnGotoExchange:" destination="wpT-Wv-Ci0" eventType="touchUpInside" id="udj-RX-jbu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S0j-s2-05S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mfU-ME-qRg" firstAttribute="leading" secondItem="S0j-s2-05S" secondAttribute="leading" id="4LA-F0-FNG"/>
+                            <constraint firstItem="S0j-s2-05S" firstAttribute="bottom" secondItem="mfU-ME-qRg" secondAttribute="bottom" constant="50" id="A1V-6I-MjB"/>
+                            <constraint firstItem="VF5-DZ-Ahl" firstAttribute="bottom" secondItem="S0j-s2-05S" secondAttribute="bottom" constant="8" id="U97-ki-zll"/>
+                            <constraint firstItem="mfU-ME-qRg" firstAttribute="top" secondItem="S0j-s2-05S" secondAttribute="top" id="cNg-ZP-vzv"/>
+                            <constraint firstItem="VF5-DZ-Ahl" firstAttribute="centerX" secondItem="S0j-s2-05S" secondAttribute="centerX" id="s2y-3L-2qt"/>
+                            <constraint firstItem="S0j-s2-05S" firstAttribute="trailing" secondItem="mfU-ME-qRg" secondAttribute="trailing" id="tir-jj-Xsi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblExpandable" destination="mfU-ME-qRg" id="I8n-cy-IeR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmr-2E-47f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="-20"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
