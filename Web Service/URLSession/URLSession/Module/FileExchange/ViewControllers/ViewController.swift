@@ -27,7 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // fetchData()
-        apiCallUsingAlamofire(callType: .getJsonCall)
+        // apiCallUsingAlamofire(callType: .getJsonCall)
+        getDataFromServer()
     }
     
     @IBAction func btnGoToNews(_ sender: UIButton) {

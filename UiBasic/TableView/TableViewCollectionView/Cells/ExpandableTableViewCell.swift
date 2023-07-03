@@ -43,7 +43,6 @@ class ExpandableTableViewCell: UITableViewCell {
     // MARK: ACTIONS
     @IBAction func seeMoreTapped(_ sender: UIButton) {
         seeMoreDelegate?.btnSeemoreTapped(cell: self)
-
     }
 }
 

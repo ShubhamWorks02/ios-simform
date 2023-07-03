@@ -92,7 +92,7 @@ extension ExpandableViewController: UITableViewDataSource,BtnDelegate {
             return
         }
         radioToggleAllExcept(exceptedIndex: path)
-        tblExpandable.reloadData()
+        tblExpandable.reloadRows(at: [path], with: .none)
     }
     
     private func radioToggleAllExcept(exceptedIndex: IndexPath) {

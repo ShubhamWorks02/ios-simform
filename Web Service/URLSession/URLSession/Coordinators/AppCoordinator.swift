@@ -21,6 +21,5 @@ class AppCoordinator: Coordinator {
         let mainCoordi = MainCoordinator(navigationController: navigationController, window: window)
         mainCoordi.start()
     }
-    
-    
+
 }

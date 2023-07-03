@@ -7,9 +7,9 @@
 import UIKit
 
 // Coordinator to manage the flow this method are requird to implement in every coordinator
-protocol Coordinator {
+@objc protocol Coordinator {
 
     var navigationController: UINavigationController { get set }
     func start()
-    
+    @objc optional func popToVc()
 }

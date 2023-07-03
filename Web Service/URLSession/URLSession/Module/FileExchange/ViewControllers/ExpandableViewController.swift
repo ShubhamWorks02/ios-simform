@@ -25,21 +25,25 @@ class ExpandableViewController: UIViewController {
         return searchBar.searchTextField.hasText
     }
     
-
+    
+    // MARK: VIEWCONTROLLER LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         initValues()
-        bindVm()
+        assignApiData()
         viewModel.getNews()
     }
     
-    private func bindVm() {
-        viewModel.onSuccess.bind { articles in
+    private func assignApiData() {
+        viewModel.onSuccess.bind { [weak self] articles in
             if let articles = articles {
-                self.articleList = articles
+                self?.articleList = articles
+                for i in 0..<(self?.articleList.count ?? 0)  {
+                    self?.articleList[i]?.isExpanded = false
+                }
             }
             DispatchQueue.main.async {
-                self.tblExpandable.reloadData()
+                self?.tblExpandable.reloadData()
             }
         }
     }
@@ -57,8 +61,9 @@ class ExpandableViewController: UIViewController {
         tblExpandable.estimatedRowHeight = 60
         configureRefreshControl()
         searchBar.isUserInteractionEnabled = true
+        
     }
-
+    
 }
 
 // MARK: SEARCHBAR DELEGATE
@@ -70,7 +75,8 @@ extension ExpandableViewController: UISearchBarDelegate {
             self?.filterData(with: searchText)
         }
     }
-
+    
+    
     func filterData(with searchText: String) {
         filteredArticleList = articleList.filter { item in
             return item?.description?.lowercased().contains(searchText.lowercased()) ?? false
@@ -85,7 +91,6 @@ extension ExpandableViewController: UITableViewDataSource, BtnDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchIsActive ? filteredArticleList.count : articleList.count
-    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,7 +98,7 @@ extension ExpandableViewController: UITableViewDataSource, BtnDelegate {
             return UITableViewCell()
         }
         cell.seeMoreDelegate = self
-        cell.configCell(data: (searchIsActive ? filteredArticleList[indexPath.row] : articleList[indexPath.row]) ?? Article(source: Source(id: "", name: ""), author: "", title: "", description: "", url: "", urlToImage: "", publishedAt: "", content: ""))
+        cell.configCell(data: (searchIsActive ? filteredArticleList[indexPath.row] : articleList[indexPath.row]) ?? Article(source: Source(id: "", name: ""), author: "", title: "", description: "", url: "", urlToImage: "", publishedAt: "", content: "", isExpanded: false))
         return cell
     }
     
@@ -103,38 +108,49 @@ extension ExpandableViewController: UITableViewDataSource, BtnDelegate {
             print("returned unbinded")
             return
         }
-        tblExpandable.reloadData()
+        radioToggleAllExcept(exceptedIndex: path)
+        tblExpandable.reloadRows(at: [path], with: .none)
     }
     
+    private func radioToggleAllExcept(exceptedIndex: IndexPath) {
+        // getting the value to be toggled
+        if let curValue = articleList[exceptedIndex.row]?.isExpanded {
+            for i in 0..<articleList.count {
+                articleList[i]?.isExpanded = false
+            }
+            articleList[exceptedIndex.row]?.isExpanded = !curValue
+        }
+    }
 }
 
 // MARK: TABLEVIEW DELEGATE
 extension ExpandableViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let customColor = createCustomColor(red: 18, green: 21, blue: 30)
-
+        
         headerView.backgroundColor = customColor
         headerView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 200, right: 0)
-
+        
         searchBar = createSearchBar()
         headerView.addSubview(searchBar)
-
+        
         let doneButton = createButton()
         doneButton.backgroundColor = customColor
         headerView.addSubview(doneButton)
-
+        
         return headerView
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tblExpandable.bounds.width, height: 50))
         footerView.backgroundColor = .lightGray
-
+        
         let button = UIButton(type: .system)
         button.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         button.setImage(UIImage(named: "uncheck"), for: .normal)
@@ -143,11 +159,11 @@ extension ExpandableViewController: UITableViewDelegate {
         footerView.addSubview(button)
         return footerView
     }
-
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
-
+    
     @objc private func buttonTapped(_ sender: UIButton) {
         isSelectAllBtnSelected.toggle()
         print("isSelected: \(isSelectAllBtnSelected)")
@@ -159,10 +175,10 @@ extension ExpandableViewController: UITableViewDelegate {
         }
         tblExpandable.reloadData()
     }
-
+    
     @objc private func doneButtonTapped(_ sender: UIButton) {
         guard let headerView = sender.superview else {
-                return
+            return
         }
         var enteredText = ""
         for subview in headerView.subviews {
