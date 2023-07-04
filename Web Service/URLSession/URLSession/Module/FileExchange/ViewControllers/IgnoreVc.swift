@@ -48,7 +48,7 @@ class IgnoreVc: UIViewController {}
 //
 //        task.resume()
 //    }
-//
+
 //    private func getHttpClient() -> URLSession {
 //        return client
 //    }

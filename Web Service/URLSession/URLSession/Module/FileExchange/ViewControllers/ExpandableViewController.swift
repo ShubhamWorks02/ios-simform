@@ -61,7 +61,6 @@ class ExpandableViewController: UIViewController {
         tblExpandable.estimatedRowHeight = 60
         configureRefreshControl()
         searchBar.isUserInteractionEnabled = true
-        
     }
     
 }
@@ -108,6 +107,8 @@ extension ExpandableViewController: UITableViewDataSource, BtnDelegate {
             print("returned unbinded")
             return
         }
+        
+//        cell.btnSeeMore.setTitle("See Less", for: )
         radioToggleAllExcept(exceptedIndex: path)
         tblExpandable.reloadRows(at: [path], with: .none)
     }

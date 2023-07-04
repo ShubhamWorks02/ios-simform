@@ -28,7 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // fetchData()
         // apiCallUsingAlamofire(callType: .getJsonCall)
-        getDataFromServer()
+        register(user: User(email: "eve.holt@reqres.in", password: "pistol"))
+        // getDataFromServer()
     }
     
     @IBAction func btnGoToNews(_ sender: UIButton) {
@@ -177,7 +178,11 @@ class ViewController: UIViewController {
                 
                 if let data = urlData {
                     do {
-                        let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
+                        let jsonObject = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers])
+                        let prettyObj = try JSONSerialization.data(withJSONObject: jsonObject , options: .prettyPrinted)
+                        guard let strObj = String(data: prettyObj, encoding: .utf8) else {
+                            return
+                        }
                         print("JSON response: \(jsonObject)")
                     } catch let error {
                         print("Error serializing JSON: \(error)")

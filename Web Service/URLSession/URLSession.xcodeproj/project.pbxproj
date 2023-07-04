@@ -28,6 +28,12 @@
 		51528DE12A4D606D006EDDBB /* ImageUploadVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51528DE02A4D606D006EDDBB /* ImageUploadVc.swift */; };
 		51528DE32A4D8450006EDDBB /* ImageUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51528DE22A4D8450006EDDBB /* ImageUploadModel.swift */; };
 		51528DE52A4DA24B006EDDBB /* DownloadVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51528DE42A4DA24B006EDDBB /* DownloadVc.swift */; };
+		518CA5AF2A5440220064958C /* ProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5AE2A5440210064958C /* ProfileVc.swift */; };
+		518CA5B12A5440380064958C /* EditProfileVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5B02A5440380064958C /* EditProfileVc.swift */; };
+		518CA5B32A54408C0064958C /* HomeVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5B22A54408C0064958C /* HomeVc.swift */; };
+		518CA5B62A5440FA0064958C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5B42A5440FA0064958C /* UserTableViewCell.swift */; };
+		518CA5B72A5440FA0064958C /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518CA5B52A5440FA0064958C /* UserTableViewCell.xib */; };
+		518CA5B92A5449B60064958C /* Kt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518CA5B82A5449B60064958C /* Kt.storyboard */; };
 		519C638D2A4C332400E64465 /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C638B2A4C332400E64465 /* ExpandableTableViewCell.swift */; };
 		519C638E2A4C332400E64465 /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519C638C2A4C332400E64465 /* ExpandableTableViewCell.xib */; };
 		519C63902A4C33AD00E64465 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C638F2A4C33AD00E64465 /* ExpandableViewController.swift */; };
@@ -62,6 +68,12 @@
 		51528DE02A4D606D006EDDBB /* ImageUploadVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadVc.swift; sourceTree = "<group>"; };
 		51528DE22A4D8450006EDDBB /* ImageUploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadModel.swift; sourceTree = "<group>"; };
 		51528DE42A4DA24B006EDDBB /* DownloadVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadVc.swift; sourceTree = "<group>"; };
+		518CA5AE2A5440210064958C /* ProfileVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVc.swift; sourceTree = "<group>"; };
+		518CA5B02A5440380064958C /* EditProfileVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVc.swift; sourceTree = "<group>"; };
+		518CA5B22A54408C0064958C /* HomeVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVc.swift; sourceTree = "<group>"; };
+		518CA5B42A5440FA0064958C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		518CA5B52A5440FA0064958C /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		518CA5B82A5449B60064958C /* Kt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Kt.storyboard; sourceTree = "<group>"; };
 		519C638B2A4C332400E64465 /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 		519C638C2A4C332400E64465 /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableTableViewCell.xib; sourceTree = "<group>"; };
 		519C638F2A4C33AD00E64465 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +120,7 @@
 		511AB0F62A500AD4009712D6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				518CA5A92A543E250064958C /* WebServiceKt */,
 				511AB0F82A500B5E009712D6 /* FileExchange */,
 			);
 			path = Module;
@@ -157,6 +170,7 @@
 				5147C50A2A4B1381006D505E /* Main.storyboard */,
 				5105BB182A503554001A1E45 /* News.storyboard */,
 				5105BB1A2A503585001A1E45 /* Exchange.storyboard */,
+				518CA5B82A5449B60064958C /* Kt.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -236,6 +250,50 @@
 				511AB1022A50195B009712D6 /* UserManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		518CA5A92A543E250064958C /* WebServiceKt */ = {
+			isa = PBXGroup;
+			children = (
+				518CA5AD2A543EC10064958C /* ViewModel */,
+				518CA5AC2A543EBA0064958C /* View */,
+				518CA5AB2A543EB20064958C /* Model */,
+				518CA5AA2A543EA60064958C /* VIewControllers */,
+			);
+			path = WebServiceKt;
+			sourceTree = "<group>";
+		};
+		518CA5AA2A543EA60064958C /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				518CA5AE2A5440210064958C /* ProfileVc.swift */,
+				518CA5B02A5440380064958C /* EditProfileVc.swift */,
+				518CA5B22A54408C0064958C /* HomeVc.swift */,
+			);
+			path = VIewControllers;
+			sourceTree = "<group>";
+		};
+		518CA5AB2A543EB20064958C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		518CA5AC2A543EBA0064958C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				518CA5B42A5440FA0064958C /* UserTableViewCell.swift */,
+				518CA5B52A5440FA0064958C /* UserTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		518CA5AD2A543EC10064958C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		519C638A2A4C32C900E64465 /* Cells */ = {
@@ -325,6 +383,8 @@
 				5147C5112A4B1382006D505E /* LaunchScreen.storyboard in Resources */,
 				5105BB1B2A503585001A1E45 /* Exchange.storyboard in Resources */,
 				5147C50E2A4B1382006D505E /* Assets.xcassets in Resources */,
+				518CA5B92A5449B60064958C /* Kt.storyboard in Resources */,
+				518CA5B72A5440FA0064958C /* UserTableViewCell.xib in Resources */,
 				5105BB192A503554001A1E45 /* News.storyboard in Resources */,
 				5147C50C2A4B1381006D505E /* Main.storyboard in Resources */,
 				519C638E2A4C332400E64465 /* ExpandableTableViewCell.xib in Resources */,
@@ -400,10 +460,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				511AB10B2A5024EB009712D6 /* NewsCoordinator.swift in Sources */,
+				518CA5B32A54408C0064958C /* HomeVc.swift in Sources */,
 				5147C5092A4B1381006D505E /* ViewController.swift in Sources */,
 				51CC916C2A4DDAE7000B15BA /* R.generated.swift in Sources */,
+				518CA5B62A5440FA0064958C /* UserTableViewCell.swift in Sources */,
 				5105BB1F2A5055BD001A1E45 /* Dynamic.swift in Sources */,
+				518CA5AF2A5440220064958C /* ProfileVc.swift in Sources */,
 				519C63922A4C340B00E64465 /* AppConstants.swift in Sources */,
+				518CA5B12A5440380064958C /* EditProfileVc.swift in Sources */,
 				5147C5052A4B1381006D505E /* AppDelegate.swift in Sources */,
 				511AB10D2A50251D009712D6 /* ExchangeCoordinator.swift in Sources */,
 				51528DE52A4DA24B006EDDBB /* DownloadVc.swift in Sources */,
