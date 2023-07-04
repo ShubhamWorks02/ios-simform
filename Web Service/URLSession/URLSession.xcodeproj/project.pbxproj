@@ -34,6 +34,10 @@
 		518CA5B62A5440FA0064958C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5B42A5440FA0064958C /* UserTableViewCell.swift */; };
 		518CA5B72A5440FA0064958C /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518CA5B52A5440FA0064958C /* UserTableViewCell.xib */; };
 		518CA5B92A5449B60064958C /* Kt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518CA5B82A5449B60064958C /* Kt.storyboard */; };
+		518CA5BC2A545D480064958C /* DeleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5BA2A545D480064958C /* DeleteTableViewCell.swift */; };
+		518CA5BD2A545D480064958C /* DeleteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518CA5BB2A545D480064958C /* DeleteTableViewCell.xib */; };
+		518CA5BF2A5461CB0064958C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5BE2A5461CB0064958C /* Product.swift */; };
+		518CA5C12A54631C0064958C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CA5C02A54631C0064958C /* HomeViewModel.swift */; };
 		519C638D2A4C332400E64465 /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C638B2A4C332400E64465 /* ExpandableTableViewCell.swift */; };
 		519C638E2A4C332400E64465 /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519C638C2A4C332400E64465 /* ExpandableTableViewCell.xib */; };
 		519C63902A4C33AD00E64465 /* ExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C638F2A4C33AD00E64465 /* ExpandableViewController.swift */; };
@@ -74,6 +78,10 @@
 		518CA5B42A5440FA0064958C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		518CA5B52A5440FA0064958C /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		518CA5B82A5449B60064958C /* Kt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Kt.storyboard; sourceTree = "<group>"; };
+		518CA5BA2A545D480064958C /* DeleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTableViewCell.swift; sourceTree = "<group>"; };
+		518CA5BB2A545D480064958C /* DeleteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteTableViewCell.xib; sourceTree = "<group>"; };
+		518CA5BE2A5461CB0064958C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		518CA5C02A54631C0064958C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		519C638B2A4C332400E64465 /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
 		519C638C2A4C332400E64465 /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableTableViewCell.xib; sourceTree = "<group>"; };
 		519C638F2A4C33AD00E64465 /* ExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +284,7 @@
 		518CA5AB2A543EB20064958C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				518CA5BE2A5461CB0064958C /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 		518CA5AD2A543EC10064958C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				518CA5C02A54631C0064958C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,6 +311,8 @@
 			children = (
 				519C638B2A4C332400E64465 /* ExpandableTableViewCell.swift */,
 				519C638C2A4C332400E64465 /* ExpandableTableViewCell.xib */,
+				518CA5BA2A545D480064958C /* DeleteTableViewCell.swift */,
+				518CA5BB2A545D480064958C /* DeleteTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -385,6 +397,7 @@
 				5147C50E2A4B1382006D505E /* Assets.xcassets in Resources */,
 				518CA5B92A5449B60064958C /* Kt.storyboard in Resources */,
 				518CA5B72A5440FA0064958C /* UserTableViewCell.xib in Resources */,
+				518CA5BD2A545D480064958C /* DeleteTableViewCell.xib in Resources */,
 				5105BB192A503554001A1E45 /* News.storyboard in Resources */,
 				5147C50C2A4B1381006D505E /* Main.storyboard in Resources */,
 				519C638E2A4C332400E64465 /* ExpandableTableViewCell.xib in Resources */,
@@ -472,7 +485,9 @@
 				511AB10D2A50251D009712D6 /* ExchangeCoordinator.swift in Sources */,
 				51528DE52A4DA24B006EDDBB /* DownloadVc.swift in Sources */,
 				5105BB222A505B93001A1E45 /* IgnoreVc.swift in Sources */,
+				518CA5BF2A5461CB0064958C /* Product.swift in Sources */,
 				519C63982A4C3FA500E64465 /* ProductList.swift in Sources */,
+				518CA5C12A54631C0064958C /* HomeViewModel.swift in Sources */,
 				511AB1032A50195B009712D6 /* UserManager.swift in Sources */,
 				511AB0FD2A500FEF009712D6 /* Coordinator.swift in Sources */,
 				519C639A2A4C48D500E64465 /* NewsModel.swift in Sources */,
@@ -484,6 +499,7 @@
 				511AB0FF2A50114A009712D6 /* AppCoordinator.swift in Sources */,
 				519C63962A4C3C0B00E64465 /* ApiService.swift in Sources */,
 				519C638D2A4C332400E64465 /* ExpandableTableViewCell.swift in Sources */,
+				518CA5BC2A545D480064958C /* DeleteTableViewCell.swift in Sources */,
 				5105BB1D2A504A3A001A1E45 /* ApiViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

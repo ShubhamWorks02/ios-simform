@@ -19,6 +19,7 @@ struct Constants {
         static let nestedCollectionViewCell = "NestedCollectionViewCell"
         static let jobDetailCollectionViewCell = "JobDetailCollectionViewCell"
         static let openingTableViewCell = "OpeningTableViewCell"
+        static let userTableViewCell = "UserTableViewCell"
     }
     
 }

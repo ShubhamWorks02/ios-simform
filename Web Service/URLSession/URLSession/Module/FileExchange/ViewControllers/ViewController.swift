@@ -9,10 +9,10 @@ import UIKit
 import Reachability
 import Alamofire
 
-struct User: Codable {
-    let email: String
-    let password: String
-}
+//struct User: Codable {
+//    let email: String
+//    let password: String
+//}
 
 enum AlamofireCallType {
     case getCall
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // fetchData()
         // apiCallUsingAlamofire(callType: .getJsonCall)
-        register(user: User(email: "eve.holt@reqres.in", password: "pistol"))
+        // register(user: User(email: "eve.holt@reqres.in", password: "pistol"))
         // getDataFromServer()
     }
     
@@ -41,28 +41,28 @@ class ViewController: UIViewController {
     }
     
     
-    private func fetchData() {
-        Task {
-            do {
-                let welcome: Welcome = try await ApiService.shared.get(endpoint: "api/users?page=2")
-                // Access the response data
-                print("Page: \(welcome.page)")
-                print("Total Users: \(welcome.data.count)")
-                // Access individual user data
-                for user in welcome.data {
-                    print("User ID: \(user.id)")
-                    print("Email: \(user.email)")
-                    print("First Name: \(user.firstName)")
-                    print("Last Name: \(user.lastName)")
-                    print("Avatar: \(user.avatar)")
-                    print("---")
-                }
-            } catch {
-                // Handle error
-                print("Error: \(error)")
-            }
-        }
-    }
+//    private func fetchData() {
+//        Task {
+//            do {
+//                let welcome: Welcome = try await ApiService.shared.get(endpoint: "api/users?page=2")
+//                // Access the response data
+//                print("Page: \(welcome.page)")
+//                print("Total Users: \(welcome.data.count)")
+//                // Access individual user data
+//                for user in welcome.data {
+//                    print("User ID: \(user.id)")
+//                    print("Email: \(user.email)")
+//                    print("First Name: \(user.firstName)")
+//                    print("Last Name: \(user.lastName)")
+//                    print("Avatar: \(user.avatar)")
+//                    print("---")
+//                }
+//            } catch {
+//                // Handle error
+//                print("Error: \(error)")
+//            }
+//        }
+//    }
     
     private func getDataFromServer() {
         

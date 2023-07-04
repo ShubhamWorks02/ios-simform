@@ -76,7 +76,7 @@ extension ExpandableViewController: UISearchBarDelegate {
     }
     
     
-    func filterData(with searchText: String) {
+    private func filterData(with searchText: String) {
         filteredArticleList = articleList.filter { item in
             return item?.description?.lowercased().contains(searchText.lowercased()) ?? false
         }

@@ -45,17 +45,35 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 1 colors.
+  /// This `_R.color` struct is generated, and contains static references to 2 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
+    /// Color `tableTheme`.
+    var tableTheme: RswiftResources.ColorResource { .init(name: "tableTheme", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 1 images.
+  /// This `_R.image` struct is generated, and contains static references to 6 images.
   struct image {
     let bundle: Foundation.Bundle
+
+    /// Image `EditProfile`.
+    var editProfile: RswiftResources.ImageResource { .init(name: "EditProfile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `homeImg`.
+    var homeImg: RswiftResources.ImageResource { .init(name: "homeImg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `imgBack`.
+    var imgBack: RswiftResources.ImageResource { .init(name: "imgBack", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `profileImg`.
+    var profileImg: RswiftResources.ImageResource { .init(name: "profileImg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `sampleImg`.
+    var sampleImg: RswiftResources.ImageResource { .init(name: "sampleImg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `starShot`.
     var starShot: RswiftResources.ImageResource { .init(name: "starShot", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -103,41 +121,56 @@ struct _R {
             let bundle: Foundation.Bundle
             var uiSceneConfigurationName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneConfigurationName") ?? "Default Configuration" }
             var uiSceneDelegateClassName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate" }
-            var uiSceneStoryboardFile: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneStoryboardFile") ?? "Main" }
+            var uiSceneStoryboardFile: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneStoryboardFile") ?? "Kt" }
           }
         }
       }
     }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     let bundle: Foundation.Bundle
+
+    /// Nib `DeleteTableViewCell`.
+    var deleteTableViewCell: RswiftResources.NibReference<DeleteTableViewCell> { .init(name: "DeleteTableViewCell", bundle: bundle) }
 
     /// Nib `ExpandableTableViewCell`.
     var expandableTableViewCell: RswiftResources.NibReferenceReuseIdentifier<ExpandableTableViewCell, ExpandableTableViewCell> { .init(name: "ExpandableTableViewCell", bundle: bundle, identifier: "ExpandableTableViewCell") }
 
-    func validate() throws {
+    /// Nib `UserTableViewCell`.
+    var userTableViewCell: RswiftResources.NibReferenceReuseIdentifier<UserTableViewCell, UserTableViewCell> { .init(name: "UserTableViewCell", bundle: bundle, identifier: "UserTableViewCell") }
 
+    func validate() throws {
+      if UIKit.UIImage(named: "homeImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'homeImg' is used in nib 'DeleteTableViewCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "sampleImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'sampleImg' is used in nib 'UserTableViewCell', but couldn't be loaded.") }
+      if UIKit.UIColor(named: "tableTheme", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'tableTheme' is used in nib 'UserTableViewCell', but couldn't be loaded.") }
     }
   }
 
-  /// This `_R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `_R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
 
     /// Reuse identifier `ExpandableTableViewCell`.
     let expandableTableViewCell: RswiftResources.ReuseIdentifier<ExpandableTableViewCell> = .init(identifier: "ExpandableTableViewCell")
+
+    /// Reuse identifier `UserTableViewCell`.
+    let userTableViewCell: RswiftResources.ReuseIdentifier<UserTableViewCell> = .init(identifier: "UserTableViewCell")
   }
 
-  /// This `_R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `_R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
     var exchange: exchange { .init(bundle: bundle) }
+    var kt: kt { .init(bundle: bundle) }
     var launchScreen: launchScreen { .init(bundle: bundle) }
     var main: main { .init(bundle: bundle) }
     var news: news { .init(bundle: bundle) }
 
     func exchange(bundle: Foundation.Bundle) -> exchange {
+      .init(bundle: bundle)
+    }
+    func kt(bundle: Foundation.Bundle) -> kt {
       .init(bundle: bundle)
     }
     func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
@@ -151,6 +184,7 @@ struct _R {
     }
     func validate() throws {
       try self.exchange.validate()
+      try self.kt.validate()
       try self.launchScreen.validate()
       try self.main.validate()
       try self.news.validate()
@@ -169,6 +203,19 @@ struct _R {
       func validate() throws {
         if downloadVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'downloadVc' could not be loaded from storyboard 'Exchange' as 'DownloadVc'.") }
         if imageUploadVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'imageUploadVc' could not be loaded from storyboard 'Exchange' as 'ImageUploadVc'.") }
+      }
+    }
+
+    /// Storyboard `Kt`.
+    struct kt: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
+      typealias InitialController = HomeVc
+
+      let bundle: Foundation.Bundle
+
+      let name = "Kt"
+      func validate() throws {
+        if UIKit.UIImage(named: "imgBack", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'imgBack' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "profileImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'profileImg' is used in storyboard 'Kt', but couldn't be loaded.") }
       }
     }
 

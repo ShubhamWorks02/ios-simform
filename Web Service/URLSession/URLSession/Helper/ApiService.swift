@@ -7,7 +7,7 @@
 
 import Foundation
 
-let API_BASE_URL = "https://newsapi.org"
+let API_BASE_URL = "https://reqres.in"
 
 class ApiService {
     static let shared: ApiService = {
