@@ -48,6 +48,9 @@
 		51CC91692A4DD88B000B15BA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 51CC91682A4DD88B000B15BA /* Alamofire */; };
 		51CC916C2A4DDAE7000B15BA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC916B2A4DDAE7000B15BA /* R.generated.swift */; };
 		51E0D83C2A552AAD00A3CEC6 /* PaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E0D83B2A552AAD00A3CEC6 /* PaginationManager.swift */; };
+		51EB65402A5580A100EB1345 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EB653F2A5580A100EB1345 /* EditProfileViewModel.swift */; };
+		51EB65422A55820B00EB1345 /* UserCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EB65412A55820B00EB1345 /* UserCommunication.swift */; };
+		51EB65442A55C55600EB1345 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EB65432A55C55600EB1345 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		519C63992A4C48D500E64465 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		51CC916B2A4DDAE7000B15BA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		51E0D83B2A552AAD00A3CEC6 /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
+		51EB653F2A5580A100EB1345 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		51EB65412A55820B00EB1345 /* UserCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCommunication.swift; sourceTree = "<group>"; };
+		51EB65432A55C55600EB1345 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		6AC0652A3CA8B42E89C2A625 /* Pods-URLSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession.debug.xcconfig"; path = "Target Support Files/Pods-URLSession/Pods-URLSession.debug.xcconfig"; sourceTree = "<group>"; };
 		8AA731A8B8013123E1CEF616 /* Pods-URLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession.release.xcconfig"; path = "Target Support Files/Pods-URLSession/Pods-URLSession.release.xcconfig"; sourceTree = "<group>"; };
 		F4064822AE2F6A56FF054195 /* Pods_URLSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				518CA5BE2A5461CB0064958C /* Product.swift */,
+				51EB65412A55820B00EB1345 /* UserCommunication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				518CA5C02A54631C0064958C /* HomeViewModel.swift */,
+				51EB653F2A5580A100EB1345 /* EditProfileViewModel.swift */,
+				51EB65432A55C55600EB1345 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -482,15 +491,18 @@
 				518CA5B62A5440FA0064958C /* UserTableViewCell.swift in Sources */,
 				5105BB1F2A5055BD001A1E45 /* Dynamic.swift in Sources */,
 				518CA5AF2A5440220064958C /* ProfileVc.swift in Sources */,
+				51EB65422A55820B00EB1345 /* UserCommunication.swift in Sources */,
 				51E0D83C2A552AAD00A3CEC6 /* PaginationManager.swift in Sources */,
 				519C63922A4C340B00E64465 /* AppConstants.swift in Sources */,
 				518CA5B12A5440380064958C /* EditProfileVc.swift in Sources */,
 				5147C5052A4B1381006D505E /* AppDelegate.swift in Sources */,
 				511AB10D2A50251D009712D6 /* ExchangeCoordinator.swift in Sources */,
 				51528DE52A4DA24B006EDDBB /* DownloadVc.swift in Sources */,
+				51EB65402A5580A100EB1345 /* EditProfileViewModel.swift in Sources */,
 				5105BB222A505B93001A1E45 /* IgnoreVc.swift in Sources */,
 				518CA5BF2A5461CB0064958C /* Product.swift in Sources */,
 				519C63982A4C3FA500E64465 /* ProductList.swift in Sources */,
+				51EB65442A55C55600EB1345 /* ProfileViewModel.swift in Sources */,
 				518CA5C12A54631C0064958C /* HomeViewModel.swift in Sources */,
 				511AB1032A50195B009712D6 /* UserManager.swift in Sources */,
 				511AB0FD2A500FEF009712D6 /* Coordinator.swift in Sources */,

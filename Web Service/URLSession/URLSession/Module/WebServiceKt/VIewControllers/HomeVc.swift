@@ -11,7 +11,7 @@ class HomeVc: UIViewController {
     
     // MARK: OUTLETS
     @IBOutlet weak private var tblUserList: UITableView!
-    @IBOutlet weak var searchView: UISearchBar!
+    @IBOutlet weak private var searchView: UISearchBar!
     
     // MARK: VARIABLE
     var viewModel = HomeViewModel()
@@ -39,13 +39,7 @@ class HomeVc: UIViewController {
     }
     
     private func assignApiData() {
-        viewModel.userList.bind { [weak self] users in
-            
-            //                self?.userList = users
-            //                self?.userList.forEach { user in
-            //                    print("FirstName: ",user?.firstName)
-            //
-            //}
+        viewModel.userList.bind { [weak self] _ in
             DispatchQueue.main.async {
                 self?.tblUserList.reloadData()
             }
@@ -84,12 +78,6 @@ extension HomeVc: UISearchBarDelegate {
     
     private func searchData() {
         viewModel.isSearching.bind { [weak self] users in
-            
-            //                self?.userList = users
-            //                self?.userList.forEach { user in
-            //                    print("FirstName: ",user?.firstName)
-            //
-            //}
             DispatchQueue.main.async {
                 self?.tblUserList.reloadData()
             }
@@ -100,28 +88,40 @@ extension HomeVc: UISearchBarDelegate {
 
 // MARK: TABLEVIEW DELEGATE
 extension HomeVc: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-            if indexPath.row == viewModel.userList.value.count - 1,
-               viewModel.currentPage.value < viewModel.totalPages.value {
-                viewModel.getUsers()
-            }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let userProfileVc = storyboard?.instantiateViewController(
+            withIdentifier: "ProfileVc") as? ProfileVc else {
+            return
         }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        200
+        userProfileVc.userData = viewModel.userList.value[indexPath.row]
+        navigationController?.pushViewController(userProfileVc, animated: true)
     }
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.row == viewModel.userList.value.count - 1 {
-//            var url = "https://reqres.in/api/users?page=\()"
-//            paginationManager.fetchData(baseURL: .users(page: paginationManager.currentPage + 1)) { [weak self] users in
-//                self?.viewModel.userList.value.append(contentsOf: users)
-//            }
-//        }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.userList.value.count - 1,
+           viewModel.currentPage.value < viewModel.totalPages.value {
+            viewModel.getUsers()
+        }
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        UITableView.automaticDimension
 //    }
-//    private func setupPagination() {
-//        paginationManager = PaginationManager(tableView: tblUserList)
-//        paginationManager.fetchData(baseURL: .users(page: 1)) { [weak self] users in
-//            self?.viewModel.userList.value.append(contentsOf: users)
-//        }
-//    }
+    //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    //        if indexPath.row == viewModel.userList.value.count - 1 {
+    //            var url = "https://reqres.in/api/users?page=\()"
+    //            paginationManager.fetchData(baseURL: .users(page: paginationManager.currentPage + 1)) { [weak self] users in
+    //                self?.viewModel.userList.value.append(contentsOf: users)
+    //            }
+    //        }
+    //    }
+    //    private func setupPagination() {
+    //        paginationManager = PaginationManager(tableView: tblUserList)
+    //        paginationManager.fetchData(baseURL: .users(page: 1)) { [weak self] users in
+    //            self?.viewModel.userList.value.append(contentsOf: users)
+    //        }
+    //    }
 }

@@ -11,17 +11,14 @@ import Kingfisher
 class UserTableViewCell: UITableViewCell {
 
     // MARK: OUTLET
-    @IBOutlet weak var imgUser: UIImageView!
-    @IBOutlet weak var lblUserName: UILabel!
-    @IBOutlet weak var lblUserEmail: UILabel!
-    @IBOutlet weak var lblUserid: UILabel!
+    @IBOutlet weak private var imgUser: UIImageView!
+    @IBOutlet weak private var lblUserName: UILabel!
+    @IBOutlet weak private var lblUserEmail: UILabel!
+    @IBOutlet weak private var lblUserid: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        imgUser.makeViewCircular()
     }
     
     func configCell(data: User) {
@@ -29,12 +26,10 @@ class UserTableViewCell: UITableViewCell {
             imgUser.kf.setImage(with: URL(string: imageUrl))
         }
         lblUserName.text = "\(data.firstName!) \(data.lastName!)"
-        lblUserid.text = "\(data.id)"
+        if let id = data.id {
+            lblUserid.text = "\(id)"
+        }
         lblUserEmail.text = data.email!
-    }
-    
-    func makeImageViewCircular() {
-        
     }
     
 }

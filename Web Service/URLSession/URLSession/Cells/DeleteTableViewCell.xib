@@ -20,22 +20,22 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="132" y="-11"/>
         </tableViewCell>
-        <viewController id="uvk-ON-sao">
-            <view key="view" contentMode="scaleToFill" id="P9I-kk-16L">
+        <viewController id="Bse-w6-fTJ">
+            <view key="view" contentMode="scaleToFill" id="1ew-sb-HP5">
                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImg" translatesAutoresizingMaskIntoConstraints="NO" id="6ps-I5-f4t">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImg" translatesAutoresizingMaskIntoConstraints="NO" id="HFX-Pv-7Hy">
                         <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     </imageView>
                 </subviews>
-                <viewLayoutGuide key="safeArea" id="un0-r2-Ka5"/>
+                <viewLayoutGuide key="safeArea" id="rKH-jT-EoC"/>
                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
-                    <constraint firstItem="un0-r2-Ka5" firstAttribute="trailing" secondItem="6ps-I5-f4t" secondAttribute="trailing" id="Ief-Ep-3T1"/>
-                    <constraint firstItem="un0-r2-Ka5" firstAttribute="bottom" secondItem="6ps-I5-f4t" secondAttribute="bottom" id="PXf-uM-OLR"/>
-                    <constraint firstItem="6ps-I5-f4t" firstAttribute="leading" secondItem="un0-r2-Ka5" secondAttribute="leading" id="axK-j2-Y8J"/>
-                    <constraint firstItem="6ps-I5-f4t" firstAttribute="top" secondItem="un0-r2-Ka5" secondAttribute="top" id="lrX-fe-sUZ"/>
+                    <constraint firstItem="HFX-Pv-7Hy" firstAttribute="top" secondItem="rKH-jT-EoC" secondAttribute="top" id="Rf8-cC-xLt"/>
+                    <constraint firstItem="rKH-jT-EoC" firstAttribute="trailing" secondItem="HFX-Pv-7Hy" secondAttribute="trailing" id="U0d-Uo-gVm"/>
+                    <constraint firstItem="rKH-jT-EoC" firstAttribute="bottom" secondItem="HFX-Pv-7Hy" secondAttribute="bottom" id="Ujs-Q7-uhI"/>
+                    <constraint firstItem="HFX-Pv-7Hy" firstAttribute="leading" secondItem="rKH-jT-EoC" secondAttribute="leading" id="j66-sU-nl4"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="818" y="34"/>

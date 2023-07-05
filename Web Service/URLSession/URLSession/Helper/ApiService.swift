@@ -97,4 +97,20 @@ class ApiService {
         
         return try await handleApiErrors(apiRequest: { request })
     }
+    
+    func patch<T: Decodable>(endpoint: String, data: EditUserRequest) async throws -> T {
+            let url = URL(string: "\(API_BASE_URL)/\(endpoint)")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "PATCH"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            do {
+                request.httpBody = try JSONEncoder().encode(data)
+            } catch {
+                throw error
+            }
+
+            return try await handleApiErrors(apiRequest: { request })
+        }
+    
 }

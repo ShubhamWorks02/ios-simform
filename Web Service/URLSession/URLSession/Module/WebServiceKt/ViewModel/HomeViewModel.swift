@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import Reachability
 
 class HomeViewModel {
+    
+    // MARK: VARIABLES
     var userList = Dynamic<[User]>([])
     private (set) var currentPage = Dynamic(0)
     private (set) var totalPages = Dynamic(0)
@@ -17,11 +20,17 @@ class HomeViewModel {
     
     func getUsers() {
         currentPage.value += 1
-        let endPoint = "api/users?page=\(currentPage.value)"
+        let endPoint = "api/users?page=\(currentPage.value)&per_page=\(5)&delay=\(2)"
+        
+        // Connection checks
+        let reachability = try? Reachability()
+        if reachability?.connection == .unavailable {
+            print("No connection")
+            return
+        }
         
         Task {
             do {
-                
                 let users: UserData = try await ApiService.shared.get(endpoint: endPoint)
                 self.totalPages.value = users.totalPages ?? 20
                 if let users = users.data {
