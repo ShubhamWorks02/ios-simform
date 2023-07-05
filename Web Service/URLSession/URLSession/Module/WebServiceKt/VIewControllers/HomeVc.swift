@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeVc: UIViewController {
-
+    
     // MARK: OUTLETS
     @IBOutlet weak private var tblUserList: UITableView!
     @IBOutlet weak var searchView: UISearchBar!
@@ -35,22 +35,23 @@ class HomeVc: UIViewController {
         tblUserList.register(UINib(nibName: Constants.Cell.userTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Cell.userTableViewCell)
         tblUserList.estimatedRowHeight = 60
         searchView.isUserInteractionEnabled = true
+        searchView.delegate = self
     }
     
     private func assignApiData() {
         viewModel.userList.bind { [weak self] users in
             
-//                self?.userList = users
-//                self?.userList.forEach { user in
-//                    print("FirstName: ",user?.firstName)
-//
-           //}
+            //                self?.userList = users
+            //                self?.userList.forEach { user in
+            //                    print("FirstName: ",user?.firstName)
+            //
+            //}
             DispatchQueue.main.async {
                 self?.tblUserList.reloadData()
             }
         }
     }
-
+    
 }
 
 // MARK: TABLEVIEW DATASOURCE
@@ -77,21 +78,50 @@ extension HomeVc: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchTimer?.invalidate()
         searchTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
-             self?.filterData(with: searchText) //
+            self?.viewModel.filterUsers(searchQuery: searchText) //
         }
     }
     
-    
-    func filterData(with searchText: String) {
-        filteredUserList = userList.filter { user in
-            return user?.firstName?.lowercased().contains(searchText.lowercased()) ?? false
+    private func searchData() {
+        viewModel.isSearching.bind { [weak self] users in
+            
+            //                self?.userList = users
+            //                self?.userList.forEach { user in
+            //                    print("FirstName: ",user?.firstName)
+            //
+            //}
+            DispatchQueue.main.async {
+                self?.tblUserList.reloadData()
+            }
         }
-        tblUserList.reloadData()
     }
     
 }
 
 // MARK: TABLEVIEW DELEGATE
 extension HomeVc: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+            if indexPath.row == viewModel.userList.value.count - 1,
+               viewModel.currentPage.value < viewModel.totalPages.value {
+                viewModel.getUsers()
+            }
+        }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        200
+    }
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath.row == viewModel.userList.value.count - 1 {
+//            var url = "https://reqres.in/api/users?page=\()"
+//            paginationManager.fetchData(baseURL: .users(page: paginationManager.currentPage + 1)) { [weak self] users in
+//                self?.viewModel.userList.value.append(contentsOf: users)
+//            }
+//        }
+//    }
+//    private func setupPagination() {
+//        paginationManager = PaginationManager(tableView: tblUserList)
+//        paginationManager.fetchData(baseURL: .users(page: 1)) { [weak self] users in
+//            self?.viewModel.userList.value.append(contentsOf: users)
+//        }
+//    }
 }
