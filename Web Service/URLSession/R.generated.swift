@@ -45,7 +45,7 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 2 colors.
+  /// This `_R.color` struct is generated, and contains static references to 3 colors.
   struct color {
     let bundle: Foundation.Bundle
 
@@ -54,20 +54,35 @@ struct _R {
 
     /// Color `tableTheme`.
     var tableTheme: RswiftResources.ColorResource { .init(name: "tableTheme", path: [], bundle: bundle) }
+
+    /// Color `themeColor`.
+    var themeColor: RswiftResources.ColorResource { .init(name: "themeColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 6 images.
+  /// This `_R.image` struct is generated, and contains static references to 10 images.
   struct image {
     let bundle: Foundation.Bundle
 
     /// Image `EditProfile`.
     var editProfile: RswiftResources.ImageResource { .init(name: "EditProfile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
+    /// Image `Image`.
+    var image: RswiftResources.ImageResource { .init(name: "Image", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `homeImg`.
     var homeImg: RswiftResources.ImageResource { .init(name: "homeImg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `imgBack`.
     var imgBack: RswiftResources.ImageResource { .init(name: "imgBack", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `offToggle`.
+    var offToggle: RswiftResources.ImageResource { .init(name: "offToggle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `onToggle`.
+    var onToggle: RswiftResources.ImageResource { .init(name: "onToggle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `profile`.
+    var profile: RswiftResources.ImageResource { .init(name: "profile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `profileImg`.
     var profileImg: RswiftResources.ImageResource { .init(name: "profileImg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -208,14 +223,21 @@ struct _R {
 
     /// Storyboard `Kt`.
     struct kt: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = HomeVc
+      typealias InitialController = UIKit.UIViewController
 
       let bundle: Foundation.Bundle
 
       let name = "Kt"
       func validate() throws {
+        if UIKit.UIImage(named: "EditProfile", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'EditProfile' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIImage(named: "imgBack", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'imgBack' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "offToggle", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'offToggle' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "onToggle", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'onToggle' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "profile", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'profile' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIImage(named: "profileImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'profileImg' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIColor(named: "tableTheme", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'tableTheme' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIColor(named: "themeColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'themeColor' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIColor(named: "viewBg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'viewBg' is used in storyboard 'Kt', but couldn't be loaded.") }
       }
     }
 
