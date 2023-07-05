@@ -45,12 +45,15 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 3 colors.
+  /// This `_R.color` struct is generated, and contains static references to 4 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
+    /// Color `formFontColor`.
+    var formFontColor: RswiftResources.ColorResource { .init(name: "formFontColor", path: [], bundle: bundle) }
 
     /// Color `tableTheme`.
     var tableTheme: RswiftResources.ColorResource { .init(name: "tableTheme", path: [], bundle: bundle) }
@@ -223,11 +226,14 @@ struct _R {
 
     /// Storyboard `Kt`.
     struct kt: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = UIKit.UIViewController
+      typealias InitialController = ProfileVc
 
       let bundle: Foundation.Bundle
 
       let name = "Kt"
+
+      var editProfileVc: RswiftResources.StoryboardViewControllerIdentifier<EditProfileVc> { .init(identifier: "EditProfileVc", storyboard: name, bundle: bundle) }
+
       func validate() throws {
         if UIKit.UIImage(named: "EditProfile", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'EditProfile' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIImage(named: "imgBack", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'imgBack' is used in storyboard 'Kt', but couldn't be loaded.") }
@@ -235,9 +241,11 @@ struct _R {
         if UIKit.UIImage(named: "onToggle", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'onToggle' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIImage(named: "profile", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'profile' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIImage(named: "profileImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'profileImg' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if UIKit.UIColor(named: "formFontColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'formFontColor' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIColor(named: "tableTheme", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'tableTheme' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIColor(named: "themeColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'themeColor' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIColor(named: "viewBg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'viewBg' is used in storyboard 'Kt', but couldn't be loaded.") }
+        if editProfileVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'editProfileVc' could not be loaded from storyboard 'Kt' as 'EditProfileVc'.") }
       }
     }
 

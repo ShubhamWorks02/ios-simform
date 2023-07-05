@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -48,7 +49,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="UserId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLV-5X-XfE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="UserId" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLV-5X-XfE">
                                         <rect key="frame" x="138.66666666666666" y="0.0" width="48.666666666666657" height="18"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="textColor" name="tableTheme"/>
@@ -77,11 +78,35 @@
             </connections>
             <point key="canvasLocation" x="-95" y="-24"/>
         </tableViewCell>
+        <viewController id="Ac6-eh-qAm">
+            <view key="view" contentMode="scaleToFill" id="8CD-tV-nyw">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImg" translatesAutoresizingMaskIntoConstraints="NO" id="uH3-1b-mZ1">
+                        <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    </imageView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="4lT-ta-4wM"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="4lT-ta-4wM" firstAttribute="trailing" secondItem="uH3-1b-mZ1" secondAttribute="trailing" id="9mw-Nk-jE0"/>
+                    <constraint firstItem="4lT-ta-4wM" firstAttribute="bottom" secondItem="uH3-1b-mZ1" secondAttribute="bottom" id="ALI-KX-r30"/>
+                    <constraint firstItem="uH3-1b-mZ1" firstAttribute="leading" secondItem="4lT-ta-4wM" secondAttribute="leading" id="MWl-np-Lna"/>
+                    <constraint firstItem="uH3-1b-mZ1" firstAttribute="top" secondItem="4lT-ta-4wM" secondAttribute="top" id="jT0-tV-M1H"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="818" y="34"/>
+        </viewController>
     </objects>
     <resources>
+        <image name="homeImg" width="602" height="1202"/>
         <image name="sampleImg" width="32" height="32"/>
         <namedColor name="tableTheme">
             <color red="0.043137254901960784" green="0.17254901960784313" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
