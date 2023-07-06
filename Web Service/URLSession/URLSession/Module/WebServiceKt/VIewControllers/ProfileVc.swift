@@ -11,19 +11,21 @@ import Kingfisher
 class ProfileVc: UIViewController {
     
     // MARK: OUTLETS
-    @IBOutlet weak var imgProfile: UIImageView!
-    @IBOutlet weak var lblUserName: UILabel!
-    @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblUserLastName: UILabel!
-    @IBOutlet weak var lblUserId: UILabel!
-    @IBOutlet weak var btnNotificationStatus: UIButton!
+    @IBOutlet weak private var imgProfile: UIImageView!
+    @IBOutlet weak private var lblUserName: UILabel!
+    @IBOutlet weak private var lblEmail: UILabel!
+    @IBOutlet weak private var lblUserLastName: UILabel!
+    @IBOutlet weak private var lblUserId: UILabel!
+    @IBOutlet weak private var btnNotificationStatus: UIButton!
+    @IBOutlet weak private var profileView: UIView!
+    @IBOutlet weak private var notificationView: UIView!
     
     // MARK: VARIABLES
     var userData: User?
+    var coordinator: ProfileCoordinator? // not being used
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         initSetUp()
     }
     
@@ -70,6 +72,8 @@ extension ProfileVc {
         saveBtn.tintColor = UIColor(named: "tableTheme")
         navigationItem.rightBarButtonItem = saveBtn
         navigationItem.setHidesBackButton(true, animated: true)
+        profileView.layer.cornerRadius = 12
+        notificationView.layer.cornerRadius = 8
     }
     
 }
@@ -81,4 +85,5 @@ extension UIView {
         layer.masksToBounds = false
         clipsToBounds = true
     }
+    
 }

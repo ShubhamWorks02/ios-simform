@@ -17,15 +17,16 @@ class EditProfileVc: UIViewController {
     @IBOutlet weak private var imgUserProfile: UIImageView!
     @IBOutlet weak private var tfJob: UITextField!
     @IBOutlet weak private var imgContainerView: UIView!
+    @IBOutlet weak private var containerView: UIView!
     
     // MARK: VARIABLES
     var userData: User?
     private lazy var viewModel = EditProfileViewModel()
+    var coordinator: EditProfileCoordinator? // not being used
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
-        placeImageOnProfile()
     }
     
     private func placeImageOnProfile() {
@@ -76,7 +77,6 @@ class EditProfileVc: UIViewController {
     
     @objc private func backButtonPressed(_ sender: UITapGestureRecognizer) {
         navigationController?.popViewController(animated: true)
-        // want implement updated user
     }
     
     private func validateEntriesAndUpdate(firstName: String, lastName: String, job: String) -> Bool {
@@ -116,9 +116,11 @@ class EditProfileVc: UIViewController {
                                       style: .plain, target: self, action: #selector(backButtonPressed))
         backBtn.tintColor = UIColor(named: "tableTheme")
         navigationItem.leftBarButtonItem = backBtn
+        containerView.layer.cornerRadius = 15
         guard let userData else {
             return
         }
+        placeImageOnProfile()
         configureUserData(user: userData)
     }
     

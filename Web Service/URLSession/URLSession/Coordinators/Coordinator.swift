@@ -10,6 +10,5 @@ import UIKit
 @objc protocol Coordinator {
 
     var navigationController: UINavigationController { get set }
-    func start()
     @objc optional func popToVc()
 }

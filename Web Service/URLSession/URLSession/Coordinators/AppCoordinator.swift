@@ -18,8 +18,8 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let mainCoordi = MainCoordinator(navigationController: navigationController, window: window)
-        mainCoordi.start()
+        let mainCoordinator = MainCoordinator(navigationController: navigationController, window: window)
+        mainCoordinator.start()
     }
 
 }

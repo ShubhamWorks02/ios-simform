@@ -152,12 +152,9 @@ struct _R {
     }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     let bundle: Foundation.Bundle
-
-    /// Nib `DeleteTableViewCell`.
-    var deleteTableViewCell: RswiftResources.NibReference<DeleteTableViewCell> { .init(name: "DeleteTableViewCell", bundle: bundle) }
 
     /// Nib `ExpandableTableViewCell`.
     var expandableTableViewCell: RswiftResources.NibReferenceReuseIdentifier<ExpandableTableViewCell, ExpandableTableViewCell> { .init(name: "ExpandableTableViewCell", bundle: bundle, identifier: "ExpandableTableViewCell") }
@@ -166,7 +163,6 @@ struct _R {
     var userTableViewCell: RswiftResources.NibReferenceReuseIdentifier<UserTableViewCell, UserTableViewCell> { .init(name: "UserTableViewCell", bundle: bundle, identifier: "UserTableViewCell") }
 
     func validate() throws {
-      if UIKit.UIImage(named: "homeImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'homeImg' is used in nib 'DeleteTableViewCell', but couldn't be loaded.") }
       if UIKit.UIImage(named: "sampleImg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'sampleImg' is used in nib 'UserTableViewCell', but couldn't be loaded.") }
       if UIKit.UIColor(named: "formFontColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'formFontColor' is used in nib 'UserTableViewCell', but couldn't be loaded.") }
       if UIKit.UIColor(named: "tableTheme", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'tableTheme' is used in nib 'UserTableViewCell', but couldn't be loaded.") }
@@ -240,6 +236,7 @@ struct _R {
       let name = "Kt"
 
       var editProfileVc: RswiftResources.StoryboardViewControllerIdentifier<EditProfileVc> { .init(identifier: "EditProfileVc", storyboard: name, bundle: bundle) }
+      var homeVc: RswiftResources.StoryboardViewControllerIdentifier<HomeVc> { .init(identifier: "HomeVc", storyboard: name, bundle: bundle) }
       var profileVc: RswiftResources.StoryboardViewControllerIdentifier<ProfileVc> { .init(identifier: "ProfileVc", storyboard: name, bundle: bundle) }
 
       func validate() throws {
@@ -251,6 +248,7 @@ struct _R {
         if UIKit.UIColor(named: "tableTheme", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'tableTheme' is used in storyboard 'Kt', but couldn't be loaded.") }
         if UIKit.UIColor(named: "themeColor", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'themeColor' is used in storyboard 'Kt', but couldn't be loaded.") }
         if editProfileVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'editProfileVc' could not be loaded from storyboard 'Kt' as 'EditProfileVc'.") }
+        if homeVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'homeVc' could not be loaded from storyboard 'Kt' as 'HomeVc'.") }
         if profileVc() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'profileVc' could not be loaded from storyboard 'Kt' as 'ProfileVc'.") }
       }
     }

@@ -14,6 +14,7 @@ class HomeVc: UIViewController {
     @IBOutlet weak private var searchView: UISearchBar!
     
     // MARK: VARIABLE
+    var coordinator: HomeCoordinator? // not being used
     var viewModel = HomeViewModel()
     private var userList: [User?] = []
     private var filteredUserList: [User?] = []
@@ -90,7 +91,7 @@ extension HomeVc: UISearchBarDelegate {
 extension HomeVc: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        // tableView.deselectRow(at: indexPath, animated: true)
         
         guard let userProfileVc = storyboard?.instantiateViewController(
             withIdentifier: "ProfileVc") as? ProfileVc else {
@@ -107,21 +108,4 @@ extension HomeVc: UITableViewDelegate {
         }
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        UITableView.automaticDimension
-//    }
-    //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    //        if indexPath.row == viewModel.userList.value.count - 1 {
-    //            var url = "https://reqres.in/api/users?page=\()"
-    //            paginationManager.fetchData(baseURL: .users(page: paginationManager.currentPage + 1)) { [weak self] users in
-    //                self?.viewModel.userList.value.append(contentsOf: users)
-    //            }
-    //        }
-    //    }
-    //    private func setupPagination() {
-    //        paginationManager = PaginationManager(tableView: tblUserList)
-    //        paginationManager.fetchData(baseURL: .users(page: 1)) { [weak self] users in
-    //            self?.viewModel.userList.value.append(contentsOf: users)
-    //        }
-    //    }
 }
