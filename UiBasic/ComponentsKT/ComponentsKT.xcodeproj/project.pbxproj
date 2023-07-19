@@ -11,6 +11,7 @@
 		5151E9822A2B5AA2008699CD /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E9812A2B5AA2008699CD /* FormViewController.swift */; };
 		5151E9842A2B5C1F008699CD /* ActualGradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E9832A2B5C1F008699CD /* ActualGradientButton.swift */; };
 		5151E9862A2B6293008699CD /* UITextFieldCustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151E9852A2B6293008699CD /* UITextFieldCustomImage.swift */; };
+		516B87352A66E62B0028C966 /* KeyboardDismissHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516B87342A66E62B0028C966 /* KeyboardDismissHelper.swift */; };
 		51CD6D642A2DBA0500464C1F /* SectionDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD6D632A2DBA0500464C1F /* SectionDetailsModel.swift */; };
 		51CD6D662A2DC0A800464C1F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD6D652A2DC0A800464C1F /* AppConstants.swift */; };
 		51EEE17A2A29D5E700816C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EEE1792A29D5E700816C0D /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		5151E9812A2B5AA2008699CD /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		5151E9832A2B5C1F008699CD /* ActualGradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualGradientButton.swift; sourceTree = "<group>"; };
 		5151E9852A2B6293008699CD /* UITextFieldCustomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldCustomImage.swift; sourceTree = "<group>"; };
+		516B87342A66E62B0028C966 /* KeyboardDismissHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissHelper.swift; sourceTree = "<group>"; };
 		51CD6D632A2DBA0500464C1F /* SectionDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailsModel.swift; sourceTree = "<group>"; };
 		51CD6D652A2DC0A800464C1F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		51EEE1762A29D5E700816C0D /* ComponentsKT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentsKT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				51EEE18F2A29E8C200816C0D /* RoundedBottomView.swift */,
 				5151E9832A2B5C1F008699CD /* ActualGradientButton.swift */,
 				5151E9852A2B6293008699CD /* UITextFieldCustomImage.swift */,
+				516B87342A66E62B0028C966 /* KeyboardDismissHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				51CD6D642A2DBA0500464C1F /* SectionDetailsModel.swift in Sources */,
 				51CD6D662A2DC0A800464C1F /* AppConstants.swift in Sources */,
 				51EEE19C2A2A0BDF00816C0D /* HeaderCollectionReusableView.swift in Sources */,
+				516B87352A66E62B0028C966 /* KeyboardDismissHelper.swift in Sources */,
 				51EEE1A02A2A125400816C0D /* FilterCollectionViewCell.swift in Sources */,
 				5151E9862A2B6293008699CD /* UITextFieldCustomImage.swift in Sources */,
 				51EEE1982A2A02BB00816C0D /* DeleteTableViewCell.swift in Sources */,

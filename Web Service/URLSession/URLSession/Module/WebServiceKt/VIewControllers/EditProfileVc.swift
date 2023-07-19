@@ -57,8 +57,6 @@ class EditProfileVc: UIViewController {
                 let alertController = UIAlertController(title: "Profile Updated", message: "Thank you", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(okAction)
-                
-                // Present the alert
                 self?.present(alertController, animated: true, completion: nil)
             }
         }

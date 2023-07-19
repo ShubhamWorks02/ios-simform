@@ -28,12 +28,14 @@ class ViewController: UIViewController {
     // MARK: VARIABLES
     private var sectionList = Data.sectionNumber
     private let sectionData = Array(Data.sectionNumber.keys)
+    private var keyboardDismissHelper: KeyboardDismissHelper!
     
     // MARK: VIEWCONTROLLER LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         customizeComponent()
+        keyboardDismissHelper = KeyboardDismissHelper.shared(view: self.view)
     }
     
     // MARK: INITIALIZATION
@@ -49,8 +51,6 @@ class ViewController: UIViewController {
         collectionOfFilters.register(UINib(nibName: Constants.Cell.filterCollectionViewCell, bundle: nil),
                                      forCellWithReuseIdentifier: Constants.Cell.filterCollectionViewCell)
         collectionOfFilters.layer.cornerRadius = 10
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)) //
-        view.addGestureRecognizer(tapGesture)
     }
     
     // MARK: ACTION METHODS
@@ -64,10 +64,6 @@ class ViewController: UIViewController {
         applFilter.text = "Applied Filters (0)"
         collectionViewHeightConstraint.constant = 0
         btnClearFilters.isHidden = true
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
 
