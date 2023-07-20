@@ -18,7 +18,7 @@ class ExpandableTableViewCell: UITableViewCell {
     @IBOutlet weak var heightOut: NSLayoutConstraint!
     
     // MARK: VARIABLES
-    var seeMoreDelegate: BtnDelegate?
+    var delegate: ExpandDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,10 +44,10 @@ class ExpandableTableViewCell: UITableViewCell {
     
     // MARK: ACTIONS
     @IBAction func seeMoreTapped(_ sender: UIButton) {
-        seeMoreDelegate?.btnSeemoreTapped(cell: self)
+        delegate?.btnSeemoreTapped(cell: self)
     }
 }
 
-protocol BtnDelegate {
+protocol ExpandDelegate {
     func btnSeemoreTapped(cell: ExpandableTableViewCell)
 }
