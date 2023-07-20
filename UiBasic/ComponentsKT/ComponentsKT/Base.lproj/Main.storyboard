@@ -709,6 +709,7 @@ Bapista</string>
                     </view>
                     <navigationItem key="navigationItem" id="Nf7-S8-oCQ"/>
                     <connections>
+                        <outlet property="backView" destination="vZB-qK-HWC" id="5gK-Q8-ATa"/>
                         <outlet property="btnSaveInfo" destination="D31-Bp-lXB" id="QE7-Hv-IQG"/>
                         <outlet property="imgContainerView" destination="2Aq-sL-BvP" id="do5-za-kkj"/>
                         <outlet property="imgProfileView" destination="Hca-E9-9zn" id="Fl3-8Q-ctR"/>

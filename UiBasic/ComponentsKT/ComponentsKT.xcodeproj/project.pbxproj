@@ -86,6 +86,23 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		5199695D2A68F7E4001C130A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				51EEE1922A29F3E300816C0D /* DocumentTableViewCell.swift */,
+				51EEE1932A29F3E300816C0D /* DocumentTableViewCell.xib */,
+				51EEE1962A2A02BB00816C0D /* DeleteTableViewCell.swift */,
+				51EEE1972A2A02BB00816C0D /* DeleteTableViewCell.xib */,
+				51EEE19A2A2A0BDF00816C0D /* HeaderCollectionReusableView.swift */,
+				51EEE19B2A2A0BDF00816C0D /* HeaderCollectionReusableView.xib */,
+				51EEE19E2A2A125400816C0D /* FilterCollectionViewCell.swift */,
+				51EEE19F2A2A125400816C0D /* FilterCollectionViewCell.xib */,
+				51FC40862A2A497500A9BB51 /* HeaderTableViewCell.swift */,
+				51FC40872A2A497500A9BB51 /* HeaderTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		51CD6D622A2DB3F500464C1F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +154,6 @@
 			children = (
 				51CD6D672A2DC2B800464C1F /* AppDelegate */,
 				51CD6D682A2DC30000464C1F /* Resources */,
-				5151E9802A2B5A82008699CD /* ViewControllers */,
 				51EEE1A22A2A139000816C0D /* Model */,
 				51EEE1912A29F3B400816C0D /* View */,
 				51EEE17F2A29D5E700816C0D /* Main.storyboard */,
@@ -151,16 +167,8 @@
 		51EEE1912A29F3B400816C0D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				51EEE1922A29F3E300816C0D /* DocumentTableViewCell.swift */,
-				51EEE1932A29F3E300816C0D /* DocumentTableViewCell.xib */,
-				51EEE1962A2A02BB00816C0D /* DeleteTableViewCell.swift */,
-				51EEE1972A2A02BB00816C0D /* DeleteTableViewCell.xib */,
-				51EEE19A2A2A0BDF00816C0D /* HeaderCollectionReusableView.swift */,
-				51EEE19B2A2A0BDF00816C0D /* HeaderCollectionReusableView.xib */,
-				51EEE19E2A2A125400816C0D /* FilterCollectionViewCell.swift */,
-				51EEE19F2A2A125400816C0D /* FilterCollectionViewCell.xib */,
-				51FC40862A2A497500A9BB51 /* HeaderTableViewCell.swift */,
-				51FC40872A2A497500A9BB51 /* HeaderTableViewCell.xib */,
+				5151E9802A2B5A82008699CD /* ViewControllers */,
+				5199695D2A68F7E4001C130A /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";

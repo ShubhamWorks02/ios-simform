@@ -20,7 +20,7 @@ class FormViewController: UIViewController {
     @IBOutlet weak private var mainView: UIView!
     @IBOutlet weak private var imgContainerView: UIView!
     @IBOutlet weak private var imgProfileView: UIImageView!
-    
+    @IBOutlet weak private var backView: UIView!
     
     // MARK: VARIABLES
     private var keyboardHeight: CGFloat = 0.0
@@ -48,10 +48,16 @@ class FormViewController: UIViewController {
 // MARK: CUSTOMIZATION METHODS
 extension FormViewController {
     private func configureUI() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        backView.addGestureRecognizer(tap)
         navigationView.layer.cornerRadius = 8
         mainView.layer.cornerRadius = 35
         mainView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         btnSaveInfo.isHidden = true
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        navigationController?.popViewController(animated: true)
     }
     
     private func configureTextFields() {

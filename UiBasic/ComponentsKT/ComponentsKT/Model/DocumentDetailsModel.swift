@@ -35,7 +35,7 @@ class DocumentDetailsModel {
 
 class Data {
     static var data = [
-            DocumentDetailsModel(sectionName: "All Document",id: nil, subject: "Test Request Compliance Approval Test Request Compliance Approval ", emailID: "DavisBaptista@domain.name DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
+            DocumentDetailsModel(sectionName: "All Document",id: nil, subject: "Test Request Compliance Approval  ", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
             DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .awaitingApproval),
             DocumentDetailsModel(sectionName: "All", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .approved),
             DocumentDetailsModel(sectionName: "All Document", id: "745AF6", subject: "Test Request Compliance Approval", emailID: "DavisBaptista@domain.name", type: "Request", date: "Jan 01, 2020", status: .awaitingApproval),
